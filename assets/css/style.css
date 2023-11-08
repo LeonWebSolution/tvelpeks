@@ -34,8 +34,14 @@ body{
     margin: 0 auto;
 }
 .header{
+    position: fixed;
+    top: 0;
+    z-index: 777;
     transform: translateY(-0%);
     transition: all 0.5s;
+    background-color: #fff;
+    left: 0;
+    right: 0;
 }
 .wrapper {
     opacity: 0;
@@ -51,13 +57,7 @@ body{
     }
 }
 .header.fixed{
-    position: fixed;
-    top: 0;
     transition: all 0.5s;
-    z-index: 777;
-    background-color: #fff;
-    left: 0;
-    right: 0;
     transform: translateY(-57%);
 }
 .container-img{
@@ -98,7 +98,7 @@ body{
     text-transform: uppercase;
     display: block;
 }
-.header-btn__res{
+.b-btn{
     font-size: 1.8rem;
     text-transform: uppercase;
     padding: 0.8rem 2rem;
@@ -174,16 +174,6 @@ body{
     background-color: #EFEFF2;
     cursor: pointer;
 }
-.bottom-social__btn{
-    font-size: 1.8rem;
-    font-weight: 400;
-    line-height: 120%;
-    text-transform: uppercase;
-    color: #fff;
-    padding: 0.8rem 2rem;
-    border-radius: 59px;
-    background: var(--black, #292A29);
-}
 .social-btn:nth-child(1) svg{
     width: 2.1rem;
     height: 1.3rem;
@@ -217,9 +207,12 @@ body{
 }
 .section-main{
     position: relative;
+    transform: translateY(19.9rem);
+    transition: all 0.5s;
 }
 .section-main.fixed{
-    margin-top: 15.9rem;
+    transform: translateY(10.9rem);
+    transition: all 0.5s;
 }
 .section-main__wrapper{
     position: absolute;
