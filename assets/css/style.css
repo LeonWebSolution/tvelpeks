@@ -211,7 +211,7 @@ body{
     transition: all 0.5s;
 }
 .section-main.fixed{
-    transform: translateY(10.9rem);
+    transform: translateY(15.9rem);
     transition: all 0.5s;
 }
 .section-main__wrapper{
