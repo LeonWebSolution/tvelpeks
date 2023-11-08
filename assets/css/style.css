@@ -200,7 +200,31 @@ body{
     max-width: 100%;
     transition: transform 0.6s;
 }
-
+.second-contact{
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-end;
+    padding-top: 1.4rem;
+    gap: 1rem;
+}
+.contact-menu span{
+    width: 0.4rem;
+    height: 0.4rem;
+    background-color: #292A29;
+    border-radius: 50%;
+    display: block;
+}
+.contact-menu{
+    padding: 1.6rem 0.85rem;
+    border-radius: 50%;
+    background-color: #EFEFF2;
+    display: flex;
+    align-items: center;
+}
+.menus{
+    display: flex;
+    gap: 0.3rem;
+}
 .zoomed {
     transform: scale(1.2);
     transition: all 0.6s;
