@@ -207,12 +207,12 @@ body{
 }
 .section-main{
     position: relative;
-    transform: translateY(19.9rem);
     transition: all 0.5s;
+    margin-top: 19.9rem;
 }
 .section-main.fixed{
-    transform: translateY(15.9rem);
     transition: all 0.5s;
+    margin-top: 15.9rem;
 }
 .section-main__wrapper{
     position: absolute;
