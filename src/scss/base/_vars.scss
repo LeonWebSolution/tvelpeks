@@ -1,0 +1,195 @@
+// COLORS
+
+$black: #292A29;
+$body_text: #585E63;
+$primary: #FFD000;
+$hover_yellow: #FFC700;
+$hover_black: #000000;
+$bg: #EFEFF2;
+$white: #FFFFFF;
+$white_70: rgba(255, 255, 255, 0.70);
+$white_50: rgba(255, 255, 255, 0.50);
+$lable: #F4F4F6;
+$gradient: linear-gradient(180deg, #EFEFF2 0%, #F4F4F6 100%);
+$gradient_card_dark: linear-gradient(180deg, #979FAB 0%, #818790 100%);
+$text_add: #AEB2BF;
+$banner_blue: #C9DBF2;
+$banner_green: #9CC6BC;
+$gray3: #838C95;
+
+// ALL
+
+.body__big{
+    font-family: 'Graphik LCG';
+    font-size: 1.8rem;
+    font-weight: 400;
+    line-height: 140%;
+}
+.body__standart{
+    font-family: 'Graphik LCG';
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 140%;
+}
+.body__medium{
+    font-family: 'Graphik LCG';
+    font-weight: 400;
+    line-height: 140%;
+}
+.body__small{
+    font-family: 'Graphik LCG';
+    font-size: 1.2rem;
+    font-weight: 400;
+    line-height: 120%;
+}
+.btn{
+    font-family: 'Halvar-Eng-Rg';
+    font-size: 1.8rem;
+    font-weight: 400;
+    line-height: 120%;
+    text-transform: uppercase;
+}
+.btn__banner{
+    font-family: 'Halvar-Eng-Rg';
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 120%;
+    text-transform: uppercase;
+}
+.btn__small{
+    font-family: 'Halvar-Eng-Rg';
+    font-size: 1.2rem;
+    font-weight: 400;
+    line-height: 120%;
+    text-transform: uppercase;
+}
+.paragraph__big{
+    font-family: 'Graphik LCG';
+    font-size: 2.6rem;
+    font-weight: 400;
+    line-height: 140%;
+}
+.lable{
+    font-family: 'Halvar-Eng-Rg';
+    font-size: 1.4rem;
+    font-weight: 400;
+    line-height: 110%;
+    text-transform: uppercase;
+}
+.banner__big__for--short--text{
+    font-family: 'Halvar-Eng-Rg';
+    font-size: 5rem;
+    font-weight: 400;
+    line-height: 105%;
+    text-transform: uppercase;
+}
+.accent__text{
+    font-family: 'Halvar-Eng-Rg';
+    font-size: 2.4rem;
+    font-weight: 500;
+    line-height: 120%;
+}
+
+// PC
+
+.name{
+    font-family: 'Halvar-Eng-Rg';
+    font-size: 7rem;
+    font-weight: 400;
+    line-height: 105%;
+    text-transform: uppercase;
+}
+.large__disppay{
+    font-family: 'Halvar-Eng-Rg';
+    font-size: 8rem;
+    font-weight: 500;
+    line-height: 102%;
+    text-transform: uppercase;
+}
+.display__banner{
+    font-family: 'Halvar-Eng-Rg';
+    font-size: 8rem;
+    font-weight: 400;
+    line-height: 105%;
+    text-transform: uppercase;
+}
+.h2{
+    font-family: 'Halvar-Eng-Rg';
+    font-size: 4.8rem;
+    font-weight: 400;
+    line-height: 120%;
+    text-transform: uppercase;
+}
+.h3{
+    font-family: 'Halvar-Eng-Rg';
+    font-size: 3rem;
+    font-weight: 400;
+    line-height: 120%;
+    text-transform: uppercase;
+}
+.h4{
+    font-family: 'Halvar-Eng-Rg';
+    font-size: 2.2rem;
+    font-weight: 400;
+    line-height: 120%;
+    text-transform: uppercase;
+}
+.h5{
+    font-family: 'Halvar-Eng-Rg';
+    font-size: 1.8rem;
+    font-weight: 400;
+    line-height: 120%; 
+    text-transform: uppercase;
+}
+.lable__card{
+    font-family: 'Graphik LCG';
+    font-size: 1.4rem;
+    font-weight: 500;
+    line-height: 140%; 
+}
+.tabl__left{
+    font-family: 'Graphik LCG';
+    font-size: 1.4rem;
+    font-weight: 500;
+    line-height: 120%; 
+}
+.tab__right{
+    font-family: 'Graphik LCG';
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 120%;
+}
+
+@media (max-width: 600px){
+    .large__disppay{
+        font-size: 3.4rem;
+        font-weight: 500;
+        line-height: 95%;
+        text-transform: uppercase;
+    }
+    .h2{
+        font-size: 2.8rem;
+        font-weight: 400;
+        line-height: 120%;
+        text-transform: uppercase;
+    }
+    .h3{
+        font-size: 2rem;
+        font-weight: 400;
+        line-height: 120%; 
+        text-transform: uppercase;
+    }
+    .h4{
+        font-size: 1.8rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 120%; 
+        text-transform: uppercase;
+    }
+    .lable__card{
+        font-size: 1.2rem;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 130%;
+    }
+}
