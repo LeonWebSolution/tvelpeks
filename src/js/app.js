@@ -1,6 +1,6 @@
 window.addEventListener("scroll", function() {
     var header = document.querySelector(".header");
-    var sectionMain = document.querySelector(".section-main");
+    var sectionMain = document.querySelector(".main__section");
     
     if (window.scrollY > 0) {
       header.classList.add("fixed");

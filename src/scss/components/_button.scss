@@ -1,0 +1,18 @@
+.btn{
+    &__accent{
+        font-size: 1.8rem;
+        text-transform: uppercase;
+        padding: 0.8rem 2rem;
+        border-radius: 59px;
+        background-color: #292A29;
+        color: #fff;
+    }
+    &__yellow{
+        padding: 1.5rem 2.5rem;
+        border-radius: 59px;
+        background: var(--2, #FFD000);
+        font-size: 1.8rem;
+        color: #292A29;
+        text-transform: uppercase;
+    }
+}

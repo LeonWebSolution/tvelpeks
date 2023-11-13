@@ -28,10 +28,8 @@ function styles() {
 function scripts() {
     return src([
         'src/js/components/*.js',
-        '!src/js/app.js',
+        'src/js/app.js'
     ])
-    .pipe(concat('app.js'))
-    .pipe(dest('src/js'))
     .pipe(browserSync.stream())
 }
 
@@ -40,7 +38,8 @@ function building(){
         'src/css/style.min.css',
         'src/images/*.*',
         'src/js/*',
-        'src/*.html'
+        'src/*.html',
+        'src/fonts/*'
     ], {base: 'src'})
     .pipe(dest('dist'))
 }
@@ -58,7 +57,7 @@ function watching() {
     });
     watch(['src/scss/**/*.scss'], styles)
     watch(['src/images/'], images)
-    watch(['src/js/components/*.js'], scripts)
+    watch(['src/js/components/*.js', 'src/js/app.js'], scripts)
     watch(['src/*.html']).on('change', browserSync.reload)
 }
 
