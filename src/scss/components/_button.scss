@@ -3,8 +3,6 @@
         font-size: 1.8rem;
         text-transform: uppercase;
         padding: 0.8rem 2rem;
-        border-radius: 59px;
-        background-color: #292A29;
         color: #fff;
     }
     &__yellow{
@@ -14,5 +12,14 @@
         font-size: 1.8rem;
         color: #292A29;
         text-transform: uppercase;
+    }
+    &__b{
+        background-color: $black;
+        color: $white;
+        border-radius: 5.9rem;
+        &:hover{
+            background-color: $hover_black;
+            transition: all 0.3s;
+        }
     }
 }
