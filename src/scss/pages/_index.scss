@@ -299,6 +299,111 @@
     }
 }
 
+.support-form{
+    display: flex;
+    justify-content: space-between;
+    background: $gradient_card_dark;
+    padding: 0.5rem;
+    border-radius: 2rem;
+    &__content{
+        padding-top: 8rem;
+        padding-left: 6.5rem;
+    }
+    &__img{
+        img{
+            width: 70.2rem;
+            height: 61.9rem;
+            object-fit: cover;
+            border-radius: 1.5rem;
+        }
+    }
+    &__title{
+        color: $white;
+        margin-bottom: 2.4rem;
+    }
+    &__suptitle{
+        color: $white;
+        margin-bottom: 5.3rem;
+    }
+    &__action{
+        display: flex;
+        gap: 1.5rem;
+    }
+    &__input--box{
+        width: 31.4rem;
+        border-radius: 1.2rem;
+        border: 0.1rem solid $white_50;
+        max-height: 6.6rem;
+    }
+    &__input{
+        padding: 2.2rem 2rem;
+        opacity: 0;
+        color: $white;
+        border: 0;
+        width: 100%;
+    }
+    &__btn{
+        padding: 2.2rem 5.8rem;
+        color: $black;
+        background-color: $primary;
+    }
+    &__agreement{
+        color: $white_70;
+        margin-top: 3.5rem;
+        font-size: 1.4rem;
+        font-weight: 500;
+        line-height: 110%;
+        a{
+            display: inline;
+            color: $white;
+        }
+    }
+    &__input--box{
+        position: relative;
+        .label-name{
+            position: absolute;
+            top:0;
+            left: 0;
+            padding: 2.2rem 2.2rem;
+            pointer-events: none;
+            transition: .5s;
+            color: $white;
+            opacity: 0.4;
+        }
+        input:focus ~ .label-name{
+            top: 1rem;
+            left: 1.2rem;
+            padding: 0;
+            font-size: 1.4rem;
+            opacity: 0.4;
+        }
+        input:focus ~ .support-form__input--box{
+            border-color: $white;
+        }
+        input:focus {
+            padding-left: 1.2rem;
+            padding-top: 2.5rem;
+            font-size: 2.2rem;
+            opacity: 1;
+        }
+        .input-arror{
+            position: absolute;
+            left: 0;
+            bottom: -2rem !important;
+            width: 20rem;
+            font-size: 1.2rem;
+            line-height: 120%; /* 14.4px */
+            text-transform: uppercase;
+            color: #FFCACA;
+            opacity: 0;
+        }
+        .input-arror.visible{
+            opacity: 1;
+            transition: all 0.3s;
+        }
+    }
+}
+
 /* Main end*/
 
 /* Adaptive start*/
