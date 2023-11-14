@@ -55,6 +55,11 @@
         display: flex;
         align-items: center;
         gap: 1.4rem;
+        transition: all 0.3s;
+        &:hover{
+            color: $primary;
+            transition: all 0.3s;
+        }
     }
     .arrow-link{
         position: relative;
@@ -361,6 +366,11 @@
         a{
             display: inline;
             color: $white;
+            transition: all 0.3s;
+            &:hover{
+                color: $primary;
+                transition: all 0.3s;
+            }
         }
     }
     &__input--box{
@@ -453,7 +463,7 @@
             transition: all 0.3s;
         }
         &:hover .solutions__slide--link svg path {
-            stroke: $primary;
+            
             transition: all 0.3s;
         }
         &--img{
@@ -639,6 +649,8 @@
             position: relative;
             width: 11.2rem;
             height: 15.8rem;
+            border-radius: 0.8rem;
+            border: 0.1rem solid rgba(189, 192, 202, 0.40);
             object-fit: contain;
             &:nth-child(1){
                 z-index: 7;
@@ -766,6 +778,183 @@
         padding: 1.5rem;
     }
 }
+
+.reviews{
+    overflow: hidden;
+    padding-bottom: 10rem;
+    &__btns{
+        display: flex;
+        align-items: center;
+    }
+    &__btn--all{
+        padding: 1.5rem 3.5rem;
+    }
+    &__top{
+        margin-bottom: 4rem;
+    }
+    &__slider{
+        .swiper-slide{
+            background: $gradient_card_dark;
+            display: flex;
+            padding: 0.5rem;
+            border-radius: 2rem;
+            gap: 3.8rem;
+            img{
+                width: 22.6rem;
+                height: 31.9rem;
+                border-radius: 15px;
+                margin: 0;
+            }
+        }
+    }
+    &__slide{
+        &--img{
+            height: 31.9rem;
+            margin: 0;
+        }
+        &--content{
+            padding: 2.5rem 3.4rem 2.5rem 0rem;
+        }
+        &--name{
+            color: $white;
+            margin-bottom: 2rem;
+        }
+        &--text{
+            color: $white_70;
+            margin-bottom: 1.6rem;
+        }
+        &--link{
+            color: $white;
+            text-transform: uppercase;
+            text-decoration: underline !important;
+            font-size: 1.6rem;
+            margin-bottom: 4.1rem;
+        }
+        &--link--rev{
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            color: $white;
+            svg{
+               width: 4.9rem;
+               height: 4.9rem; 
+            }
+        }
+    }
+}
+
+.news{
+    padding-top: 8rem;
+    border-radius: 2rem;
+    background: linear-gradient(180deg, #EFEFF2 0%, #F4F4F6 100%);
+    padding-bottom: 10rem;
+    &__tabs{
+        display: flex;
+        align-items: center;
+        gap: 0.8rem;
+    }
+    &__top{
+        margin-bottom: 4rem;
+    }
+    &__tab{
+        border: 0.1rem solid #000;
+        padding: 0.8rem 1.5rem;
+        color: $black;
+        cursor: pointer;
+        &.active{
+            border: none;
+            background-color: $black;
+            color: $white;
+        }
+    }
+    &__wrapper{
+        display: flex;
+        margin-bottom: 5rem;
+        gap: 5rem;
+    }
+    &__img{
+        position: relative;
+        margin-bottom: 3rem;
+        img{
+            width: 61.8rem;
+            border-radius: 2rem
+        }
+    }
+    &__label{
+        padding: 0.8rem 1.5rem;
+        border-radius: 3.2rem;
+        background-color: $white;
+        color: $black;
+        position: absolute;
+        left: 1.5rem;
+        top: 1.5rem;
+    }
+    &__info{
+        width: 59.9rem;
+        &--date{
+           color: $gray3;
+           margin-bottom: 1.9rem;
+        }
+        &--name{
+            margin-bottom: 2rem;
+            color: $black;
+        }
+        &--text{
+            color: $body_text;
+            max-width: 44.3rem;
+        }
+    }
+    &__btn--all{
+        width: 100%;
+        padding: 1.5rem;
+    }
+    &__articles{
+        display: flex;
+        flex-direction: column;
+        gap: 3rem;
+        &--item{
+            position: relative;
+            display: flex;
+            justify-content: space-between;
+            gap: 3rem;
+            width: 100%;
+            padding-bottom: 2.1rem;
+            border-bottom: 0.1rem solid $black;
+            &-content{
+                padding-top: 4.2rem;
+            }
+            &-img{
+                img{
+                    width: 21.9rem;
+                    border-radius: 2rem;
+                }
+            }
+            &-name{
+                color: $black;
+                margin-bottom: 1.5rem;
+            }
+            &-text{
+                font-size: 1.6rem;
+                color: $body_text;
+                font-weight: 300;
+                font-family: 'Graphik LCG';
+            }
+        }
+        .news__label{
+            padding: 0.6rem 1rem;
+            font-size: 1.4rem;
+            left: 0;
+            top: 0;
+        }
+        .news__info--date{
+            margin-bottom: 1.5rem;
+        }
+    }
+}
+
+
+
+
 
 
 // @media (max-width: 1440px){

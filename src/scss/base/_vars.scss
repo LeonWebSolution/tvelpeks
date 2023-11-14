@@ -29,14 +29,14 @@ $gray3: #838C95;
         width: 6.8rem;
         height: 6.8rem;
     }
-    .swiper-button-prev:hover svg stop{
-        stop-color: #FFC700;
-        transition: all 0.3s;
-    }
-    .swiper-button-next:hover svg stop{
-        stop-color: #FFC700;
-        transition: all 0.3s;
-    }
+}
+.swiper-button-prev:hover svg stop,
+.swiper-button-next:hover svg stop {
+    stop-color: #FFC700 !important;
+    transition: all 0.3s;
+}
+#swiper-button-prev-reviews:hover svg stop{
+    stop-color: red;
 }
 .section__header{
     display: flex;
