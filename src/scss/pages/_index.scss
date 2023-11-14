@@ -683,20 +683,16 @@
     }
 }
 
-/* Main end*/
 
-/* Adaptive start*/
+// @media (max-width: 1440px){
+//     html{
+//         font-size: calc(100vw / 1440 * 10);
+//     }
+// }
 
-/* @media (max-width: 1440px){
-    html{
-        font-size: calc(100vw / 1440 * 10);
-    }
-}
+// @media (max-width: 1000px){
+//     html{
+//         font-size: calc(100vw / 360 * 10);
+//     }
+// } 
 
-@media (max-width: 1000px){
-    html{
-        font-size: calc(100vw / 320 * 10);
-    }
-} */
-
-/* Adaptive end*/
