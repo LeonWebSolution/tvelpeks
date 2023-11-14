@@ -100,6 +100,15 @@ var reviews = new Swiper('.reviews__slider', {
   },
 });
 
+var partners = new Swiper('.partners__slider', {
+  slidesPerView: 'auto',
+  spaceBetween: 30,
+  initialSlide: 0, 
+  centerInsufficientSlides: true,
+  loop: true,
+});
+
+
 document.addEventListener("DOMContentLoaded", function() {
   // Получаем все вкладки и слайдеры
   var tabs = document.querySelectorAll('.projects__tab');
@@ -122,3 +131,11 @@ document.addEventListener("DOMContentLoaded", function() {
       });
   });
 });
+
+function keepFocus() {
+  // Получаем элемент input
+  var inputElement = document.getElementById("question-input");
+
+  // Сохраняем фокус в поле ввода
+  inputElement.focus();
+}
