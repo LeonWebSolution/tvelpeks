@@ -18,7 +18,26 @@ $banner_green: #9CC6BC;
 $gray3: #838C95;
 
 // ALL
-
+.slider__arrows{
+    display: flex;
+    align-items: center;
+    .swiper-button-prev svg{
+        width: 6.8rem;
+        height: 6.8rem;
+    }
+    .swiper-button-next svg{
+        width: 6.8rem;
+        height: 6.8rem;
+    }
+    .swiper-button-prev:hover svg stop{
+        stop-color: #FFC700;
+        transition: all 0.3s;
+    }
+    .swiper-button-next:hover svg stop{
+        stop-color: #FFC700;
+        transition: all 0.3s;
+    }
+}
 .body__big{
     font-family: 'Graphik LCG';
     font-size: 1.8rem;

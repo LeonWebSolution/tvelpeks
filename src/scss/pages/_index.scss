@@ -275,6 +275,11 @@
             visibility: visible;
             transition: all 0.3s;
         }
+        &:hover .production__item--name{
+            opacity: 1;
+            border-color: $primary;
+            transition: all 0.3s;
+        }
         &--name{
             padding-bottom: 1.5rem;
            border-bottom: 1px solid $gray3;
@@ -400,6 +405,84 @@
         .input-arror.visible{
             opacity: 1;
             transition: all 0.3s;
+        }
+    }
+}
+.swiper{
+    overflow: visible !important;
+}
+.solutions{
+    position: relative;
+    overflow: hidden;
+    padding: 21rem 0 5rem;
+    &__bg{
+        position: absolute;
+        width: 143.8rem;
+        height: 173.2rem;
+        left: 0;
+        top: -68rem;
+        z-index: -1;
+    }
+    &__top{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 2.3rem;
+    }
+    &__title{
+        color: $black;
+    }
+    &__btns{
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+    }
+    &__btn--all{
+        color: $black;
+        padding: 1.5rem 3.5rem;
+    }
+    &__slide{
+        width: 53.3rem !important;
+        cursor: pointer;
+        &:hover .solutions__slide--name{
+            border-color: $primary;
+            transition: all 0.3s;
+        }
+        &:hover .solutions__slide--link svg stop{
+            stop-color: $primary;
+            transition: all 0.3s;
+        }
+        &:hover .solutions__slide--link svg path {
+            stroke: $primary;
+            transition: all 0.3s;
+        }
+        &--img{
+            border-radius: 2rem;
+            margin-bottom: 2rem;
+            img{
+                width: 53.3rem;
+                height: 34.2rem;
+                object-fit: cover;
+                border-radius: 2rem;
+            }
+        }
+        &--content{
+            padding-top: 1.3rem;
+            width: 47.3rem;
+            display: flex;
+            color: $body_text;
+        }
+        &--name{
+            color: $black;
+            padding-bottom: 2rem;
+            border-bottom: 0.1rem solid $gray3;
+            width: 47.3rem;
+        }
+        &--link{
+            svg{
+                width: 4.9rem;
+                height: 4.7rem;
+            }
         }
     }
 }

@@ -453,11 +453,11 @@
                 <div class="support-form__content">
                     <div class="support-form__title display__banner">Не знаете что подойдет лучше всего?</div>
                     <div class="support-form__suptitle h4">Оставьте телефон и наш <span class="primary">менеджер вам поможет</span></div>
-                    <form  class="support-form__action" id="supportForm">
+                    <form class="support-form__action" id="supportForm">
                         <div class="support-form__input--box">
                             <input type="tel" class="support-form__input btn" id="phoneNumber">
-                            <label class="label-name btn">Телефон</label>
-                            <label class="input-arror">введите корректные данные</label>
+                            <label for="phoneNumber" class="label-name btn">Телефон</label>
+                            <label for="phoneNumber" class="input-arror">введите корректные данные</label>
                         </div>
                         <button type="submit" class="support-form__btn btn">Отправить заявку</button>
                     </form>
@@ -465,6 +465,112 @@
                 </div>
                 <div class="support-form__img">
                     <img src="./images/form-help.jpg" alt="">
+                </div>
+            </section>
+            <section class="solutions">
+                <img class="solutions__bg" src="./images/sol-bg.png" alt="">
+                <div class="container">
+                    <div class="solutions__wrapper">
+                        <div class="solutions__top">
+                            <div class="solutions__title h2">Решения</div>
+                            <div class="solutions__btns">
+                                <button class="solutions__btn--all btn btn__stroke">Все решения</button>
+                                <div class="solutions__arrows slider__arrows">
+                                    <button class="swiper-button-prev">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="70" height="68" viewBox="0 0 70 68" fill="none">
+                                            <circle cx="24.0653" cy="24.0653" r="23.5653" transform="matrix(0.719878 -0.694101 -0.719878 -0.694101 34.6484 67.4158)" stroke="url(#paint0_linear_1640_4173)"/>
+                                            <path d="M41.3659 33.6674H27.9309M27.9309 33.6674L33.5878 28.2131M27.9309 33.6674L34.6484 40.1443" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <defs>
+                                            <linearGradient id="paint0_linear_1640_4173" x1="53.4811" y1="18.9592" x2="3.81992" y2="22.7793" gradientUnits="userSpaceOnUse">
+                                            <stop/>
+                                            <stop offset="1" stop-color="#292A29" stop-opacity="0"/>
+                                            </linearGradient>
+                                            </defs>
+                                            </svg>
+                                    </button>
+                                    <button class="swiper-button-next">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="70" height="68" viewBox="0 0 70 68" fill="none">
+                                            <circle cx="24.0653" cy="24.0653" r="23.5653" transform="matrix(0.719878 -0.694101 -0.719878 -0.694101 34.6484 67.4158)" stroke="url(#paint0_linear_1640_4176)"/>
+                                            <path d="M27.9309 33.6674H41.3659M41.3659 33.6674L35.7091 28.2131M41.3659 33.6674L34.6484 40.1443" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <defs>
+                                            <linearGradient id="paint0_linear_1640_4176" x1="53.4811" y1="18.9592" x2="3.81992" y2="22.7793" gradientUnits="userSpaceOnUse">
+                                            <stop/>
+                                            <stop offset="1" stop-color="#292A29" stop-opacity="0"/>
+                                            </linearGradient>
+                                            </defs>
+                                            </svg>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper solutions__slider">
+                            <div class="swiper-wrapper solutions__wrapper">
+                                <div class="swiper-slide solutions__slide">
+                                    <div class="solutions__slide--img">
+                                        <img src="./images/sol1.png" alt="">
+                                    </div>
+                                    <div class="solutions__slide--name h3">Сети отопления</div>
+                                    <div class="solutions__slide--content">
+                                        <p class="solutions__slide--text body__standart">Для наружных систем отопления, водоснабжения и являются альтернативой стальным трубам с ППУ-изоляцией</p>
+                                        <a href="#" class="solutions__slide--link">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="49" height="50" viewBox="0 0 49 50" fill="none">
+                                                <circle cx="24.5" cy="24.6484" r="24" stroke="url(#paint0_linear_1640_4186)"/>
+                                                <path d="M20 29.6484L29.5 20.1484M29.5 20.1484V28.1484M29.5 20.1484H20" stroke="#292A29" stroke-linecap="round" stroke-linejoin="round"/>
+                                                <defs>
+                                                <linearGradient id="paint0_linear_1640_4186" x1="49" y1="5.49389" x2="18.7091" y2="42.9121" gradientUnits="userSpaceOnUse">
+                                                <stop/>
+                                                <stop offset="1" stop-color="#292A29" stop-opacity="0"/>
+                                                </linearGradient>
+                                                </defs>
+                                            </svg>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide solutions__slide">
+                                    <div class="solutions__slide--img">
+                                        <img src="./images/sol2.png" alt="">
+                                    </div>
+                                    <div class="solutions__slide--name h3">Горячее водоснабжение</div>
+                                    <div class="solutions__slide--content">
+                                        <p class="solutions__slide--text body__standart">Водоснабжения и являются альтернативой стальным трубам с ППУ-изоляцией</p>
+                                        <a href="#" class="solutions__slide--link">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="49" height="50" viewBox="0 0 49 50" fill="none">
+                                                <circle cx="24.5" cy="24.6484" r="24" stroke="url(#paint0_linear_1640_4186)"/>
+                                                <path d="M20 29.6484L29.5 20.1484M29.5 20.1484V28.1484M29.5 20.1484H20" stroke="#292A29" stroke-linecap="round" stroke-linejoin="round"/>
+                                                <defs>
+                                                <linearGradient id="paint0_linear_1640_4186" x1="49" y1="5.49389" x2="18.7091" y2="42.9121" gradientUnits="userSpaceOnUse">
+                                                <stop/>
+                                                <stop offset="1" stop-color="#292A29" stop-opacity="0"/>
+                                                </linearGradient>
+                                                </defs>
+                                            </svg>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide solutions__slide">
+                                    <div class="solutions__slide--img">
+                                        <img src="./images/sol1.png" alt="">
+                                    </div>
+                                    <div class="solutions__slide--name h3">холодное водоснабжение</div>
+                                    <div class="solutions__slide--content">
+                                        <p class="solutions__slide--text body__standart">Для наружных систем отопления, водоснабжения и являются альтернативой стальным трубам с ППУ-изоляцией</p>
+                                        <a href="#" class="solutions__slide--link">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="49" height="50" viewBox="0 0 49 50" fill="none">
+                                                <circle cx="24.5" cy="24.6484" r="24" stroke="url(#paint0_linear_1640_4186)"/>
+                                                <path d="M20 29.6484L29.5 20.1484M29.5 20.1484V28.1484M29.5 20.1484H20" stroke="#292A29" stroke-linecap="round" stroke-linejoin="round"/>
+                                                <defs>
+                                                <linearGradient id="paint0_linear_1640_4186" x1="49" y1="5.49389" x2="18.7091" y2="42.9121" gradientUnits="userSpaceOnUse">
+                                                <stop/>
+                                                <stop offset="1" stop-color="#292A29" stop-opacity="0"/>
+                                                </linearGradient>
+                                                </defs>
+                                            </svg>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </section>
         </main>

@@ -22,4 +22,8 @@
             transition: all 0.3s;
         }
     }
+    &__stroke{
+        border-radius: 59px;
+        border: 0.1rem solid $black;
+    }
 }
