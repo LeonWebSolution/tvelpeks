@@ -455,7 +455,7 @@
                     <div class="support-form__suptitle h4">Оставьте телефон и наш <span class="primary">менеджер вам поможет</span></div>
                     <form class="support-form__action" id="supportForm">
                         <div class="support-form__input--box">
-                            <input type="tel" class="support-form__input btn" id="phoneNumber">
+                            <input type="tel" class="support-form__input btn" id="phoneNumber" required>
                             <label for="phoneNumber" class="label-name btn">Телефон</label>
                             <label for="phoneNumber" class="input-arror">введите корректные данные</label>
                         </div>
@@ -1025,7 +1025,7 @@
                             </div>
                             <div class="news__articles--item">
                                 <div class="news__articles--item-content">
-                                    <div class="news__label btn">Новинка</div>
+                                    <div class="news__label btn">Популярное</div>
                                     <div class="news__info--date lable">23 апреля 2023</div>
                                     <div class="news__articles--item-name h4">выставка «Аква-Терм- Москва 2023</div>
                                     <p class="news__articles--item-text">Поставка гибких трубопроводов ТВЭЛ-ПЭКС (30 473 м) и комплектующих к ним</p>
@@ -1037,6 +1037,60 @@
                         </div>
                     </div>
                     <button class="news__btn--all btn btn__b">Все материалы</button>
+                </div>
+            </section>
+            <section class="form-question">
+                <div class="form-question__wrapper">
+                    <div class="form-question__content">
+                        <div class="form-question__title display__banner">Есть вопрос?</div>
+                        <div class="form-question__suptitle h4">Задайте нам и мы ответим на него в ближайшее время</div>
+                        <form class="question-form">
+                            <div class="input-group">
+                                <input type="text" required>
+                                <label class="btn" for="">Имя</label>
+                            </div>
+                            <div class="input-group">
+                                <input type="text" required>
+                                <label class="btn" for="">Телефон</label>
+                            </div>
+                            <div class="input-group area">
+                                <textarea сlass="btn" placeholder="Ваше сообщение"></textarea>
+                            </div>
+                            <button class="question-form__btn btn btn__b">Задать вопрос</button>
+                        </form>
+                        <p class="form-question__descr body__medium">Отправляя свои данных вы соглашаетесь с <a href="#">политикой конфиденциальности</a></p>
+                    </div>
+                    <div class="form-question__img">
+                        <img src="./images/queimg.png" alt="">
+                    </div>
+                </div>
+            </section>
+            <section class="partners ">
+                <div class="partners__title h2">Наши партнеры</div>
+                <div class="swiper partners__slider">
+                    <div class="swiper-wrapper partners__wrapper">
+                        <div class="swiper-slide">
+                            <img src="./images/part1.png" alt="">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="./images/part2.png" alt="">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="./images/part3.png" alt="">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="./images/part4.png" alt="">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="./images/part5.png" alt="">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="./images/part6.png" alt="">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="./images/part5.png" alt="">
+                        </div>
+                    </div>
                 </div>
             </section>
         </main>

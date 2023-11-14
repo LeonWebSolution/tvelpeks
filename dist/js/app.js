@@ -89,6 +89,17 @@ var projects = new Swiper('.projects__slider', {
   },
 });
 
+var reviews = new Swiper('.reviews__slider', {
+  slidesPerView: 'auto',
+  spaceBetween: 15,
+  initialSlide: 0, 
+  centerInsufficientSlides: true,
+  navigation: {
+    nextEl: '#swiper-button-next-reviews',
+    prevEl: '#swiper-button-prev-reviews',
+  },
+});
+
 document.addEventListener("DOMContentLoaded", function() {
   // Получаем все вкладки и слайдеры
   var tabs = document.querySelectorAll('.projects__tab');

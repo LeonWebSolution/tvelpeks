@@ -3,7 +3,6 @@ const { src, dest, watch, parallel, series} = require('gulp');
 const scss = require('gulp-sass')(require('sass'));
 const concat = require('gulp-concat');
 const browserSync = require('browser-sync').create();
-// const autoprefixer = require('gulp-autoprefixer');
 const clean = require('gulp-clean');
 const imagemin = require('gulp-imagemin');
 const newer = require('gulp-newer');
@@ -18,7 +17,6 @@ function images(){
 
 function styles() {
     return src('src/scss/**/*.scss')
-    // .pipe(autoprefixer({ overrideBrowserslist: ['last 10 version']}))
     .pipe(concat('style.min.css'))
     .pipe(scss({outputStyle: 'compressed'}))
     .pipe(dest('src/css'))
