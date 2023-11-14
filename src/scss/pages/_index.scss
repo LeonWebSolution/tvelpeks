@@ -683,6 +683,90 @@
     }
 }
 
+.work{
+    overflow: hidden;
+    padding-bottom: 11rem;
+    &__btns{
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+    }
+    &__btn--all{
+        padding: 1.5rem 3.5rem;
+    }
+    &__top{
+        margin-bottom: 3.6rem;
+    }
+    &__slider{
+        margin-bottom: 3.6rem;
+        .swiper-slide img{
+            margin-bottom: 2.5rem;
+            height: 41.4rem;
+        }
+    }
+    &__btn{
+        width: 100%;
+        padding: 1.5rem;
+    }
+}
+
+.projects{
+    padding-bottom: 12.2rem;
+    overflow: hidden;
+    &__top{
+        flex-wrap: wrap;
+        // margin-bottom: 4rem;
+    }
+    &__title{
+        width: 100%;
+    }
+    &__tabs{
+        display: flex;
+        gap: 0.8rem;
+    }
+    &__tab{
+        padding: 0.8rem 1.5rem;
+        border-radius: 3.2rem;
+        border: 0.1rem solid #000;
+        color: $black;
+        cursor: pointer;
+        &.active{
+            border: none;
+            background-color: $black;
+            color: $white;
+            span{
+                color: $white_50;
+            }
+        }
+    }
+    &__slider{
+        display: none !important;
+        margin-bottom: 5rem;
+        &.active{
+            display: block !important;
+        }
+        .swiper-slide img{
+            margin-bottom: 2.5rem;
+            height: 41.4rem;
+            border-radius: 2rem;
+            object-fit: cover;
+        }
+    }
+    &__slide{
+        &--name{
+            margin-bottom: 1.5rem;
+        }
+        &--text{
+            padding-right: 5.3rem;
+            color: $body_text;
+        }
+    }
+    &__btn{
+        width: 100%;
+        padding: 1.5rem;
+    }
+}
+
 
 // @media (max-width: 1440px){
 //     html{

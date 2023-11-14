@@ -194,6 +194,13 @@ $gray3: #838C95;
     font-weight: 400;
     line-height: 120%;
 }
+.slider__wrapper .swiper-slide{
+    width: 64.3rem;
+}
+.slider__wrapper .swiper-slide img{
+    width: 100%;
+}
+
 
 @media (max-width: 600px){
     .large__disppay{
