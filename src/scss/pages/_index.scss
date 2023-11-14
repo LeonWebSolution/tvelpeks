@@ -578,6 +578,111 @@
     }
 }
 
+.prod{
+    padding-bottom: 4.6rem;
+    &__title{
+        font-size: 25rem;
+        letter-spacing: -12.5px;
+        text-transform: uppercase;
+        color: $black;
+        text-align: center;
+        margin-left: -2.5rem;
+        border-top: 0.1rem solid $black;
+        line-height: 90%;
+        margin-bottom: 5rem;
+    }
+    &__wrapper{
+        display: flex;
+        justify-content: space-between;
+        border-bottom: 0.1rem solid $gray3;
+    }
+    &__content{
+        width: 86.2rem;
+        &--text{
+            margin-bottom: 4.6rem;
+        }
+        &--list{
+            display: flex;
+            padding-bottom: 3rem;
+            &--item{
+                &:nth-child(1){
+                    padding-right: 3.8rem;
+                    min-width: 27.7rem;
+                    border-right: 0.1rem solid $black;
+                }
+                &:nth-child(2){
+                    padding: 0 3.5rem;
+                    border-right: 0.1rem solid $black;
+                    min-width: 21.5rem;
+                }
+                &:nth-child(3){
+                    padding: 0 3.6rem;
+                }
+            }
+            &--number{
+               font-size: 6rem;
+               color: $black;
+               text-transform: uppercase;
+            }
+            &--text{
+                color: $body_text;
+            }
+        }
+    }
+    &__certificates{
+        &--img{
+            margin-bottom: 1.1rem;
+            display: flex;
+            align-items: center;
+        }
+        &--img img{
+            position: relative;
+            width: 11.2rem;
+            height: 15.8rem;
+            object-fit: contain;
+            &:nth-child(1){
+                z-index: 7;
+            }
+            &:nth-child(2){
+                width: 9.1rem;
+                height: 12.8rem;
+                margin-left: -1rem;
+                z-index: 6;
+            }
+            &:nth-child(3){
+                width: 7.3rem;
+                height: 10.1rem;
+                margin-left: -0.9rem;
+                z-index: 5;
+            }
+            &:nth-child(4){
+                width: 5.7rem;
+                height: 7.9rem;
+                margin-left: -0.7rem;
+                z-index: 4;
+            }
+        }
+        &--btn{
+            display: flex;
+            align-items: center;
+            gap: 1.8rem;
+            color: $black;
+            &:hover svg stop{
+                stop-color: $primary;
+                transition: all 0.3s;
+            }
+            &:hover svg path{
+                stroke: $primary;
+                transition: all 0.3s;
+            }
+            svg{
+                width: 4.9rem;
+                height: 4.9rem;
+            }
+        }
+    }
+}
+
 /* Main end*/
 
 /* Adaptive start*/
