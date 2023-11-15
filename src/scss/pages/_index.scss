@@ -139,6 +139,9 @@
         display: flex;
         justify-content: space-between;
     }
+    .swiper-slide{
+        width: 30.4rem;
+    }
     &__item{
         width: 30.4rem;
     }
@@ -1073,20 +1076,122 @@
     }
 }
 
+// Adaptive
 
+@media (max-width: 962px){
+   .main__section{
+    margin-top: 7.8rem;
+    padding: 0 0.3rem;
+    &.fixed{
+        margin-top: 7.8rem;
+    }
+    &--bg{
+        width: 100%;
+        height: 62.8rem;
+        object-fit: cover;
+        border-radius: 2rem;
+    }
+    &--wrapper{
+        top: 3rem;
+        left: 1.2rem;
+        right: 1.2rem;
+    }
+    &--title{
+        font-size: 3.4rem;
+        margin-bottom: 1.5rem;
+        padding-right: 5rem;
+        br{
+            display: none;
+        }
+    }
+    &--suptitle{
+        font-size: 2.1rem;
+        br{
+            display: none;
+        }
+    }
+    &__bottom{
+        flex-wrap: wrap;
+        &-right{
+            order: 0;
+        }
+        .catalog-main__btn{
+            order: 1;
+            margin: auto;
+            padding: 0.9rem;
+        }
+        &-right{
+            width: 100%;
+            gap: 0;
+            padding-bottom: 2.1rem;
+            border-bottom: 0.1rem solid rgba(255,255,255, 0.2);
+        }
+        .right{
+            &__circle{
+                svg{
+                    width: 7.5rem;
+                    height: 7.5rem;
+                }
+                p{
+                    font-size: 4rem;
+                }
+            }
+            &__item{
+                display: flex;
+                align-items: center;
+                gap: 0.6rem;
+                &:nth-child(2) .right__circle p{
+                    transform: translate(33%, -50%);
+                }
+            }
+            &__item--text{
+                position: static;
+                width: 8.6rem;
+                font-size: 1.6rem;
+            }
+        }
+    }
+   }
+   .advantages{
+    padding: 2.8rem 1.5rem 3.6rem;
+    .swiper-slide{
+        width: 21.5rem;
+    }
+    &__img{
+        width: 7rem;
+        height: 7rem;
+    }
+    &__name{
+        font-size: 2rem;
+        &.border-name{
+            color: $black;
+            -webkit-text-stroke: 0;
+            br{
+                display: none;
+            }
+        }
+    }
+    &__text{
+        font-size: 1.4rem;
+    }
+   }
+   .wrap{
+        padding: 1.9rem 0;
+        &__item{
+            font-size: 2rem;
+            svg:nth-child(1) {
+                width: 7.4rem;
+                height: 4.4rem;
+            }
+            svg:nth-child(2) {
+                width: 2rem;
+                height: 2rem;
+            }
+        }
+        &__items{
+            gap: 1.5rem;
+        }
+    }
+}
 
-
-
-
-// @media (max-width: 1440px){
-//     html{
-//         font-size: calc(100vw / 1440 * 10);
-//     }
-// }
-
-// @media (max-width: 1000px){
-//     html{
-//         font-size: calc(100vw / 360 * 10);
-//     }
-// } 
 

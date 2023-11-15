@@ -141,3 +141,82 @@
         }
     }
   }
+
+  // Adaptive 
+
+@media (max-width: 962px){
+  .header{
+    padding-top: 1.4rem;
+    &.fixed{
+      transform: translateY(0);
+      .header__top{
+        border-bottom: 0.1rem solid $black;
+        transition: all 0.3s
+      }
+    }
+    &__contact--first{
+      display: none;
+    }
+    &__top{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: none;
+    }
+    &__contact--second{
+      align-items: center;
+      padding-top: 0;
+      gap: 1.6rem;
+    }
+    &__logo img{
+      width: 13.9rem;
+      height: 4.6rem;
+    }
+    .contact{
+      &__menus{
+        display: none;
+      }
+      &__tel--wrapper{
+        display: none;
+      }
+      &__menu{
+        width: 4rem;
+        height: 4rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        svg{
+          width: 2rem;
+          height: 2rem;
+        }
+      }
+    }
+    .hamburger {
+      font-size: 1.8rem;
+      font-weight: 400;
+      color: $black;
+      text-transform: uppercase;
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+    }
+    .hamburger{
+      &__menu {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        padding-left: 0.8rem;
+        span{
+          width: 2rem;
+          height: 0.1rem;
+          border-radius: 1rem;
+          background-color: $black;
+          display: block;
+        }
+      }
+    }
+    &__bottom{
+      display: none;
+    }
+  }
+}
