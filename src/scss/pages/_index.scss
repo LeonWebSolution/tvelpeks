@@ -798,6 +798,10 @@
                 color: $white_50;
             }
         }
+        &:hover{
+            border: 0.1rem solid $hover_yellow;
+            transition: all 0.3s;
+        }
     }
     .projects__tab-slider{
         width: 100%;
@@ -933,6 +937,10 @@
         padding: 0.8rem 1.5rem;
         color: $black;
         cursor: pointer;
+        &:hover{
+            border-color: $hover_yellow;
+            transition: all 0.3s;
+        }
         &.active{
             border: none;
             background-color: $black;
@@ -951,7 +959,6 @@
     &__img{
         position: relative;
         margin-bottom: 3rem;
-        padding-right: 2rem;
         img{
             width: 61.8rem;
             border-radius: 2rem
@@ -1038,6 +1045,17 @@
         }
         .news__info--date{
             margin-bottom: 1.5rem;
+        }
+    }
+    &__news{
+        padding: 0;
+        padding-right: 2rem;
+        transform: all 0.3s;
+        &:hover{
+            padding: 2rem;
+            background-color: $white;
+            border-radius: 2rem;
+            border-bottom: 0.1rem solid $black;
         }
     }
 }
