@@ -141,6 +141,20 @@ document.addEventListener('DOMContentLoaded', function () {
           centerInsufficientSlides: true,
           loop: true,
       });
+      var production = new Swiper('.production__slider', {
+        slidesPerView: 'auto',
+        spaceBetween: 10,
+        initialSlide: 0, 
+        centerInsufficientSlides: true,
+        loop: true,
+    });
+    var production = new Swiper('.services__slider', {
+      slidesPerView: 'auto',
+      spaceBetween: 10,
+      initialSlide: 0, 
+      centerInsufficientSlides: true,
+      loop: false,
+  });
   }
 });
 

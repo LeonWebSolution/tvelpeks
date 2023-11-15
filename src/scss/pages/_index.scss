@@ -246,6 +246,12 @@
     }
     &__btn{
         padding: 1.5rem 3.5rem;
+        &--mobile{
+           display: none;
+        }
+    }
+    .swiper-wrapper{
+        display: grid;
     }
     &__wrapper{
         display: grid;
@@ -435,6 +441,9 @@
         top: -68rem;
         z-index: -1;
     }
+    &__btn--all-mobile{
+        display: none;
+    }
     &__top{
         display: flex;
         justify-content: space-between;
@@ -453,8 +462,11 @@
         color: $black;
         padding: 1.5rem 3.5rem;
     }
+    .swiper-slide{
+        width: 53.3rem;
+    }
     &__slide{
-        width: 53.3rem !important;
+        width: 53.3rem;
         cursor: pointer;
         &:hover .solutions__slide--name{
             border-color: $primary;
@@ -505,6 +517,9 @@
     &__btn{
         padding: 1.5rem 3.5rem;
     }
+    &__btn--mobile{
+        display: none;
+    }
     &__wrapper{
         display: flex;
         gap: 1.5rem;
@@ -512,6 +527,9 @@
     }
     &__top{
         margin-bottom: 3.9rem;
+    }
+    .swiper-slide{
+        width: 42.3rem;
     }
     &__item{
         width: 42.3rem;
@@ -1192,6 +1210,193 @@
             gap: 1.5rem;
         }
     }
+    .production{
+        padding: 5rem 1.5rem 5.5rem;
+        .swiper-wrapper{
+            display: flex;
+        }
+        &__wrapper{
+            gap: 0;
+        }
+        .swiper-slide{
+            width: 26.1rem;
+        }
+        &__item{
+            &--img img{
+                height: 19rem;
+            }
+            &--name{
+                font-size: 1.8rem;
+                padding-right: 1.6rem;
+            }
+            &--text{
+                padding-right: 1.6rem;
+            }
+        }
+        &__btn{
+            display: none;
+            &--mobile{
+                margin-top: 2rem;
+                display: block;
+                width: 100%;
+                padding: 1.5rem;
+            }
+        }
+        &__inner{
+            margin-bottom: 2.5rem;
+        }
+    }
+    .support-form{
+        flex-direction: column;
+        padding-top: 4rem;
+        &__content{
+            padding: 0;
+            padding: 0 0.7rem;
+        }
+        &__img img{
+            width: 100%;
+            height: 26.1rem;
+        }
+        &__title{
+            font-size: 3.4rem;
+            margin-bottom: 2rem;
+        }
+        &__suptitle{
+            font-size: 2rem;
+            margin-bottom: 2rem;
+        }
+        &__action{
+            align-items: center;
+        }
+        &__btn{
+            font-size: 1.6rem;
+            padding: 1.7rem 2rem;
+            white-space: nowrap;
+        }
+        &__input--box{
+            width: 15.7rem;
+            border-radius: 10rem;
+        }
+        &__input{
+            padding: 1.9rem 1.6rem 1.6rem;
+            height: 5.4rem
+        }
+        &__agreement{
+            margin-bottom: 3rem;
+            font-size: 1.2rem;
+            font-family: 'Graphik LCG';
+        }
+        input:valid ~ .label-name,
+        input:focus ~ .label-name{
+            font-size: 1rem;
+        }
+    }
+    .solutions{
+        padding-top: 6rem;
+        &__btn--all{
+            display: none;
+        }
+        &__btn--all-mobile{
+            display: block;
+            width: 100%;
+            padding: 1.5rem;
+        }
+        .slider__arrows{
+            display: none;
+        }
+        &__wrapper{
+            margin-bottom: 3rem;
+        }
+        &__top{
+            margin-bottom: 2.5rem;
+        }
+        &__bg{
+            display: none;
+        }
+        .swiper-slide{
+            width: 30rem;
+        }
+        &__slide{
+            position: relative;
+            &--img img{
+                width: 100%;
+                height: 20rem;
+            }
+            &--name{
+                width: 28rem;
+            }
+            &--text{
+                width: 28rem;
+            }
+            &--link{
+                position: absolute;
+                top: 14.7rem;
+                right: 1rem;
+            }
+        }
+    }
+    .services{
+        &__btn{
+            display: none;
+        }
+        &__btn--mobile{
+            display: block;
+            width: 100%;
+            padding: 1.5rem;
+            margin-top: 3rem;
+            border: 1px solid  $black;
+            background: transparent;
+            color: $black;
+        }
+        &__top{
+            margin-bottom: 2.5rem;
+        }
+        .swiper-slide{
+            width: 30rem;
+        }
+        .swiper-wrapper{
+            display: flex;
+            flex-wrap: nowrap;
+            gap: 0;
+        }
+        &__item{
+            padding: 0;
+            background: transparent;
+            &--img{
+                border-radius: 1.5rem;
+                width: 100%;
+                height: 25.3rem;
+                background: linear-gradient(180deg, #EFEFF2 0%, #F4F4F6 100%);
+            }
+            &:nth-child(1) img{
+                width: 19.4rem;
+                height: 18.5rem;
+            }
+            &:nth-child(2) img{
+                width: 19.4rem;
+                height: 18.5rem;
+            }
+            &:nth-child(3) img{
+                width: 21.4rem;
+                height: 18.5rem;
+            }
+            &:nth-child(4) img{
+                width: 15.4rem;
+                height: 18.5rem;
+            }
+            &:nth-child(5) img{
+                width: 15.4rem;
+                height: 18.5rem;
+            }
+        }
+        &__item:nth-child(4){
+            display: block;
+        }
+        &__item:nth-child(5){
+            display: block;
+        }
+    }
 }
+
 
 
