@@ -125,6 +125,10 @@
         height: 4rem;
         border-radius: 50%;
         background-color: #EFEFF2;
+        &:hover{
+          background-color: $primary;
+          transition: all 0.3s;
+        }
         cursor: pointer;
         &:nth-child(1) svg{
             width: 2.1rem;

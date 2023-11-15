@@ -22,8 +22,19 @@
             transition: all 0.3s;
         }
     }
+    &__ba{
+        &:hover{
+            background-color: $hover_black;
+            transition: all 0.3s;
+        }
+    }
     &__stroke{
         border-radius: 59px;
         border: 0.1rem solid $black;
+        &:hover{
+            border-color: $hover_yellow;
+            transition: all 0.3s;
+            color: $hover_yellow;
+        }
     }
 }

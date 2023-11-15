@@ -38,6 +38,9 @@ $gray3: #838C95;
 #swiper-button-prev-reviews:hover svg stop{
     stop-color: red;
 }
+input:hover{
+    opacity: 1 !important;
+}
 .section__header{
     display: flex;
     justify-content: space-between;
