@@ -182,6 +182,8 @@ document.getElementById('supportForm').addEventListener('submit', function(event
 
 
 
+
+
 document.addEventListener("DOMContentLoaded", function () {
     const zoomedImage = document.getElementById("zoomed-image");
 
