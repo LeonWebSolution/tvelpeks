@@ -12,6 +12,10 @@
         font-size: 1.8rem;
         color: #292A29;
         text-transform: uppercase;
+        &:hover{
+            background-color: $hover_yellow;
+            transition: all 0.3s;
+        }
     }
     &__b{
         background-color: $black;
