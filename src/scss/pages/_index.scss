@@ -702,6 +702,10 @@
             align-items: center;
             gap: 1.8rem;
             color: $black;
+            &:hover{
+                color: $primary;
+                transition: all 0.3s;
+            }
             &:hover svg stop{
                 stop-color: $primary;
                 transition: all 0.3s;
@@ -798,6 +802,13 @@
     .projects__tab-slider{
         width: 100%;
     }
+    .projects__slide{
+        cursor: pointer;
+    }
+    .projects__slide:hover .projects__lable{
+        background-color: $primary;
+        transition: all 0.3s;
+    }
     &__slider{
         display: none !important;
         margin-bottom: 5rem;
@@ -859,6 +870,12 @@
         }
     }
     &__slide{
+        cursor: pointer;
+        &:hover{
+          .reviews__slide--link--rev{
+            color: $primary;
+          }  
+        }
         &--img{
             height: 31.9rem;
             margin: 0;
@@ -880,6 +897,10 @@
             text-decoration: underline !important;
             font-size: 1.6rem;
             margin-bottom: 4.1rem;
+            &:hover{
+                  color: $primary;
+                  transition: all 0.3s;
+                } 
         }
         &--link--rev{
             display: flex;
@@ -925,11 +946,12 @@
     &__wrapper{
         display: flex;
         margin-bottom: 5rem;
-        gap: 5rem;
+        gap: 1rem;
     }
     &__img{
         position: relative;
         margin-bottom: 3rem;
+        padding-right: 2rem;
         img{
             width: 61.8rem;
             border-radius: 2rem
@@ -972,9 +994,22 @@
             display: flex;
             justify-content: space-between;
             gap: 3rem;
+            transition: all 0.3s;
             width: 100%;
             padding-bottom: 2.1rem;
             border-bottom: 0.1rem solid $black;
+            padding: 2.1rem 2.5rem;
+            &:hover{
+                border-radius: 3rem;
+                background-color: $white;
+                transition: all 0.3s;
+                .news__label{
+                    top: 2.1rem;
+                    left: 2.5rem;
+                    transition: all 0.3s;
+                    background-color: $primary;
+                }
+            }
             &-content{
                 padding-top: 4.2rem;
             }
@@ -1113,6 +1148,10 @@
         a{
             display: inline;
             color: $black;
+            &:hover{
+                color: $black;
+                text-decoration: underline;
+            }
         }
     }
 }

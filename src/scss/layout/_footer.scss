@@ -24,6 +24,13 @@
             gap: 2rem;
             &-name{
                 color: $black;
+                &:hover{
+                    color: $primary;
+                    transition: all 0.3s;
+                }
+                svg{
+                    display: none;
+                }
             }
             &-b{
                 display: flex;
@@ -48,12 +55,21 @@
     &__tel{
         color: $black;
         margin-bottom: 2.2rem;
+        &:hover{
+            color: $primary;
+            transition: all 0.3s;
+        }
     }
     &__tel--btn{
         padding: 0.8rem 2rem;
         border: 1px solid $black;
         border-radius: 59px;
         margin-bottom: 4rem;
+        &:hover{
+            background-color: $primary;
+            transition: all 0.3s;
+            border-color: $primary; 
+        }
     }
     &__phones{
         display: flex;
@@ -63,13 +79,26 @@
     &__phone{
         color: $black;
         margin-bottom: 0.3rem;
+        &:hover{
+            color: $primary;
+            transition: all 0.3s;
+        }
         &--text{
             color: #838C95;
+            cursor: pointer;
+            &:hover{
+                color: $primary;
+                transition: all 0.3s;
+            }
         }
     }
     &__mail{
         color: $black;
         margin-bottom: 3rem;
+        &:hover{
+            color: $primary;
+            transition: all 0.3s;
+        }
     }
     &__socials{
         display: flex;
@@ -83,6 +112,10 @@
             display: flex;
             align-items: center;
             justify-content: center;
+            &:hover{
+                background-color: $primary;
+                transition: all 0.3s;
+            }
             svg{
                 width: 2.4rem;
                 height: 2.4rem;
@@ -114,10 +147,21 @@
         &:nth-child(3){
             margin-right: 5rem;
         }
+        &:hover{
+            color: #000;
+            transition: all 0.3s;
+        }
     }
     &__nexman{
         display: flex;
         align-items: center;
+        transition: all 0.3s;
+        &:hover{
+            svg path{
+                fill: $primary;
+                transition: all 0.3s;
+            }
+        }
         svg{
             width: 8.6rem;
             height: 1.4rem;
