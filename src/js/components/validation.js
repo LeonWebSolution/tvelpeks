@@ -15,3 +15,4 @@ document.getElementById('supportForm').addEventListener('submit', function(event
         inputErrorLabel.classList.remove('visible');
     }
 });
+

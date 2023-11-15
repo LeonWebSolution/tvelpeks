@@ -257,19 +257,17 @@
     .dropdown{
         position: relative;
         width: 100%;
-        &::before{
-            content: '';
-            position: absolute;
-            right: 0;
-            top: 30%;
-            transform: translate(-40%);
-            width: 12.5px;
-            height: 7.5px;
-            background: url('../../images/dropdown.svg');
-            transition: all 0.3s ease-in-out;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        svg{
+            width: 1.1rem;
+            height: 0.55rem;
+            transition: all 0.3s;
         }
     }
-    .footer__nav--list.active .dropdown::before{
+    .footer__nav--list.active .dropdown svg{
         transform: rotate(180deg);
+        transition: all 0.3s;
     }
 }

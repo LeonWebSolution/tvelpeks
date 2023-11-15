@@ -24,10 +24,9 @@ function styles() {
 }
 
 function scripts() {
-    return src([
-        'src/js/components/*.js',
-        'src/js/app.js'
-    ])
+    return src('src/js/components/*.js')
+    .pipe(concat('app.js'))
+    .pipe(dest('src/js'))
     .pipe(browserSync.stream())
 }
 
@@ -55,7 +54,7 @@ function watching() {
     });
     watch(['src/scss/**/*.scss'], styles)
     watch(['src/images/'], images)
-    watch(['src/js/components/*.js', 'src/js/app.js'], scripts)
+    watch(['src/js/components/*.js'], scripts)
     watch(['src/*.html']).on('change', browserSync.reload)
 }
 

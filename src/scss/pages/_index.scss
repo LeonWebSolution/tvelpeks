@@ -630,6 +630,9 @@
         width: 86.2rem;
         &--text{
             margin-bottom: 4.6rem;
+            &:nth-child(1){
+                margin: 0;
+            }
         }
         &--list{
             display: flex;
@@ -739,15 +742,33 @@
     &__btn{
         width: 100%;
         padding: 1.5rem;
+        &--all--mobile{
+            display: none;
+        }
     }
 }
 
 .projects{
     padding-bottom: 12.2rem;
     overflow: hidden;
+    &__tab-slider{
+        width: auto !important;
+        margin-left: 0 !important;
+    }
     &__top{
         flex-wrap: wrap;
         // margin-bottom: 4rem;
+    }
+    &__review--btn{
+        display: none;
+    }
+    &__lable{
+        position: absolute;
+        padding: 0.8rem 1.5rem;
+        background-color: $white;
+        top: 1.6rem;
+        left: 1.5rem;
+        color: $black;
     }
     &__title{
         width: 100%;
@@ -755,6 +776,9 @@
     &__tabs{
         display: flex;
         gap: 0.8rem;
+        .swiper-slide{
+            width: auto;
+        }
     }
     &__tab{
         padding: 0.8rem 1.5rem;
@@ -771,6 +795,9 @@
             }
         }
     }
+    .projects__tab-slider{
+        width: 100%;
+    }
     &__slider{
         display: none !important;
         margin-bottom: 5rem;
@@ -785,6 +812,7 @@
         }
     }
     &__slide{
+        position: relative;
         &--name{
             margin-bottom: 1.5rem;
         }
@@ -811,6 +839,9 @@
     }
     &__top{
         margin-bottom: 4rem;
+    }
+    &__btn--all--mobile{
+        display: none;
     }
     &__slider{
         .swiper-slide{
@@ -886,6 +917,10 @@
             background-color: $black;
             color: $white;
         }
+    }
+    .swiper-slide{
+        height: auto;
+        display: flex;
     }
     &__wrapper{
         display: flex;
@@ -980,6 +1015,7 @@
         background-color: $primary;
     }
     &__img{
+        position: relative;
         img{
             width: 69.2rem;
             border-radius: 1.5rem;
@@ -995,6 +1031,14 @@
     &__suptitle{
         color: $black;
         margin-bottom: 5.2rem;
+    }
+    .worker{
+        position: absolute;
+        right: 1rem;
+        bottom: 1.5rem;
+        padding: 1.2rem 2rem;
+        border-radius: 2rem;
+        background-color: $primary;
     }
     .question-form{
         width: 100%;
@@ -1336,6 +1380,8 @@
         }
     }
     .services{
+        padding-top: 0;
+        padding-bottom: 5.4rem;
         &__btn{
             display: none;
         }
@@ -1394,6 +1440,349 @@
         }
         &__item:nth-child(5){
             display: block;
+        }
+    }
+    .prod{
+        &__wrapper{
+            flex-direction: column;
+            border: none;
+        }
+        &__content{
+            width: 100%;
+        }
+        &__title{
+            font-size: 6.1rem;
+            letter-spacing: -3.097px;
+            margin-left: 0;
+            padding-top: 1rem;
+            margin-bottom: 1.5rem;
+        }
+        &__content{
+            &--text{
+                font-size: 1.8rem;
+                font-family: 'Graphik LCG';
+                margin-bottom: 0.5rem;
+                &:nth-child(1){
+                    margin-bottom: 1rem;
+                }
+            }
+            &--list{
+                &--number{
+                    font-size: 2.8rem;
+                }
+                &--text{
+                    font-size: 1.4rem;
+                }
+                &--item:nth-child(1){
+                    min-width: 10.5rem;
+                    padding-right: 1rem;
+                    border: none;
+                    margin-right: 2.6rem;
+                }
+                &--item:nth-child(2){
+                    min-width: 10.5rem;
+                    padding-left: 0;
+                    padding-right: 1rem;
+                    border: none;
+                }
+                &--item:nth-child(3){
+                    padding-left: 0;
+                }
+            }
+        }
+        &__certificates{
+            display: flex;
+            padding: 1.5rem;
+            gap: 2.4rem;
+            background: $gradient;
+            border-radius: 1.2rem;
+            &--img img:nth-child(1){
+                width: 5.8rem;
+                height: 8.2rem;
+            }
+            &--img img:nth-child(2){
+                width: 4.7rem;
+                height: 6.7rem;
+                margin-left: -0.6rem;
+            }
+            &--img img:nth-child(3){
+                width: 3.8rem;
+                height: 5.3rem;
+                margin-left: -0.6rem;
+            }
+            &--img img:nth-child(4){
+                width: 3rem;
+                height: 4.1rem;
+                margin-left: -0.6rem;
+            }
+            &--btn{
+                flex-direction: column;
+                align-items: flex-start;
+                font-size: 1.4rem;
+                gap: 1.4rem;
+                svg{
+                    width: 3rem;
+                    height: 3rem;
+                }
+            }
+        }
+    }
+    .work{
+        padding-bottom: 5.3rem;
+        &__btns{
+            display: none;
+        }
+        &__btn--all--mobile{
+            display: block;
+            padding: 1.85rem 2.5rem;
+            font-size: 1.6rem;
+            width: 100%;
+        }
+        &__top{
+            margin-bottom: 2.5rem;
+        }
+        .slider__wrapper .swiper-slide{
+            width: 30rem;
+        }
+        .slider__wrapper .swiper-slide img{
+            height: 19.3rem;
+        }
+        &__slide-name{
+            font-size: 1.8rem;
+        }
+        &__slide--img{
+            height: 19.3rem;
+            margin-bottom: 2rem;
+        }
+        &__slider{
+            margin-bottom: 3rem;
+        }
+        &__bottom--btns{
+            display: flex;
+            gap: 1.6rem;
+        }
+        &__btn{
+            font-size: 1.6rem;
+            padding: 1.85rem 2.5rem;
+            span{
+                display: none;
+                white-space: nowrap;
+            }
+        }
+    }
+    .projects{
+        padding-bottom: 5.5rem;
+        .slider__arrows{
+            display: none;
+        }
+        &__tab-slider{
+            width: 100% !important;
+            margin-left: auto !important;
+        }
+        &__title{
+            margin-bottom: 2.5rem;
+        }
+        &__top{
+            margin-bottom: 1.5rem;
+        }
+        &__tabs{
+            gap: 0;
+        }
+        &__tab{
+            padding: 0.8rem 1.2rem;
+            font-size: 1.6rem;
+            white-space: nowrap;
+        }
+        &__slider{
+            margin-bottom: 2.8rem;
+            .swiper-slide img {
+                margin-bottom: 2.5rem;
+                height: 19.3rem;
+                border-radius: 2rem;
+                object-fit: cover;
+            }
+            .slider__wrapper .swiper-slide{
+                width: 30rem;
+                min-height: 100%;
+            }
+        }
+        &__slide--name{
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+        }
+        &__slide--text{
+            font-size: 1.4rem;
+            padding-right: 1.7rem;
+            margin-bottom: 1.5rem;
+        }
+        &__lable{
+            padding: 0.8rem 1.5rem;
+            top: 0.5rem;
+            left: 0.5rem;
+            font-size: 1.4rem;
+        }
+        &__review--btn{
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            svg{
+                width: 3.3rem;
+                height: 3.3rem;
+            }
+        }
+    }
+    .reviews{
+        padding-bottom: 5.5rem;
+        &__btns{
+            display: none;
+        }
+        &__top{
+            margin-bottom: 2.5rem;
+        }
+        &__slider .swiper-slide{
+            display: flex;
+            flex-direction: column;
+            padding: 2rem 1.5rem;
+            width: 30rem;
+            height: auto;
+        }
+        &__btn--all--mobile{
+            display: block;
+        }
+        &__slide{
+            &--img{
+                display: none;
+            }
+            &--content{
+                padding: 0;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+            }
+            &--name{
+                font-size: 1.8rem;
+                margin-bottom: 1.2rem;
+            }
+            &--link{
+               display: none; 
+            }
+        }
+        .swiper-wrapper{
+            // align-items: stretch;
+            height: 100%;
+        }
+        &__btn--all--mobile{
+            width: 100%;
+            padding: 1.5rem;
+            margin-top: 3rem;
+        }
+    }
+    .news{
+        padding-top: 4.5rem;
+        padding-bottom: 3.5rem;
+        margin-bottom: 4rem;
+        &__news{
+            display: none;
+        }
+        &__title{
+            margin-bottom: 2.5rem;
+        }
+        &__top{
+            flex-wrap: wrap;
+            margin-bottom: 3rem;
+        }
+        &__tab{
+            font-size: 1.4rem;
+        }
+        &__tabs{
+            width: 100%;;
+        }
+        &__articles--item-img{
+            display: none;
+        }
+        .swiper-slide{
+            height: auto;
+            width: 28rem;
+            border: 0.1px solid $black;
+            padding: 1.5rem;
+            border-radius: 2rem;
+        }
+        .swiper-wrapper{
+            display: flex;
+            flex-direction: row;
+            gap: 0;
+        }
+        .articles__slider{
+            width: 100%;
+        }
+        .news__articles .news__label{
+            top: 1.5rem;
+            left: 1.5rem;
+        }
+    }
+    .form-question{
+        &__wrapper{
+            flex-direction: column;
+            gap: 2.5rem;
+        }
+        &__content{
+            padding: 0;
+            padding: 4rem 0.7rem 0;
+        }
+        &__img{
+            height: 22rem;
+        }
+        &__img img{
+            width: 100%;
+            height: 22rem;
+            object-fit: cover;
+        }
+        &__title{
+            font-size: 5rem;
+            margin-bottom: 1.5rem;
+        }
+        &__suptitle{
+            margin-bottom: 2.5rem;
+        }
+        textarea{
+            width: 33.5rem !important;
+        }
+        &__descr{
+            font-size: 1.2rem;
+        }
+        .question-form{
+            margin-bottom: 1.5rem;
+        }
+        .worker{
+            left: 0.5rem;
+            bottom: 1rem;
+            border-radius: 1rem;
+            padding: 1rem 1.2rem;
+            right: auto;
+            &__text{
+                font-size: 1.2rem;
+            }
+        }
+    }
+    
+    .form-question .question-form input{
+        width: 15.9rem;
+        border-radius: 10rem;
+    }
+    .partners{
+        padding: 5.5rem 0;
+        &__slider .swiper-slide{
+            width: 11.4rem;
+            height: 11.4rem;
+            margin-left: -0.7rem;
+            img{
+                width: 50%;
+                object-fit: cover;
+            }
+        }
+        &__title{
+            margin-bottom: 2.5rem;
         }
     }
 }
