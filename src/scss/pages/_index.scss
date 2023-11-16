@@ -952,7 +952,8 @@
         display: flex;
     }
     &__wrapper{
-        display: flex;
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
         margin-bottom: 5rem;
         gap: 1rem;
     }
@@ -1050,12 +1051,18 @@
     &__news{
         padding: 0;
         padding-right: 2rem;
-        transform: all 0.3s;
+        transition: all 0.3s;
+        min-width: 100%;
         &:hover{
             padding: 2rem;
             background-color: $white;
             border-radius: 2rem;
             border-bottom: 0.1rem solid $black;
+            transition: all 0.3s;
+            img{
+                width: 59.8rem;
+                transition: all 0.3s;
+            }
         }
     }
 }
@@ -1075,6 +1082,7 @@
         }
     }
     &__content{
+        width: 100%;
         padding: 11.2rem 7.1rem 0 6.5rem;
     }
     &__title{
@@ -1123,6 +1131,7 @@
             background-color: transparent;
             height: 6.6rem;
             opacity: 0.3;
+            display: block;
         }
         textarea{
             width: 58rem;
@@ -1157,7 +1166,7 @@
             opacity: 1;
         }
         &__btn{
-            width: 100%;
+            width: 58rem;
             padding: 1.5rem;
         }
     }
