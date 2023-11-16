@@ -10,3 +10,22 @@ window.addEventListener("scroll", function() {
     sectionMain.classList.remove("fixed");
   }
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+  var myElement = document.querySelector('.header');
+  var lastScrollTop = 0;
+
+  window.addEventListener('scroll', function() {
+    var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+    if (scrollTop > lastScrollTop && scrollTop > 500) {
+      // Скролл вниз
+      myElement.classList.add('hidden');
+    } else {
+      // Скролл вверх или на самом верху
+      myElement.classList.remove('hidden');
+    }
+
+    lastScrollTop = scrollTop;
+  });
+});

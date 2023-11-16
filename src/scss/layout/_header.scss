@@ -157,8 +157,11 @@
     &.fixed{
       transform: translateY(0);
       .header__top{
-        border-bottom: 0.1rem solid $black;
         transition: all 0.3s
+      }
+      &.hidden{
+        transform: translateY(-100%);
+        transition: all 0.3s;
       }
     }
     &__contact--first{
