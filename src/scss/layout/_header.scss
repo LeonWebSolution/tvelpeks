@@ -26,7 +26,7 @@
           width: 2rem;
           height: 1.7rem;
         }
-        &--t {
+        &-t {
           font-size: 1.8rem;
           color: #292A29;
           text-transform: uppercase;
@@ -42,12 +42,12 @@
           height: 6.6rem;
         }
       }
-      &__contact--first {
+      &__contact-first {
         display: flex;
         align-items: center;
         gap: 4rem;
       }
-      &__contact--second {
+      &__contact-second {
         display: flex;
         align-items: flex-start;
         justify-content: flex-end;
@@ -55,7 +55,7 @@
         gap: 1rem;
       }
       .contact{
-        &__tel--wrapper {
+        &__tel-wrapper {
             display: flex;
             align-items: flex-end;
             flex-direction: column;
@@ -66,14 +66,14 @@
             text-transform: uppercase;
             color: #292A29;
           }
-          &__tel--btn {
+          &__tel-btn {
             padding: 0.75rem 1.5rem;
             font-size: 1.2rem;
             font-weight: 400;
             line-height: 120%;
             text-transform: uppercase;
             border-radius: 5.9rem;
-            border: 1px solid var(--black, #292A29);
+            border: 1px solid var(-black, #292A29);
             display: block;
             width: 12.4rem;
             margin-left: auto;
@@ -117,7 +117,7 @@
             gap: 1.2rem;
         }
     }
-    &__social--btn{
+    &__social-btn{
         display: flex;
         justify-content: center;
         align-items: center;
@@ -164,7 +164,7 @@
         transition: all 0.3s;
       }
     }
-    &__contact--first{
+    &__contact-first{
       display: none;
     }
     &__top{
@@ -173,7 +173,7 @@
       align-items: center;
       border-bottom: none;
     }
-    &__contact--second{
+    &__contact-second{
       align-items: center;
       padding-top: 0;
       gap: 1.6rem;
@@ -186,7 +186,7 @@
       &__menus{
         display: none;
       }
-      &__tel--wrapper{
+      &__tel-wrapper{
         display: none;
       }
       &__menu{

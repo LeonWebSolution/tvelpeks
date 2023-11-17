@@ -10,7 +10,7 @@
     &__nav{
         display: flex;
         gap: 11rem;
-        &--block{
+        &-block{
             display: flex;
             flex-direction: column;
             gap: 3.8rem;
@@ -18,7 +18,7 @@
                 margin-right: 10rem;
             }
         }
-        &--list{
+        &-list{
             display: flex;
             flex-direction: column;
             gap: 2rem;
@@ -39,7 +39,7 @@
             }
         }
     }
-    &__list--link{
+    &__list-link{
        color: $body_text;
     }
     &__logo{
@@ -60,7 +60,7 @@
             transition: all 0.3s;
         }
     }
-    &__tel--btn{
+    &__tel-btn{
         padding: 0.8rem 2rem;
         border: 1px solid $black;
         border-radius: 59px;
@@ -83,7 +83,7 @@
             color: $primary;
             transition: all 0.3s;
         }
-        &--text{
+        &-text{
             color: #838C95;
             cursor: pointer;
             &:hover{
@@ -104,7 +104,7 @@
         display: flex;
         justify-content: flex-end;
         gap: 1.5rem;
-        &--item{
+        &-item{
             background-color: $white;
             border-radius: 50%;
             width: 4.8rem;
@@ -132,7 +132,7 @@
             padding: 0;
             padding-top: 3rem;
         }
-        &--wrapper{
+        &-wrapper{
             display: flex;
         }
     }
@@ -166,7 +166,7 @@
             width: 8.6rem;
             height: 1.4rem;
         }
-        &--text{
+        &-text{
             color: #838C95;
         }
     }
@@ -182,20 +182,20 @@
             order: 1;
             flex-direction: column;
             gap: 1.5rem;
-            &--list{
+            &-list{
                 gap: 0rem;
                 &.all-list{
                     gap: 1.5rem;
-                    .footer__list--link{
+                    .footer__list-link{
                         display: none;
                     }
                 }
             }
-            &--block{
+            &-block{
                 gap: 1.5rem;
             }
         }
-        &__list--link{
+        &__list-link{
             font-size: 1.4rem;
         }
         &__contacts{
@@ -216,7 +216,7 @@
             text-align: center;
             font-size: 2.8rem;
             margin-bottom: 2rem;
-            &--btn{
+            &-btn{
                 display: block;
                 margin: auto;
                 width: 100%;
@@ -232,14 +232,14 @@
             justify-content: space-between;
             margin-bottom: 1rem;
         }
-        &__phone--text{
+        &__phone-text{
             font-size: 1.2rem;
         }
         &__mail{
             width: 46%;
         }
         &__phone{
-            &--block{
+            &-block{
                 width: 46%;
             }
         }
@@ -250,7 +250,7 @@
             flex-direction: column;
             align-items: flex-start;
             border: none;
-            &--wrapper{
+            &-wrapper{
                 flex-direction: column;
                 order: 1;
                 gap: 1.5rem;
@@ -283,19 +283,19 @@
     .footer__bottom.container{
         padding: 0rem 1.2rem;
     }
-    .footer__nav--list-b {
+    .footer__nav-list-b {
         max-height: 0;
         overflow: hidden;
         transition: max-height 0.3s ease-in-out;
     }
-    .footer__nav--list.active .footer__nav--list-b {
+    .footer__nav-list.active .footer__nav-list-b {
         transition: max-height 0.3s ease-in-out;
     }
-    .footer__nav--list.active .footer__nav--list-name{
+    .footer__nav-list.active .footer__nav-list-name{
         margin-bottom: 2rem;
         transition: all 0.3s;
     }
-    .footer__nav--block:nth-child(2){
+    .footer__nav-block:nth-child(2){
         margin: 0;
     }
     .dropdown{
@@ -311,7 +311,7 @@
             transition: all 0.3s;
         }
     }
-    .footer__nav--list.active .dropdown svg{
+    .footer__nav-list.active .dropdown svg{
         transform: rotate(180deg);
         transition: all 0.3s;
     }
