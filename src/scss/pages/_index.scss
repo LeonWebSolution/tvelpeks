@@ -85,12 +85,12 @@
         width: 0.95rem;
         height: 0.95rem;
     }
-    &__bottom{
+    &-bottom{
         display: flex;
         justify-content: space-between;
         width: 100%;
     }
-    &__bottom-right{
+    &-bottom-right{
         display: flex;
         gap: 12.3rem;
     }
@@ -557,7 +557,7 @@
         }
         &:nth-child(5){
             display: flex;
-            width: 64.3rem;
+            width: 63.7rem;
             align-items: center;
             gap: 6.1rem;
          }
@@ -1238,7 +1238,7 @@
             display: none;
         }
     }
-    &__bottom{
+    &-bottom{
         flex-wrap: wrap;
         &-right{
             order: 0;

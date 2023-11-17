@@ -10,6 +10,7 @@
     &.fixed {
       transition: all 0.5s;
       transform: translateY(-57%);
+      box-shadow: 0rem 1.5rem 2.3rem 0rem rgba(10, 9, 11, 0.04);
     }
     &__top {
         display: grid;
@@ -106,12 +107,12 @@
         display: flex;
         justify-content: space-between;
         padding-bottom: 2.6rem;
-        &__social{
+        &-social{
             display: flex;
             align-items: center;
             gap: 3rem;
         }
-        &__socials{
+        &-socials{
             display: flex;
             align-items: center;
             gap: 1.2rem;
