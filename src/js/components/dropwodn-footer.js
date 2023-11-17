@@ -1,9 +1,9 @@
 document.addEventListener('DOMContentLoaded', function () {
-    var dropdowns = document.querySelectorAll('.footer__nav--list');
+    var dropdowns = document.querySelectorAll('.footer__nav-list');
   
     dropdowns.forEach(function (dropdown) {
-        var dropdownName = dropdown.querySelector('.footer__nav--list-name');
-        var dropdownContent = dropdown.querySelector('.footer__nav--list-b');
+        var dropdownName = dropdown.querySelector('.footer__nav-list-name');
+        var dropdownContent = dropdown.querySelector('.footer__nav-list-b');
   
         dropdownName.addEventListener('click', function () {
             // Проверяем, есть ли у элемента класс 'all-list'
