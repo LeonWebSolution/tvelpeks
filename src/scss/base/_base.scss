@@ -4,7 +4,7 @@
 	flex-direction: column;
 }
 html{
-    font-size: calc(100vw / 1440 * 10);
+    font-size: calc(100vw / 1440 * 9);
 }
 body{
     font-family: 'Halvar-Eng-Rg', sans-serif;
@@ -39,9 +39,9 @@ body{
     display: none;
 }
 
-@media (min-width: 1921px){
+@media (max-width: 1440px){
     html{
-        font-size: calc(100vw / 1440 * 8.5);
+        font-size: calc(100vw / 1440 * 10);
     }
 }
 
