@@ -15,30 +15,52 @@
         &:hover{
             background-color: $hover_yellow;
             transition: all 0.3s;
+            color: #292A29;
+            transform: scale(1.02);
         }
     }
     &--b{
         background-color: $black;
         color: $white;
         border-radius: 5.9rem;
+        transition: all 0.3s;
         &:hover{
-            background-color: $hover_black;
+            background-color: $hover_yellow;
             transition: all 0.3s;
+            color: #292A29;
+            transform: scale(1.02);
         }
     }
     &--ba{
+        transition: all 0.3s;
         &:hover{
-            background-color: $hover_black;
+            background-color: $hover_yellow;
             transition: all 0.3s;
+            transform: scale(1.02);
+        }
+    }
+    &--bay{
+        background-color: $black;
+        color: $white;
+        border-radius: 5.9rem;
+        transition: all 0.3s;
+        &:hover{
+            background-color: #000;
+            transition: all 0.3s;
+            color: $white;
+            transform: scale(1.02);
         }
     }
     &--stroke{
         border-radius: 59px;
         border: 0.1rem solid $black;
+        transition: all 0.3s;
         &:hover{
-            border-color: $hover_yellow;
+            background-color: $hover_yellow;
+            border: none;
             transition: all 0.3s;
-            color: $hover_yellow;
+            border-color: $hover_yellow;
+            transform: scale(1.02);
         }
     }
 }

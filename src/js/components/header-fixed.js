@@ -1,15 +1,22 @@
-window.addEventListener("scroll", function() {
-  var header = document.querySelector(".header");
-  var sectionMain = document.querySelector(".main__section");
-  
-  if (window.scrollY > 0) {
-    header.classList.add("fixed");
-    sectionMain.classList.add("fixed");
-  } else {
-    header.classList.remove("fixed");
-    sectionMain.classList.remove("fixed");
-  }
-});
+// let prevScrollPos = window.pageYOffset;
+//     const header = document.querySelector('.header');
+//     const mainSection = document.querySelector('.main__section');
+
+//     window.onscroll = function() {
+//       const currentScrollPos = window.pageYOffset;
+
+//       if (prevScrollPos > currentScrollPos) {
+//         // Скролл вверх
+//         header.classList.add('fixed');
+//         mainSection.classList.add('fixed');
+//       } else {
+//         // Скролл вниз
+//         header.classList.remove('fixed');
+//         mainSection.classList.remove('fixed');
+//       }
+
+//       prevScrollPos = currentScrollPos;
+//     };
 
 document.addEventListener('DOMContentLoaded', function() {
   var myElement = document.querySelector('.header');
@@ -18,14 +25,23 @@ document.addEventListener('DOMContentLoaded', function() {
   window.addEventListener('scroll', function() {
     var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
 
-    if (scrollTop > lastScrollTop && scrollTop > 500) {
+    if (scrollTop > lastScrollTop) {
       // Скролл вниз
-      myElement.classList.add('hidden');
+      if (scrollTop > 300) {
+        myElement.classList.add('top-del');
+      }
     } else {
-      // Скролл вверх или на самом верху
-      myElement.classList.remove('hidden');
+      // Скролл вверх
+      if (scrollTop > 300) {
+        myElement.classList.add('fixed');
+      } else {
+        myElement.classList.remove('fixed');
+      }
+
+      myElement.classList.remove('top-del');
     }
 
     lastScrollTop = scrollTop;
   });
 });
+

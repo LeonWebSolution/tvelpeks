@@ -41,6 +41,11 @@
     }
     &__list-link{
        color: $body_text;
+       transition: all 0.3s;
+       &:hover{
+        color: $black;
+        transition: all 0.3s;
+       }
     }
     &__logo{
         margin-bottom: 1rem;
@@ -112,9 +117,11 @@
             display: flex;
             align-items: center;
             justify-content: center;
+            transition: all 0.3s;
             &:hover{
                 background-color: $primary;
                 transition: all 0.3s;
+                transform: scale(1.1);
             }
             svg{
                 width: 2.4rem;
@@ -171,7 +178,11 @@
         }
     }
 }
-
+.none-hover{
+    &:hover{
+        color: $body_text;
+    }
+}
 @media (max-width: 962px){
     .footer{
         padding: 3.5rem 0 2.5rem;
