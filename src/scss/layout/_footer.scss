@@ -76,6 +76,13 @@
             border-color: $primary; 
         }
     }
+    &__phone-block{
+        transition: all 0.3s;
+        &:hover .footer__phone{
+            color: $hover_yellow;
+            transition: all 0.3s;
+        }
+    }
     &__phones{
         display: flex;
         flex-direction: column;
@@ -84,17 +91,9 @@
     &__phone{
         color: $black;
         margin-bottom: 0.3rem;
-        &:hover{
-            color: $primary;
-            transition: all 0.3s;
-        }
         &-text{
             color: #838C95;
             cursor: pointer;
-            &:hover{
-                color: $primary;
-                transition: all 0.3s;
-            }
         }
     }
     &__mail{
