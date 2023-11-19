@@ -18,6 +18,8 @@
       spaceBetween: 15,
       initialSlide: 0, 
       centerInsufficientSlides: true,
+      freeMode: true,
+      freeModeSticky: true,
       navigation: {
         nextEl: '#swiper-button-next-sol',
         prevEl: '#swiper-button-prev-sol',
@@ -29,6 +31,8 @@
       spaceBetween: 15,
       initialSlide: 0, 
       centerInsufficientSlides: true,
+      freeMode: true,
+      freeModeSticky: true,
       navigation: {
         nextEl: '#swiper-button-next-work',
         prevEl: '#swiper-button-prev-work',
@@ -40,6 +44,8 @@
       spaceBetween: 15,
       initialSlide: 0, 
       centerInsufficientSlides: true,
+      freeMode: true,
+      freeModeSticky: true,
       navigation: {
         nextEl: '#swiper-button-next-proj',
         prevEl: '#swiper-button-prev-proj',
@@ -51,6 +57,8 @@
       spaceBetween: 15,
       initialSlide: 0, 
       centerInsufficientSlides: true,
+      freeMode: true,
+      freeModeSticky: true,
       navigation: {
         nextEl: '#swiper-button-next-reviews',
         prevEl: '#swiper-button-prev-reviews',
@@ -63,6 +71,16 @@
       initialSlide: 0, 
       centerInsufficientSlides: true,
       loop: true,
+      breakpoints: {
+        200: {
+          freeMode: true,
+          freeModeSticky: true,
+        },
+        1024: {
+          freeMode: false,
+          freeModeSticky: false,
+        },
+      },
     });
     
     document.addEventListener('DOMContentLoaded', function () {
@@ -72,14 +90,18 @@
               spaceBetween: 30,
               initialSlide: 0, 
               centerInsufficientSlides: true,
-              loop: true,
+              loop: false,
+              freeMode: true,
+              freeModeSticky: true,
           });
           var production = new Swiper('.production__slider', {
             slidesPerView: 'auto',
             spaceBetween: 10,
             initialSlide: 0, 
             centerInsufficientSlides: true,
-            loop: true,
+            loop: false,
+            freeMode: true,
+            freeModeSticky: true,
         });
         var production = new Swiper('.services__slider', {
           slidesPerView: 'auto',
@@ -87,6 +109,8 @@
           initialSlide: 0, 
           centerInsufficientSlides: true,
           loop: false,
+          freeMode: true,
+          freeModeSticky: true,
       });
       var articles = new Swiper('.articles__slider', {
         slidesPerView: 'auto',
@@ -94,14 +118,18 @@
         initialSlide: 0, 
         centerInsufficientSlides: true,
         loop: false,
+        freeMode: true,
+        freeModeSticky: true,
     });
-    var projects = new Swiper('.projects__tab-slider', {
+    var articles = new Swiper('.projects__tab-slider', {
       slidesPerView: 'auto',
       spaceBetween: 10,
       initialSlide: 0, 
       centerInsufficientSlides: true,
       loop: false,
-  }); 
+      freeMode: true,
+      freeModeSticky: true,
+  });
       }
     });
     

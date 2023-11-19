@@ -293,6 +293,8 @@
             opacity: 1;
             border-color: $primary;
             transition: all 0.3s;
+            position: relative;
+            z-index: 1;
         }
         &-name{
             padding-bottom: 1.5rem;
@@ -1694,7 +1696,7 @@
         }
         &__content{
             &-text{
-                font-size: 1.8rem;
+                font-size: 1.6rem;
                 font-family: 'Graphik LCG';
                 margin-bottom: 3.5rem;
                 &:nth-child(1){
@@ -2031,8 +2033,11 @@
             display: none;
         }
     }
-    .form-question .input-group{
+    .block-input{
         width: 48.3%;
+    }
+    .form-question .input-group{
+        width: 100%;
     }
     .form-question .input-group.area{
         width: 100%;
@@ -2059,6 +2064,9 @@
 
 @media (max-width: 500px){
     .form-question .input-group {
+        width: 100%;
+    }
+    .block-input{
         width: 47.5%;
     }
     .form-question .form-question__img{
