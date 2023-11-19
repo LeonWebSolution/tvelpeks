@@ -57,7 +57,7 @@
         transition: all 0.3s;
         &:hover{
             background-color: $hover_yellow;
-            border: none;
+            border: 0.1rem solid transparent;
             transition: all 0.3s;
             border-color: $hover_yellow;
             transform: scale(1.02);

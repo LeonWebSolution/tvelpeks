@@ -89,46 +89,71 @@ function closeModal() {
   body.style.overflow = ''; 
 }
 document.addEventListener("DOMContentLoaded", function() {
+    function addActiveClasses(element, list, blurLink) {
+        element.classList.add('active');
+        list.classList.add('active');
+        blurLink.classList.add('active');
+    }
+
+    function removeActiveClasses(element, list, blurLink) {
+        element.classList.remove('active');
+        list.classList.remove('active');
+        if (!solutionsLinkIsActive() && !productionsLinkIsActive() && !element.classList.contains('active')) {
+            blurLink.classList.remove('active');
+        }
+    }
+
+    function solutionsLinkIsActive() {
+        return nameLinkSolutions.classList.contains('active');
+    }
+
+    function productionsLinkIsActive() {
+        return nameLinkProductions.classList.contains('active');
+    }
+
+    function createMouseoverHandler(element, list, blurLink, nextElement) {
+        return function() {
+            removeActiveClasses(element, list, blurLink);
+            addActiveClasses(nextElement, list, blurLink);
+        };
+    }
+
+    function createMouseleaveHandler(element, list) {
+        return function() {
+            removeActiveClasses(element, list, blurLink);
+        };
+    }
+
     var nameLinkSolutions = document.querySelector('.solutions__name-link');
     var solutionsList = document.querySelector('.solutions__list');
     var blurLink = document.querySelector('.blur-link');
     var nameLinkProductions = document.querySelector('.productions__name-link');
     var productionsList = document.querySelector('.productions__list');
 
-    nameLinkSolutions.addEventListener('click', function(event) {
-        event.preventDefault(); 
-        nameLinkSolutions.classList.toggle('active');
-        solutionsList.classList.toggle('active');
-        var productionsLinkIsActive = nameLinkProductions.classList.contains('active');
-        nameLinkProductions.classList.remove('active');
-        productionsList.classList.remove('active');
-        if (!productionsLinkIsActive && !nameLinkSolutions.classList.contains('active')) {
-            blurLink.classList.remove('active');
-        } else {
-        
-            if (!blurLink.classList.contains('active')) {
-                blurLink.classList.add('active');
-            }
-        }
+    nameLinkSolutions.addEventListener('mouseover', function() {
+        addActiveClasses(nameLinkSolutions, solutionsList, blurLink);
+    });
+    nameLinkSolutions.addEventListener('mouseleave', function() {
+        removeActiveClasses(nameLinkSolutions, solutionsList, blurLink);
     });
 
-    nameLinkProductions.addEventListener('click', function(event) {
-        event.preventDefault(); 
-        nameLinkProductions.classList.toggle('active');
-        productionsList.classList.toggle('active');
-        var solutionsLinkIsActive = nameLinkSolutions.classList.contains('active');
-        nameLinkSolutions.classList.remove('active');
-        solutionsList.classList.remove('active');
-
-        if (!solutionsLinkIsActive && !nameLinkProductions.classList.contains('active')) {
-            blurLink.classList.remove('active');
-        } else {
-          
-            if (!blurLink.classList.contains('active')) {
-                blurLink.classList.add('active');
-            }
-        }
+    nameLinkProductions.addEventListener('mouseover', function() {
+        addActiveClasses(nameLinkProductions, productionsList, blurLink);
     });
+    nameLinkProductions.addEventListener('mouseleave', function() {
+        removeActiveClasses(nameLinkProductions, productionsList, blurLink);
+    });
+
+    blurLink.addEventListener('mouseenter', function() {
+        // Добавьте здесь логику, если необходимо
+    });
+
+    var nextElementAfterNameLinkProductions = nameLinkProductions.nextElementSibling;
+
+    if (nextElementAfterNameLinkProductions) {
+        nextElementAfterNameLinkProductions.addEventListener('mouseover', createMouseoverHandler(nameLinkProductions, productionsList, blurLink, nextElementAfterNameLinkProductions));
+        nextElementAfterNameLinkProductions.addEventListener('mouseleave', createMouseleaveHandler(nextElementAfterNameLinkProductions, productionsList));
+    }
 });
 
     /**
@@ -153,6 +178,10 @@ document.addEventListener("DOMContentLoaded", function() {
       centerInsufficientSlides: true,
       freeMode: true,
       freeModeSticky: true,
+      snap: {
+        // Включаем снэпинг
+        snapToSlides: true,
+      },
       navigation: {
         nextEl: '#swiper-button-next-sol',
         prevEl: '#swiper-button-prev-sol',
@@ -166,6 +195,10 @@ document.addEventListener("DOMContentLoaded", function() {
       centerInsufficientSlides: true,
       freeMode: true,
       freeModeSticky: true,
+      snap: {
+        snapToSlides: true,
+      },
+      freeModeMomentum: false,
       navigation: {
         nextEl: '#swiper-button-next-work',
         prevEl: '#swiper-button-prev-work',
@@ -235,6 +268,10 @@ document.addEventListener("DOMContentLoaded", function() {
             loop: false,
             freeMode: true,
             freeModeSticky: true,
+            snap: {
+              // Включаем снэпинг
+              snapToSlides: true,
+            },
         });
         var production = new Swiper('.services__slider', {
           slidesPerView: 'auto',
@@ -244,6 +281,10 @@ document.addEventListener("DOMContentLoaded", function() {
           loop: false,
           freeMode: true,
           freeModeSticky: true,
+          snap: {
+            snapToSlides: true,
+            snapToSlidesOffset: 70,
+          },
       });
       var articles = new Swiper('.articles__slider', {
         slidesPerView: 'auto',

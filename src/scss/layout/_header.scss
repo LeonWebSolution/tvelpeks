@@ -32,6 +32,11 @@
         padding: 0;
         color: #838C95;
         font-size: 1.4rem;
+        transition: all 0.3s;
+        &:hover{
+          color: $hover_yellow;
+          transition: all 0.3s;
+        }
       }
       .header__bottom{
         padding-bottom: 1.2rem;

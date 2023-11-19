@@ -20,6 +20,10 @@
       centerInsufficientSlides: true,
       freeMode: true,
       freeModeSticky: true,
+      snap: {
+        // Включаем снэпинг
+        snapToSlides: true,
+      },
       navigation: {
         nextEl: '#swiper-button-next-sol',
         prevEl: '#swiper-button-prev-sol',
@@ -33,6 +37,10 @@
       centerInsufficientSlides: true,
       freeMode: true,
       freeModeSticky: true,
+      snap: {
+        snapToSlides: true,
+      },
+      freeModeMomentum: false,
       navigation: {
         nextEl: '#swiper-button-next-work',
         prevEl: '#swiper-button-prev-work',
@@ -102,6 +110,10 @@
             loop: false,
             freeMode: true,
             freeModeSticky: true,
+            snap: {
+              // Включаем снэпинг
+              snapToSlides: true,
+            },
         });
         var production = new Swiper('.services__slider', {
           slidesPerView: 'auto',
@@ -111,6 +123,10 @@
           loop: false,
           freeMode: true,
           freeModeSticky: true,
+          snap: {
+            snapToSlides: true,
+            snapToSlidesOffset: 70,
+          },
       });
       var articles = new Swiper('.articles__slider', {
         slidesPerView: 'auto',
