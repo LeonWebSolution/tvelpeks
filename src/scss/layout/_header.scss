@@ -154,6 +154,36 @@
             svg{
               display: none;
             }
+            &-link{
+              transition: all 0.3s;
+              &:hover .header-block__tel{
+                color: $hover_yellow;
+                transition: all 0.3s;
+              }
+            }
+            &-block{
+              opacity: 0;
+              position: absolute;
+              top: 5.5rem;
+              padding: 2.2rem 3.3rem 2.2rem 2.5rem;
+              background-color: $white;
+              border-radius: 1.5rem;
+              border: 0.1rem solid #292A29;
+              display: flex;
+              flex-direction: column;
+              gap: 1.8rem;
+              transition: all 0.3s;
+              &.active{
+                opacity: 1;
+                transition: all 0.3s;
+              }
+              .header-block__tel{
+                color: #292A29;
+              }
+              .header-block__descr{
+                color: #838C95;
+              }
+            }
           }
           &__menus {
             display: flex;
@@ -283,6 +313,7 @@ body.hidden{
     .contact{
       &__menus{
         display: none;
+
       }
       &__tel-wrapper{
         display: none;

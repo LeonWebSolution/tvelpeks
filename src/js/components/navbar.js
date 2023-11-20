@@ -48,3 +48,18 @@ function resetActiveClasses() {
 
   if (blurLink) blurLink.classList.remove('active');
 }
+
+document.addEventListener('DOMContentLoaded', function() {
+    const contactMenus = document.querySelectorAll('.contact__menu');
+    const contactMenuBlock = document.querySelector('.contact__menu-block');
+  
+    contactMenus.forEach(menu => {
+      menu.addEventListener('mouseover', () => {
+        contactMenuBlock.classList.add('active');
+      });
+  
+      menu.addEventListener('mouseout', () => {
+        contactMenuBlock.classList.remove('active');
+      });
+    });
+  });
