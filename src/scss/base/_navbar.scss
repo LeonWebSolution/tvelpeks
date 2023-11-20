@@ -34,8 +34,10 @@
         width: 100%;
         top: 19rem;
         border-radius: 0px 0px 3rem 3rem;
-        display: none;
+        opacity: 0;
+        visibility: hidden;
         box-shadow: 0rem 1.2rem 1.8rem 0rem rgba(0, 0, 0, 0.25);
+        transition: all 0.5s;
         &__block-img{
             width: 16.3rem;
             height: 11.9rem;
@@ -44,19 +46,24 @@
             transition: all 0.3s;
         }
         &.active{
-            display: block;
-            animation: fade-inm 1.1s;
-            @keyframes fade-inm {
-                from {
-                    opacity: 0;
-                }
-                to {
-                    opacity: 1;
-                }
-            }
+            opacity: 1;
+            visibility: visible;
+            transition: all 0.7s;
+            // animation: fade-inm 1.1s;
+            // @keyframes fade-inm {
+            //     from {
+            //         opacity: 0;
+            //     }
+            //     to {
+            //         opacity: 1;
+            //     }
+            // }
         }
     }
     .solutions__list{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        gap: 1.5rem 4rem;
         &::before{
             content: '';
             position: absolute;
@@ -65,11 +72,6 @@
             background-color: #292A29;
             width: 9.4rem;
             height: 0.2rem;
-        }
-        &.active{
-            display: grid;
-            grid-template-columns: repeat(3,1fr);
-            gap: 1.5rem 4rem;
         }
         &-link{
             display: flex;
@@ -97,6 +99,9 @@
         }
     }
     .productions__list{
+        display: grid;
+            grid-template-columns: repeat(4,1fr);
+            gap: 3.5rem 1.5rem;
         &::before{
             content: '';
             position: absolute;
@@ -105,11 +110,6 @@
             background-color: #292A29;
             width: 9.4rem;
             height: 0.2rem;
-        }
-        &.active{
-            display: grid;
-            grid-template-columns: repeat(4,1fr);
-            gap: 3.5rem 1.5rem;
         }
         &-link{
             display: flex;
@@ -131,8 +131,15 @@
         display: none;
         justify-content: space-between;
         width: 100%;
-        &.active{
-            display: flex;
+        display: flex;
+        &::before{
+            content: '';
+            position: absolute;
+            left: 38.5rem;
+            top: 0;
+            background-color: #292A29;
+            width: 9.4rem;
+            height: 0.2rem;
         }
         &-links{
             display: flex;
@@ -252,6 +259,44 @@
         }
     }
 }
+
+.calc__list{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 1.5rem;
+    &::before{
+        content: '';
+        position: absolute;
+        left: 75.5rem;
+        top: 0;
+        background-color: #292A29;
+        width: 9.4rem;
+        height: 0.2rem;
+    }
+    &-link{
+        padding: 1.6rem 2rem;
+        border-radius: 1.5rem;
+        display: flex;
+        gap: 2.2rem;
+        font-size: 1.6rem;
+        text-transform: none;
+        font-family: 'Graphik LCG';
+        color: #292A29;
+        align-items: flex-start;
+        border-bottom: 0.1rem solid transparent;
+        transition: all 0.3s;
+        background: linear-gradient(180deg, #E9E9EF 0%, #F4F4F6 100%);
+        svg{
+            width: 7.4rem;
+            height: 3.4rem;
+        }
+        &:hover{
+            background: #FFC700;
+            border-bottom: 0.1rem solid  #000;
+            transition: all 0.3s;
+        }
+    }
+}
 .about__name-link{
     transition: all 0.3s;
     &.active svg{
@@ -297,7 +342,13 @@
     }
 }
 
-
+.calc__name-link.active{
+    transition: all 0.3s;
+    svg{
+        transform: rotate(180deg);
+        transition: all 0.3s;
+    }
+}
 
 
 @media (max-width: 1440px){
@@ -307,8 +358,14 @@
     .nav .about__list-links{
         padding-left: 5.8rem;
     }
+    .nav .about__list::before{
+        left: 31rem;
+    }
     .nav .productions__list::before{
         left: 18rem;
+    }
+    .nav .calc__list::before{
+        left: 68rem;
     }
 }
 
