@@ -175,58 +175,74 @@
 
 
 .wrap {
-    max-width:100%;
+    max-width: 100%;
     background-color: #FFD000;
     padding: 3.6rem 0;
-    &__items{
+    
+    &__items {
         position: relative;
         display: flex;
         overflow: hidden;
         user-select: none;
         gap: 2rem;
-        &-line{
+        
+        &-line {
             flex-shrink: 0;
             display: flex;
             gap: 3rem;
-            counter-reset: item;
             justify-content: space-around;
             min-width: 100%;
+            
             &.marquee {
                 animation: scroll 60s linear infinite;
+                animation-delay: -60s; /* Задержка равная продолжительности анимации */
             }
         }
     }
-    &__item{
+    
+    &__item {
         flex: 0 0 auto;
-        counter-increment: item;
         display: flex;
         justify-content: center;
         align-items: center;
         font-size: 3rem;
         color: #292A29;
         transition: all 0.1s ease-in-out;
-        line-height: 120%; /* 36px */
+        line-height: 120%;
         text-transform: uppercase;
         gap: 3rem;
         align-items: center;
-        svg:nth-child(1){
+        
+        svg:nth-child(1) {
             width: 11.7rem;
             height: 5.7rem;
         }
-        svg:nth-child(2){
+        
+        svg:nth-child(2) {
             width: 2.2rem;
             height: 2.2rem;
-          }
+        }
     }
+    
     @keyframes scroll {
         from {
-          transform: translateX(0);
+            transform: translateX(0);
         }
         to {
-          transform: translateX(calc(-100% - 10px));
+            transform: translateX(calc(-100% - 10px));
         }
-      }
+    }
+
+    .marquee {
+        animation: scroll 60s linear infinite;
+        animation-delay: -60s; /* Задержка равная продолжительности анимации */
+    }
+
+    .reverce {
+        animation-direction: reverse;
+    }
 }
+
 
 .production{
     padding: 10rem 0;
