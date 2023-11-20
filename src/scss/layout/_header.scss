@@ -163,6 +163,7 @@
             }
             &-block{
               opacity: 0;
+              visibility: hidden;
               position: absolute;
               top: 5.5rem;
               padding: 2.2rem 3.3rem 2.2rem 2.5rem;
@@ -175,6 +176,7 @@
               transition: all 0.3s;
               &.active{
                 opacity: 1;
+                visibility: visible;
                 transition: all 0.3s;
               }
               .header-block__tel{
