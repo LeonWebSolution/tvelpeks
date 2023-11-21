@@ -183,42 +183,45 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   // For the hamburger menu
-  hamburgerMenu.addEventListener('click', function () {
-    const isActive = hamburgerMenu.classList.contains('active');
-    const solutionsNameLink = document.querySelectorAll('.solutions__name-link');
-    const solutionsList = document.querySelector('.solutions__list');
-  
-    if (isActive) {
-      hamburgerMenu.classList.remove('active');
-      headerBottom.classList.remove('active');
-      body.style.overflow = 'auto';
-  
-      // Remove 'active' class from solutions__name-link and solutions__list
-      solutionsNameLink.forEach(link => link.classList.remove('active'));
-      solutionsList.classList.remove('active');
-      solutionsList.style.maxHeight = '';
+  // For the hamburger menu
+hamburgerMenu.addEventListener('click', function () {
+  const isActive = hamburgerMenu.classList.contains('active');
+  const solutionsNameLink = document.querySelectorAll('.solutions__name-link');
+  const solutionsList = document.querySelector('.solutions__list');
 
-      // Remove 'active' class from productions__name-link and productions__list
-      productionsLink.classList.remove('active');
-      productionsList.classList.remove('active');
-      productionsList.style.maxHeight = '';
-    } else {
-      hamburgerMenu.classList.add('active');
-      headerBottom.classList.add('active');
-      body.style.overflow = 'hidden';
-  
-      // Add 'active' class to solutions__name-link and solutions__list
-      solutionsNameLink.forEach(link => link.classList.add('active'));
-      solutionsList.classList.add('active');
-      const maxHeight = solutionsList.classList.contains('active') ? solutionsList.scrollHeight + 'px' : '';
-      solutionsList.style.maxHeight = maxHeight;
+  if (isActive) {
+    hamburgerMenu.classList.remove('active');
+    headerBottom.classList.remove('active');
+    body.style.overflow = 'auto';
 
-      // Remove 'active' class from productions__name-link and productions__list
-      productionsLink.classList.remove('active');
-      productionsList.classList.remove('active');
-      productionsList.style.maxHeight = '';
-    }
-  });
+    // Remove 'active' class from solutions__name-link and solutions__list
+    solutionsNameLink.forEach(link => link.classList.remove('active'));
+    solutionsList.classList.remove('active');
+    solutionsList.style.maxHeight = '';
+
+    // Remove 'active' class from productions__name-link and productions__list
+    productionsLink.classList.remove('active');
+    productionsList.classList.remove('active');
+    productionsList.style.maxHeight = '';
+  } else {
+    hamburgerMenu.classList.add('active');
+    headerBottom.classList.add('active');
+    body.style.overflow = 'hidden';
+
+    // Remove 'active' class from solutions__name-link and solutions__list
+    solutionsNameLink.forEach(link => link.classList.remove('active'));
+    solutionsList.classList.remove('active');
+    solutionsList.style.maxHeight = '';
+
+    // Do not add 'active' class to solutions__name-link
+
+    // Remove 'active' class from productions__name-link and productions__list
+    productionsLink.classList.remove('active');
+    productionsList.classList.remove('active');
+    productionsList.style.maxHeight = '';
+  }
+});
+
 
   // For the contact menu
   contactMenu.addEventListener('click', function () {

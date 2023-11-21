@@ -233,9 +233,20 @@
         }
     }
 
+    @-webkit-keyframes scroll {
+        from {
+            -webkit-transform: translateX(0);
+        }
+        to {
+            -webkit-transform: translateX(calc(-100% - 10px));
+        }
+    }
+
     .marquee {
         animation: scroll 60s linear infinite;
-        animation-delay: -60s; /* Задержка равная продолжительности анимации */
+        animation-delay: -60s;
+        -webkit-animation: scroll 60s linear infinite;
+        -webkit-animation-delay: -60s;
     }
 
     .reverce {
