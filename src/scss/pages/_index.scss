@@ -190,8 +190,6 @@
             display: flex;
             gap: 3rem;
             justify-content: space-around;
-            min-width: 100%;
-            
             &.marquee {
                 animation: scroll 60s linear infinite;
                 animation-delay: -60s; /* Задержка равная продолжительности анимации */
