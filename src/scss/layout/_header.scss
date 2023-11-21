@@ -13,6 +13,10 @@
     .header__bottom .header__logo-bottom{
       display: none;
     }
+    .production__item-link svg{
+      width: 3.9rem;
+      height: 3.9rem;
+    }
     &.fixed {
       position: fixed;
       transition: all 0.5s;

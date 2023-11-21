@@ -90,66 +90,139 @@ function closeModal() {
 }
 const isMobile = window.matchMedia("(max-width: 962px)").matches;
 if (!isMobile) {
-  document.addEventListener('DOMContentLoaded', function() {
-    initHoverEvents();
+  // document.addEventListener('DOMContentLoaded', function() {
+  //   initHoverEvents();
   
-    const contactMenus = document.querySelectorAll('.contact__menu');
-    const contactMenuBlock = document.querySelector('.contact__menu-block');
+  //   const contactMenus = document.querySelectorAll('.contact__menu');
+  //   const contactMenuBlock = document.querySelector('.contact__menu-block');
   
-    contactMenus.forEach(menu => {
-      menu.addEventListener('mouseover', () => {
-        contactMenuBlock.classList.add('active');
-      });
+  //   contactMenus.forEach(menu => {
+  //     menu.addEventListener('mouseover', () => {
+  //       contactMenuBlock.classList.add('active');
+  //     });
   
-      menu.addEventListener('mouseout', () => {
-        contactMenuBlock.classList.remove('active');
-      });
+  //     menu.addEventListener('mouseout', () => {
+  //       contactMenuBlock.classList.remove('active');
+  //     });
+  //   });
+  // });
+  
+  // function initHoverEvents() {
+  //   const solutionsLinks = document.querySelectorAll('.solutions__name-link');
+  //   const productionsLinks = document.querySelectorAll('.productions__name-link');
+  //   const aboutLinks = document.querySelectorAll('.about__name-link');
+  //   const calcLinks = document.querySelectorAll('.calc__name-link');
+  //   const blurLink = document.querySelector('.blur-link');
+  
+  //   document.addEventListener('scroll', () => {
+  //     resetActiveClasses();
+  //   });
+  
+  //   const addMouseoverEvent = (link, list) => {
+  //     link.addEventListener('mouseover', () => {
+  //       resetActiveClasses();
+  //       link.classList.add('active');
+  //       list.classList.add('active');
+  //       if (blurLink) blurLink.classList.add('active');
+  //     });
+  //   };
+  
+  //   solutionsLinks.forEach((link) => addMouseoverEvent(link, document.querySelector('.solutions__list')));
+  //   productionsLinks.forEach((link) => addMouseoverEvent(link, document.querySelector('.productions__list')));
+  //   aboutLinks.forEach((link) => addMouseoverEvent(link, document.querySelector('.about__list')));
+  //   calcLinks.forEach((link) => addMouseoverEvent(link, document.querySelector('.calc__list')));
+  
+  //   blurLink.addEventListener('mouseover', () => {
+  //     resetActiveClasses();
+  //   });
+  
+  //   function resetActiveClasses() {
+  //     const removeActiveClasses = (links, list) => {
+  //       links.forEach((link) => link.classList.remove('active'));
+  //       if (list) list.classList.remove('active');
+  //     };
+  
+  //     removeActiveClasses(solutionsLinks, document.querySelector('.solutions__list'));
+  //     removeActiveClasses(productionsLinks, document.querySelector('.productions__list'));
+  //     removeActiveClasses(aboutLinks, document.querySelector('.about__list'));
+  //     removeActiveClasses(calcLinks, document.querySelector('.calc__list'));
+  
+  //     if (blurLink) blurLink.classList.remove('active');
+  //   }
+  // }
+  document.addEventListener('DOMContentLoaded', function () {
+    var solutionLink = document.querySelector('.solution__link');
+    var nameLinks = document.querySelectorAll('.solutions__name-link');
+    var solutionsList = document.querySelector('.solutions__list');
+    
+    var productionLink = document.querySelector('.production__link');
+    var productionNameLinks = document.querySelectorAll('.productions__name-link');
+    var productionsList = document.querySelector('.productions__list');
+
+    var aboutLink = document.querySelector('.about__link');
+    var aboutNameLinks = document.querySelectorAll('.about__name-link');
+    var aboutList = document.querySelector('.about__list');
+
+    var calcLink = document.querySelector('.calc__link');
+    var calcNameLinks = document.querySelectorAll('.calc__name-link');
+    var calcList = document.querySelector('.calc__list');
+
+    solutionLink.addEventListener('mouseover', function () {
+        nameLinks.forEach(function (link) {
+            link.classList.add('active');
+        });
+        solutionsList.classList.add('active');
     });
-  });
-  
-  function initHoverEvents() {
-    const solutionsLinks = document.querySelectorAll('.solutions__name-link');
-    const productionsLinks = document.querySelectorAll('.productions__name-link');
-    const aboutLinks = document.querySelectorAll('.about__name-link');
-    const calcLinks = document.querySelectorAll('.calc__name-link');
-    const blurLink = document.querySelector('.blur-link');
-  
-    document.addEventListener('scroll', () => {
-      resetActiveClasses();
+
+    solutionLink.addEventListener('mouseout', function () {
+        nameLinks.forEach(function (link) {
+            link.classList.remove('active');
+        });
+        solutionsList.classList.remove('active');
     });
-  
-    const addMouseoverEvent = (link, list) => {
-      link.addEventListener('mouseover', () => {
-        resetActiveClasses();
-        link.classList.add('active');
-        list.classList.add('active');
-        if (blurLink) blurLink.classList.add('active');
-      });
-    };
-  
-    solutionsLinks.forEach((link) => addMouseoverEvent(link, document.querySelector('.solutions__list')));
-    productionsLinks.forEach((link) => addMouseoverEvent(link, document.querySelector('.productions__list')));
-    aboutLinks.forEach((link) => addMouseoverEvent(link, document.querySelector('.about__list')));
-    calcLinks.forEach((link) => addMouseoverEvent(link, document.querySelector('.calc__list')));
-  
-    blurLink.addEventListener('mouseover', () => {
-      resetActiveClasses();
+
+    productionLink.addEventListener('mouseover', function () {
+        productionNameLinks.forEach(function (link) {
+            link.classList.add('active');
+        });
+        productionsList.classList.add('active');
     });
-  
-    function resetActiveClasses() {
-      const removeActiveClasses = (links, list) => {
-        links.forEach((link) => link.classList.remove('active'));
-        if (list) list.classList.remove('active');
-      };
-  
-      removeActiveClasses(solutionsLinks, document.querySelector('.solutions__list'));
-      removeActiveClasses(productionsLinks, document.querySelector('.productions__list'));
-      removeActiveClasses(aboutLinks, document.querySelector('.about__list'));
-      removeActiveClasses(calcLinks, document.querySelector('.calc__list'));
-  
-      if (blurLink) blurLink.classList.remove('active');
-    }
-  }
+
+    productionLink.addEventListener('mouseout', function () {
+        productionNameLinks.forEach(function (link) {
+            link.classList.remove('active');
+        });
+        productionsList.classList.remove('active');
+    });
+
+    aboutLink.addEventListener('mouseover', function () {
+        aboutNameLinks.forEach(function (link) {
+            link.classList.add('active');
+        });
+        aboutList.classList.add('active');
+    });
+
+    aboutLink.addEventListener('mouseout', function () {
+        aboutNameLinks.forEach(function (link) {
+            link.classList.remove('active');
+        });
+        aboutList.classList.remove('active');
+    });
+
+    calcLink.addEventListener('mouseover', function () {
+        calcNameLinks.forEach(function (link) {
+            link.classList.add('active');
+        });
+        calcList.classList.add('active');
+    });
+
+    calcLink.addEventListener('mouseout', function () {
+        calcNameLinks.forEach(function (link) {
+            link.classList.remove('active');
+        });
+        calcList.classList.remove('active');
+    });
+});
 }
 
 document.addEventListener('DOMContentLoaded', function () {
