@@ -394,11 +394,12 @@ body.hidden{
       }
     }
     &__bottom{
-      display: block;
+      display: flex;
       transform: translateX(-130%);
       transition: all 0.5s;
       position: absolute;
-      padding: 0 1.5rem 3rem 1.5rem;
+      flex-direction: column;
+      padding: 0 1.5rem 4rem 1.5rem;
       min-height: 93svh;
       max-height: 93svh;
       left: 0;
@@ -407,7 +408,7 @@ body.hidden{
         display: none !important;
       }
       &.active{
-        display: block;
+        display: flex;
         transform: translateX(0%);
         transition: all 0.5s;
         background-color: #fff;
@@ -480,6 +481,7 @@ body.hidden{
         }
         .btn--accent{
           width: 100%;
+          padding: 1.5rem;
         }
         .header__social-btn:nth-child(1) svg{
           width: 3rem;
@@ -570,5 +572,11 @@ body.hidden{
         }
       }
     }
+  }
+}
+
+@media (max-height: 800px){
+  .header__bottom{
+    overflow: hidden;
   }
 }
