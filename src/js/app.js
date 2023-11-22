@@ -90,66 +90,6 @@ function closeModal() {
 }
 const isMobile = window.matchMedia("(max-width: 962px)").matches;
 if (!isMobile) {
-  // document.addEventListener('DOMContentLoaded', function() {
-  //   initHoverEvents();
-  
-  //   const contactMenus = document.querySelectorAll('.contact__menu');
-  //   const contactMenuBlock = document.querySelector('.contact__menu-block');
-  
-  //   contactMenus.forEach(menu => {
-  //     menu.addEventListener('mouseover', () => {
-  //       contactMenuBlock.classList.add('active');
-  //     });
-  
-  //     menu.addEventListener('mouseout', () => {
-  //       contactMenuBlock.classList.remove('active');
-  //     });
-  //   });
-  // });
-  
-  // function initHoverEvents() {
-  //   const solutionsLinks = document.querySelectorAll('.solutions__name-link');
-  //   const productionsLinks = document.querySelectorAll('.productions__name-link');
-  //   const aboutLinks = document.querySelectorAll('.about__name-link');
-  //   const calcLinks = document.querySelectorAll('.calc__name-link');
-  //   const blurLink = document.querySelector('.blur-link');
-  
-  //   document.addEventListener('scroll', () => {
-  //     resetActiveClasses();
-  //   });
-  
-  //   const addMouseoverEvent = (link, list) => {
-  //     link.addEventListener('mouseover', () => {
-  //       resetActiveClasses();
-  //       link.classList.add('active');
-  //       list.classList.add('active');
-  //       if (blurLink) blurLink.classList.add('active');
-  //     });
-  //   };
-  
-  //   solutionsLinks.forEach((link) => addMouseoverEvent(link, document.querySelector('.solutions__list')));
-  //   productionsLinks.forEach((link) => addMouseoverEvent(link, document.querySelector('.productions__list')));
-  //   aboutLinks.forEach((link) => addMouseoverEvent(link, document.querySelector('.about__list')));
-  //   calcLinks.forEach((link) => addMouseoverEvent(link, document.querySelector('.calc__list')));
-  
-  //   blurLink.addEventListener('mouseover', () => {
-  //     resetActiveClasses();
-  //   });
-  
-  //   function resetActiveClasses() {
-  //     const removeActiveClasses = (links, list) => {
-  //       links.forEach((link) => link.classList.remove('active'));
-  //       if (list) list.classList.remove('active');
-  //     };
-  
-  //     removeActiveClasses(solutionsLinks, document.querySelector('.solutions__list'));
-  //     removeActiveClasses(productionsLinks, document.querySelector('.productions__list'));
-  //     removeActiveClasses(aboutLinks, document.querySelector('.about__list'));
-  //     removeActiveClasses(calcLinks, document.querySelector('.calc__list'));
-  
-  //     if (blurLink) blurLink.classList.remove('active');
-  //   }
-  // }
   document.addEventListener('DOMContentLoaded', function () {
     var solutionLink = document.querySelector('.solution__link');
     var nameLinks = document.querySelectorAll('.solutions__name-link');
@@ -236,22 +176,29 @@ document.addEventListener('DOMContentLoaded', function () {
   const body = document.body;
   const contactMenu = document.querySelector('.contact__menu');
   const contactMenuBlock = document.querySelector('.contact__menu-block');
+  const aboutLink = document.querySelector('.about__link');
+  const aboutNameLink = document.querySelector('.about__name-link');
+  const aboutList = document.querySelector('.about__list');
+  const calcLink = document.querySelector('.calc__link');
+  const calcNameLink = document.querySelector('.calc__name-link');
+  const calcList = document.querySelector('.calc__list');
 
   function toggleList(link, list) {
     const isActive = link.classList.contains('active');
 
-    // Убираем 'active' класс и 'max-height' у всех связанных элементов
-    const allLinks = document.querySelectorAll('.solutions__name-link, .productions__name-link');
+    const allLinks = document.querySelectorAll('.solutions__name-link, .productions__name-link, .about__name-link, .calc__name-link');
     allLinks.forEach(otherLink => {
       if (otherLink !== link) {
         otherLink.classList.remove('active');
-        const otherList = otherLink.classList.contains('solutions__name-link') ? document.querySelector('.solutions__list') : document.querySelector('.productions__list');
+        const otherList = otherLink.classList.contains('solutions__name-link') ? document.querySelector('.solutions__list') :
+          (otherLink.classList.contains('productions__name-link') ? document.querySelector('.productions__list') :
+            (otherLink.classList.contains('about__name-link') ? document.querySelector('.about__list') :
+              document.querySelector('.calc__list')));
         otherList.classList.remove('active');
         otherList.style.maxHeight = '';
       }
     });
 
-    // Добавляем/убираем 'active' класс и 'max-height' текущему элементу
     link.classList.toggle('active');
     list.classList.toggle('active');
 
@@ -270,48 +217,66 @@ document.addEventListener('DOMContentLoaded', function () {
       event.preventDefault();
       toggleList(productionsLink, productionsList);
     });
+
+    aboutLink.addEventListener('click', function (event) {
+      event.preventDefault();
+      toggleList(aboutNameLink, aboutList);
+    });
+
+    calcLink.addEventListener('click', function (event) {
+      event.preventDefault();
+      toggleList(calcNameLink, calcList);
+    });
   }
 
   // For the hamburger menu
-  // For the hamburger menu
-hamburgerMenu.addEventListener('click', function () {
-  const isActive = hamburgerMenu.classList.contains('active');
-  const solutionsNameLink = document.querySelectorAll('.solutions__name-link');
-  const solutionsList = document.querySelector('.solutions__list');
+  hamburgerMenu.addEventListener('click', function () {
+    const isActive = hamburgerMenu.classList.contains('active');
+    const solutionsNameLink = document.querySelectorAll('.solutions__name-link');
+    const solutionsList = document.querySelector('.solutions__list');
 
-  if (isActive) {
-    hamburgerMenu.classList.remove('active');
-    headerBottom.classList.remove('active');
-    body.style.overflow = 'auto';
+    if (isActive) {
+      hamburgerMenu.classList.remove('active');
+      headerBottom.classList.remove('active');
+      body.style.overflow = 'auto';
 
-    // Remove 'active' class from solutions__name-link and solutions__list
-    solutionsNameLink.forEach(link => link.classList.remove('active'));
-    solutionsList.classList.remove('active');
-    solutionsList.style.maxHeight = '';
+      solutionsNameLink.forEach(link => link.classList.remove('active'));
+      solutionsList.classList.remove('active');
+      solutionsList.style.maxHeight = '';
 
-    // Remove 'active' class from productions__name-link and productions__list
-    productionsLink.classList.remove('active');
-    productionsList.classList.remove('active');
-    productionsList.style.maxHeight = '';
-  } else {
-    hamburgerMenu.classList.add('active');
-    headerBottom.classList.add('active');
-    body.style.overflow = 'hidden';
+      productionsLink.classList.remove('active');
+      productionsList.classList.remove('active');
+      productionsList.style.maxHeight = '';
 
-    // Remove 'active' class from solutions__name-link and solutions__list
-    solutionsNameLink.forEach(link => link.classList.remove('active'));
-    solutionsList.classList.remove('active');
-    solutionsList.style.maxHeight = '';
+      aboutNameLink.classList.remove('active');
+      aboutList.classList.remove('active');
+      aboutList.style.maxHeight = '';
 
-    // Do not add 'active' class to solutions__name-link
+      calcNameLink.classList.remove('active');
+      calcList.classList.remove('active');
+      calcList.style.maxHeight = '';
+    } else {
+      hamburgerMenu.classList.add('active');
+      headerBottom.classList.add('active');
+      body.style.overflow = 'hidden';
 
-    // Remove 'active' class from productions__name-link and productions__list
-    productionsLink.classList.remove('active');
-    productionsList.classList.remove('active');
-    productionsList.style.maxHeight = '';
-  }
-});
+      solutionsNameLink.forEach(link => link.classList.remove('active'));
+      solutionsList.classList.remove('active');
+      solutionsList.style.maxHeight = '';
 
+      productionsLink.classList.remove('active');
+      productionsList.classList.remove('active');
+      productionsList.style.maxHeight = '';
+
+      aboutNameLink.classList.remove('active');
+      aboutList.classList.remove('active');
+      aboutList.style.maxHeight = '';
+
+      calcNameLink.classList.remove('active');
+      calcList.classList.remove('active');
+      calcList.style.maxHeight = '';
+    }
+  });
 
   // For the contact menu
   contactMenu.addEventListener('click', function () {
@@ -319,6 +284,7 @@ hamburgerMenu.addEventListener('click', function () {
     contactMenuBlock.classList.toggle('active');
   });
 });
+
 
 
 
