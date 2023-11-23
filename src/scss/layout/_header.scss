@@ -1,7 +1,7 @@
 .header {
     position: absolute;
     top: 0;
-    z-index: 777;
+    z-index: 7777777 !important;
     transform: translateY(-0%);
     transition: all 0.5s;
     background-color: #fff;
@@ -19,6 +19,7 @@
     }
     &.fixed {
       position: fixed;
+      z-index: 7777777;
       transition: all 0.5s;
       transform: translateY(-57%);
       box-shadow: 0rem 1.5rem 2.3rem 0rem rgba(10, 9, 11, 0.04);
@@ -45,6 +46,7 @@
       .header__bottom{
         padding-bottom: 1.2rem;
         align-items: center;
+        z-index: 7777777;
       }
       .header__bottom .header__logo-bottom{
         display: block;
@@ -284,6 +286,10 @@ body.hidden{
   }
 }
 
+.contact__menu-block .header__mail{
+  display: none;
+}
+
 @media (max-width: 1440px){
   .header.fixed{
     .solutions__list::before{
@@ -304,6 +310,9 @@ body.hidden{
   // Adaptive 
 
 @media (max-width: 962px){
+  .contact__menu-block .header__mail{
+    display: block;
+  }
   .hamburger__menu{
      transition: all 0.5s;
       span:nth-child(1){

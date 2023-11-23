@@ -1,23 +1,3 @@
-// let prevScrollPos = window.pageYOffset;
-//     const header = document.querySelector('.header');
-//     const mainSection = document.querySelector('.main__section');
-
-//     window.onscroll = function() {
-//       const currentScrollPos = window.pageYOffset;
-
-//       if (prevScrollPos > currentScrollPos) {
-//         // Скролл вверх
-//         header.classList.add('fixed');
-//         mainSection.classList.add('fixed');
-//       } else {
-//         // Скролл вниз
-//         header.classList.remove('fixed');
-//         mainSection.classList.remove('fixed');
-//       }
-
-//       prevScrollPos = currentScrollPos;
-//     };
-
 document.addEventListener('DOMContentLoaded', function() {
   var myElement = document.querySelector('.header');
   var lastScrollTop = 0;

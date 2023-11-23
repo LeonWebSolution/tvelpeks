@@ -90,6 +90,46 @@
         },
       },
     });
+
+    var history = new Swiper('.history__slider', {
+      slidesPerView: 'auto',
+      spaceBetween: 70,
+      initialSlide: 0, 
+      centerInsufficientSlides: true,
+      navigation: {
+        nextEl: '#swiper-button-next-his',
+        prevEl: '#swiper-button-prev-his',
+      },
+      freeMode: true,
+      freeModeSticky: true,
+      breakpoints: {
+        200: {
+          freeMode: true,
+          freeModeSticky: true,
+          spaceBetween: 15,
+        },
+      },
+    });
+
+    var workers = new Swiper('.workers__slider', {
+      slidesPerView: 'auto',
+      spaceBetween: 20,
+      initialSlide: 0, 
+      centerInsufficientSlides: true,
+      freeMode: true,
+      freeModeSticky: true,
+      navigation: {
+        nextEl: '#swiper-button-next-workrs',
+        prevEl: '#swiper-button-prev-workrs',
+      },
+      breakpoints: {
+        200: {
+          freeMode: true,
+          freeModeSticky: true,
+        },
+      },
+    });
+    
     
     document.addEventListener('DOMContentLoaded', function () {
       if (window.innerWidth < 962) {
@@ -115,6 +155,19 @@
               snapToSlides: true,
             },
         });
+        var pecul = new Swiper('.peculiarities__slider', {
+          slidesPerView: 'auto',
+          spaceBetween: 10,
+          initialSlide: 0, 
+          centerInsufficientSlides: true,
+          loop: false,
+          freeMode: true,
+          freeModeSticky: true,
+          snap: {
+            // Включаем снэпинг
+            snapToSlides: true,
+          },
+      });
         var production = new Swiper('.services__slider', {
           slidesPerView: 'auto',
           spaceBetween: 10,
