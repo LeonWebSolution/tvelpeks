@@ -1,6 +1,6 @@
 .solutions-main{
     margin-top: 19.9rem;
-    padding: 6rem 0 3.7rem;
+    padding: 6rem 0 8rem;
     &__title{
         margin-bottom: 2rem;
     }
@@ -89,6 +89,10 @@
             padding-top: 3rem;
             border-bottom: 0.1rem solid rgba(41, 42, 41, 0.4);
             cursor: pointer;
+            &:hover span{
+                background-color: $primary;
+                transition: all 0.3s;
+            }
             &.active span{
                 &:nth-child(1){
                     transform: translate(0rem, 0.2rem) rotate(-45deg);
@@ -227,6 +231,9 @@
 }
 
 @media (max-width: 962px){
+    .sub-section{
+        margin-bottom: 2rem;
+    }
     .solutions-main{
         margin-top: 3rem;
         &__title{
@@ -241,10 +248,10 @@
             gap: 2rem 1.5rem;
             grid-template-columns: repeat(2, 1fr);
             .solutions__slide-img img{
-                height: 11.5rem;
+                height: 16.5rem;
             }
             .solutions__slide{
-                width: 15.7rem;
+                width: 100%;
                 &-text{
                     display: none;
                 }
@@ -274,7 +281,7 @@
         }
     }
     .faq{
-        padding: 4rem 0;
+        padding: 4rem 0 1.4rem;
         margin-bottom: 2.1rem;
         .container{
             margin: 0 1.2rem;
@@ -303,6 +310,12 @@
             width: 3rem;
             height: 1px;
         }
+        .faq__sub-item{
+            &.active .faq__sub-item-content{
+                margin: 0;
+                padding-top: 2rem;
+            }
+        }
         .faq__sub-name{
             font-size: 1.8rem;
             padding-left: 2.8rem;
@@ -328,5 +341,11 @@
                 font-size: 1.4rem;
             }
         }
+    }
+}
+
+@media (max-width: 600px){
+    .solutions-main .solutions__wrapper .solutions__slide-img img{
+        height: 11.5rem;
     }
 }

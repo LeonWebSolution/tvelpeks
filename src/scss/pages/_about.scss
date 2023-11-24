@@ -540,3 +540,11 @@
         height: 19rem;
     }  
 }
+
+.svg-path stop{
+    stop-color: $primary;
+}
+
+.solutions-main .solutions__wrapper .solutions__slide-link svg circle{
+    fill: #fff;
+}

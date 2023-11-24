@@ -7,6 +7,7 @@
     background-color: #fff;
     left: 0;
     right: 0;
+    box-shadow: 0px 15px 23px 0px rgba(10, 9, 11, 0.04);
     .header__bottom-social .contact__tel-wrapper{
       display: none;
     }
@@ -343,6 +344,7 @@ body.hidden{
   }
   .header{
     padding-top: 1.4rem;
+
     &.fixed{
       transform: translateY(0);
       .header__top{
@@ -361,6 +363,9 @@ body.hidden{
       justify-content: space-between;
       align-items: center;
       border-bottom: none;
+      &.bord{
+        border-bottom: 0.1rem solid $black;
+      }
     }
     &__contact-second{
       align-items: center;
