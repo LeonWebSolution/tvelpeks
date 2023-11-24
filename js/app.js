@@ -647,6 +647,6 @@ document.addEventListener("DOMContentLoaded", function () {
             if (zoomedImage) {
                 zoomedImage.classList.remove("zoomed");
             }
-        }, 1000);
+        }, 3000);
     }
 });
