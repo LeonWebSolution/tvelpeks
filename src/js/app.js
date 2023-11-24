@@ -4,16 +4,20 @@ document.addEventListener('DOMContentLoaded', function () {
     var currentSubAccordion = null;
 
     function closeAccordion(accordion, isSubAccordion) {
-        accordion.classList.remove('active');
-        var accordionContent = accordion.nextElementSibling;
-        accordionContent.style.maxHeight = '0';
+        if (accordion) {
+            accordion.classList.remove('active');
+            var accordionContent = accordion.nextElementSibling;
+            if (accordionContent) {
+                accordionContent.style.maxHeight = '0';
+            }
 
-        var faqItem = accordion.closest(isSubAccordion ? '.faq__sub-item' : '.faq__item');
-        if (faqItem) {
-            faqItem.classList.remove('active');
-            var faqItemContent = faqItem.querySelector(isSubAccordion ? '.faq__sub-item-content' : '.faq__item-content');
-            if (faqItemContent) {
-                faqItemContent.classList.remove('active');
+            var faqItem = accordion.closest(isSubAccordion ? '.faq__sub-item' : '.faq__item');
+            if (faqItem) {
+                faqItem.classList.remove('active');
+                var faqItemContent = faqItem.querySelector(isSubAccordion ? '.faq__sub-item-content' : '.faq__item-content');
+                if (faqItemContent) {
+                    faqItemContent.classList.remove('active');
+                }
             }
         }
     }
@@ -22,7 +26,9 @@ document.addEventListener('DOMContentLoaded', function () {
         var isActive = !accordion.classList.contains('active');
 
         accordion.classList.toggle('active', isActive);
-        content.style.maxHeight = isActive ? content.scrollHeight + 'px' : '0';
+        if (content) {
+            content.style.maxHeight = isActive ? content.scrollHeight + 'px' : '0';
+        }
 
         var faqItem = accordion.closest(isSubAccordion ? '.faq__sub-item' : '.faq__item');
 
@@ -31,7 +37,7 @@ document.addEventListener('DOMContentLoaded', function () {
             var faqItemContent = faqItem.querySelector(isSubAccordion ? '.faq__sub-item-content' : '.faq__item-content');
 
             if (faqItemContent) {
-                var newHeight = faqItemContent.scrollHeight + content.scrollHeight;
+                var newHeight = faqItemContent.scrollHeight + (content ? content.scrollHeight : 0);
                 faqItemContent.style.maxHeight = newHeight + 'px';
                 faqItemContent.classList.add('active');
             }
@@ -58,19 +64,23 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     }
 
-    faqItems.forEach(function (item) {
-        item.addEventListener('click', function () {
-            handleAccordionClick(this, false);
-        });
-
-        var subItems = item.nextElementSibling.querySelectorAll('.faq__sub-item-top');
-        subItems.forEach(function (subItem) {
-            subItem.addEventListener('click', function (event) {
-                event.stopPropagation();
-                handleAccordionClick(this, true);
+    if (faqItems) {
+        faqItems.forEach(function (item) {
+            item.addEventListener('click', function () {
+                handleAccordionClick(this, false);
             });
+
+            var subItems = item.nextElementSibling ? item.nextElementSibling.querySelectorAll('.faq__sub-item-top') : null;
+            if (subItems) {
+                subItems.forEach(function (subItem) {
+                    subItem.addEventListener('click', function (event) {
+                        event.stopPropagation();
+                        handleAccordionClick(this, true);
+                    });
+                });
+            }
         });
-    });
+    }
 });
 
 document.addEventListener('DOMContentLoaded', function () {
@@ -149,6 +159,16 @@ function closeModal() {
     body.style.overflow = '';
   }
 }
+
+// Additional check for close button (if you have one)
+var closeModalBtn = document.getElementById('closeModalBtn');
+
+if (closeModalBtn) {
+  closeModalBtn.addEventListener('click', function () {
+    closeModal();
+  });
+}
+
 const isMobile = window.matchMedia("(max-width: 962px)").matches;
 if (!isMobile) {
   document.addEventListener('DOMContentLoaded', function () {
@@ -558,51 +578,57 @@ document.addEventListener("DOMContentLoaded", function() {
     // Получаем все вкладки и слайдеры
     var tabs = document.querySelectorAll('.projects__tab');
     var sliders = document.querySelectorAll('.projects__slider');
-  
-    // Добавляем обработчик событий click к каждой вкладке
-    tabs.forEach(function(tab, index) {
-        tab.addEventListener('click', function() {
-            // Удаляем класс 'active' у всех вкладок и слайдеров
-            tabs.forEach(function(t) {
-                t.classList.remove('active');
+
+    // Проверяем, что есть хотя бы одна вкладка и один слайдер
+    if (tabs.length > 0 && sliders.length > 0) {
+        // Добавляем обработчик событий click к каждой вкладке
+        tabs.forEach(function(tab, index) {
+            tab.addEventListener('click', function() {
+                // Удаляем класс 'active' у всех вкладок и слайдеров
+                tabs.forEach(function(t) {
+                    t.classList.remove('active');
+                });
+                sliders.forEach(function(s) {
+                    s.classList.remove('active');
+                });
+
+                // Добавляем класс 'active' к кликнутой вкладке и соответствующему слайдеру
+                this.classList.add('active');
+                sliders[index].classList.add('active');
             });
-            sliders.forEach(function(s) {
-                s.classList.remove('active');
-            });
-  
-            // Добавляем класс 'active' к кликнутой вкладке и соответствующему слайдеру
-            this.classList.add('active');
-            sliders[index].classList.add('active');
         });
-    });
-  });
+    }
+});
+
 const itMobile = window.matchMedia("(min-width: 962px)").matches;
 
 if (!itMobile) {
     document.addEventListener('DOMContentLoaded', function () {
         var button = document.querySelector('.about-descr__btn');
         var textElement = document.querySelector('.about-descr__text');
-    
-        // Устанавливаем начальную высоту
-        textElement.style.maxHeight = '21rem';
-    
-        button.addEventListener('click', function () {
-            // Переключаем класс active
-            textElement.classList.toggle('active');
-    
-            // Если элемент сейчас активен, вычисляем его высоту и устанавливаем максимальную высоту
-            if (textElement.classList.contains('active')) {
-                textElement.style.maxHeight = textElement.scrollHeight + 'px';
-                button.textContent = 'Скрыть';
-            } else {
-                // Если элемент неактивен, устанавливаем максимальную высоту в 21rem
-                textElement.style.maxHeight = '21rem';
-                button.textContent = 'Смотреть все';
-            }
-        });
+
+        // Проверяем, что элементы существуют
+        if (button && textElement) {
+            // Устанавливаем начальную высоту
+            textElement.style.maxHeight = '21rem';
+
+            button.addEventListener('click', function () {
+                // Переключаем класс active
+                textElement.classList.toggle('active');
+
+                // Если элемент сейчас активен, вычисляем его высоту и устанавливаем максимальную высоту
+                if (textElement.classList.contains('active')) {
+                    textElement.style.maxHeight = textElement.scrollHeight + 'px';
+                    button.textContent = 'Скрыть';
+                } else {
+                    // Если элемент неактивен, устанавливаем максимальную высоту в 21rem
+                    textElement.style.maxHeight = '21rem';
+                    button.textContent = 'Смотреть все';
+                }
+            });
+        }
     });
 }
-
 
 // document.getElementById('supportForm').addEventListener('submit', function(event) {
 //     var phoneNumberInput = document.getElementById('phoneNumber');
@@ -628,17 +654,29 @@ var myVideo = document.getElementById('myVideo');
 var videoBlur = document.querySelector('.words__video-blur');
 var videoBtn = document.querySelector('.words__video-btn');
 
-playButton.addEventListener('click', function () {
-    if (myVideo.paused) {
-        myVideo.play();
-        videoBlur.classList.add('hidden');
-        videoBtn.classList.add('hidden');
-    } else {
-        myVideo.pause();
-        videoBlur.classList.remove('hidden');
-        videoBtn.classList.remove('hidden');
-    }
-});
+// Check if elements exist before adding the click event listener
+if (playButton && myVideo && videoBlur && videoBtn) {
+    playButton.addEventListener('click', function () {
+        if (myVideo.paused) {
+            myVideo.play();
+            if (videoBlur) {
+                videoBlur.classList.add('hidden');
+            }
+            if (videoBtn) {
+                videoBtn.classList.add('hidden');
+            }
+        } else {
+            myVideo.pause();
+            if (videoBlur) {
+                videoBlur.classList.remove('hidden');
+            }
+            if (videoBtn) {
+                videoBtn.classList.remove('hidden');
+            }
+        }
+    });
+}
+
 document.addEventListener("DOMContentLoaded", function () {
     const zoomedImage = document.getElementById("zoomed-image");
     if (zoomedImage) {
@@ -647,6 +685,6 @@ document.addEventListener("DOMContentLoaded", function () {
             if (zoomedImage) {
                 zoomedImage.classList.remove("zoomed");
             }
-        }, 3000);
+        }, 1000);
     }
 });

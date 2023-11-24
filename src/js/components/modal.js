@@ -23,3 +23,12 @@ function closeModal() {
     body.style.overflow = '';
   }
 }
+
+// Additional check for close button (if you have one)
+var closeModalBtn = document.getElementById('closeModalBtn');
+
+if (closeModalBtn) {
+  closeModalBtn.addEventListener('click', function () {
+    closeModal();
+  });
+}

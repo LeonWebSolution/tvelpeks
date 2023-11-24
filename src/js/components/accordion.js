@@ -4,16 +4,20 @@ document.addEventListener('DOMContentLoaded', function () {
     var currentSubAccordion = null;
 
     function closeAccordion(accordion, isSubAccordion) {
-        accordion.classList.remove('active');
-        var accordionContent = accordion.nextElementSibling;
-        accordionContent.style.maxHeight = '0';
+        if (accordion) {
+            accordion.classList.remove('active');
+            var accordionContent = accordion.nextElementSibling;
+            if (accordionContent) {
+                accordionContent.style.maxHeight = '0';
+            }
 
-        var faqItem = accordion.closest(isSubAccordion ? '.faq__sub-item' : '.faq__item');
-        if (faqItem) {
-            faqItem.classList.remove('active');
-            var faqItemContent = faqItem.querySelector(isSubAccordion ? '.faq__sub-item-content' : '.faq__item-content');
-            if (faqItemContent) {
-                faqItemContent.classList.remove('active');
+            var faqItem = accordion.closest(isSubAccordion ? '.faq__sub-item' : '.faq__item');
+            if (faqItem) {
+                faqItem.classList.remove('active');
+                var faqItemContent = faqItem.querySelector(isSubAccordion ? '.faq__sub-item-content' : '.faq__item-content');
+                if (faqItemContent) {
+                    faqItemContent.classList.remove('active');
+                }
             }
         }
     }
@@ -22,7 +26,9 @@ document.addEventListener('DOMContentLoaded', function () {
         var isActive = !accordion.classList.contains('active');
 
         accordion.classList.toggle('active', isActive);
-        content.style.maxHeight = isActive ? content.scrollHeight + 'px' : '0';
+        if (content) {
+            content.style.maxHeight = isActive ? content.scrollHeight + 'px' : '0';
+        }
 
         var faqItem = accordion.closest(isSubAccordion ? '.faq__sub-item' : '.faq__item');
 
@@ -31,7 +37,7 @@ document.addEventListener('DOMContentLoaded', function () {
             var faqItemContent = faqItem.querySelector(isSubAccordion ? '.faq__sub-item-content' : '.faq__item-content');
 
             if (faqItemContent) {
-                var newHeight = faqItemContent.scrollHeight + content.scrollHeight;
+                var newHeight = faqItemContent.scrollHeight + (content ? content.scrollHeight : 0);
                 faqItemContent.style.maxHeight = newHeight + 'px';
                 faqItemContent.classList.add('active');
             }
@@ -58,17 +64,21 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     }
 
-    faqItems.forEach(function (item) {
-        item.addEventListener('click', function () {
-            handleAccordionClick(this, false);
-        });
-
-        var subItems = item.nextElementSibling.querySelectorAll('.faq__sub-item-top');
-        subItems.forEach(function (subItem) {
-            subItem.addEventListener('click', function (event) {
-                event.stopPropagation();
-                handleAccordionClick(this, true);
+    if (faqItems) {
+        faqItems.forEach(function (item) {
+            item.addEventListener('click', function () {
+                handleAccordionClick(this, false);
             });
+
+            var subItems = item.nextElementSibling ? item.nextElementSibling.querySelectorAll('.faq__sub-item-top') : null;
+            if (subItems) {
+                subItems.forEach(function (subItem) {
+                    subItem.addEventListener('click', function (event) {
+                        event.stopPropagation();
+                        handleAccordionClick(this, true);
+                    });
+                });
+            }
         });
-    });
+    }
 });

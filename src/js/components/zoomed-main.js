@@ -6,6 +6,6 @@ document.addEventListener("DOMContentLoaded", function () {
             if (zoomedImage) {
                 zoomedImage.classList.remove("zoomed");
             }
-        }, 3000);
+        }, 1000);
     }
 });
