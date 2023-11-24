@@ -465,7 +465,7 @@
         }
         &__video{
             margin-top: 3rem;
-            height: 19.9rem;
+            height: 34.9rem;
             border-radius: 1.5rem;
             &-play{
                 width: 4.7rem;
@@ -533,4 +533,10 @@
             }
         }
     }
+}
+
+@media (max-width: 600px){
+    .words__video{
+        height: 19rem;
+    }  
 }
