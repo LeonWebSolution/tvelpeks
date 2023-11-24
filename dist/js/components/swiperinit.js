@@ -84,16 +84,14 @@ export class SwiperInit {
         spaceBetween: 70,
         initialSlide: 0, 
         centerInsufficientSlides: true,
+        freeMode: true,
+        freeModeSticky: true,
         navigation: {
           nextEl: '#swiper-button-next-his',
           prevEl: '#swiper-button-prev-his',
         },
-        freeMode: true,
-        freeModeSticky: true,
         breakpoints: {
           200: {
-            freeMode: true,
-            freeModeSticky: true,
             spaceBetween: 15,
           },
         },
@@ -109,12 +107,6 @@ export class SwiperInit {
         navigation: {
           nextEl: '#swiper-button-next-workrs',
           prevEl: '#swiper-button-prev-workrs',
-        },
-        breakpoints: {
-          200: {
-            freeMode: true,
-            freeModeSticky: true,
-          },
         },
       });
     });
