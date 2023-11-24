@@ -1,93 +1,116 @@
 export class Accordion {
     constructor() {
         document.addEventListener('DOMContentLoaded', () => {
-            this.initializeAccordions();
-        });
-    }
+            var faqItems = document.querySelectorAll('.faq__item-top');
+            var currentAccordion = null;
+            var currentSubAccordion = null;
 
-    closeAccordion(accordion, isSubAccordion) {
-        if (accordion) {
-            accordion.classList.remove('active');
-            var accordionContent = accordion.nextElementSibling;
-            if (accordionContent) {
+            function closeAccordion(accordion) {
+                accordion.classList.remove('active');
+                var accordionContent = accordion.nextElementSibling;
                 accordionContent.style.maxHeight = '0';
-            }
 
-            var faqItem = accordion.closest(isSubAccordion ? '.faq__sub-item' : '.faq__item');
-            if (faqItem) {
-                faqItem.classList.remove('active');
-                var faqItemContent = faqItem.querySelector(isSubAccordion ? '.faq__sub-item-content' : '.faq__item-content');
-                if (faqItemContent) {
-                    faqItemContent.classList.remove('active');
+                // Remove 'active' class from faq__item of the accordion only if it's not a nested accordion
+                var faqItem = accordion.closest('.faq__item');
+                if (faqItem && !accordion.classList.contains('faq__sub-item-top')) {
+                    faqItem.classList.remove('active');
+                    var faqItemContent = faqItem.querySelector('.faq__item-content');
+                    if (faqItemContent) {
+                        faqItemContent.style.maxHeight = ''; // Reset the max height
+                        faqItemContent.classList.remove('active');
+                    }
+                }
+
+                // Remove 'active' class from faq__sub-item of the nested accordion
+                var faqSubItem = accordion.closest('.faq__sub-item');
+                if (faqSubItem) {
+                    faqSubItem.classList.remove('active');
+                    var faqSubItemContent = faqSubItem.querySelector('.faq__sub-item-content');
+                    if (faqSubItemContent) {
+                        faqSubItemContent.style.maxHeight = ''; // Reset the max height
+                        faqSubItemContent.classList.remove('active');
+                    }
                 }
             }
-        }
-    }
 
-    toggleAccordion(accordion, content, isSubAccordion) {
-        var isActive = !accordion.classList.contains('active');
+            function updateAccordionHeight(item, content) {
+                var faqItem = item.closest('.faq__item');
+                var faqItemContent = faqItem.querySelector('.faq__item-content');
 
-        accordion.classList.toggle('active', isActive);
-        if (content) {
-            content.style.maxHeight = isActive ? content.scrollHeight + 'px' : '0';
-        }
-
-        var faqItem = accordion.closest(isSubAccordion ? '.faq__sub-item' : '.faq__item');
-
-        if (isActive) {
-            faqItem.classList.add('active');
-            var faqItemContent = faqItem.querySelector(isSubAccordion ? '.faq__sub-item-content' : '.faq__item-content');
-
-            if (faqItemContent) {
-                var newHeight = faqItemContent.scrollHeight + (content ? content.scrollHeight : 0);
-                faqItemContent.style.maxHeight = newHeight + 'px';
-                faqItemContent.classList.add('active');
+                if (faqItem && faqItemContent) {
+                    // Calculate and set the actual height
+                    var newHeight = faqItemContent.scrollHeight + content.scrollHeight;
+                    faqItemContent.style.maxHeight = newHeight + 'px';
+                    faqItemContent.classList.add('active');
+                }
             }
-        } else {
-            this.closeAccordion(accordion, isSubAccordion);
-        }
 
-        return isActive;
-    }
+            faqItems.forEach(function (item) {
+                item.addEventListener('click', function () {
+                    var content = this.nextElementSibling;
 
-    handleAccordionClick(accordion, isSubAccordion) {
-        var content = accordion.nextElementSibling;
+                    // Toggle the active state
+                    this.classList.toggle('active');
+                    var isActive = this.classList.contains('active');
 
-        if (isSubAccordion) {
-            if (this.currentSubAccordion && this.currentSubAccordion !== accordion) {
-                this.closeAccordion(this.currentSubAccordion, isSubAccordion);
-            }
-            this.currentSubAccordion = this.toggleAccordion(accordion, content, isSubAccordion) ? accordion : null;
-        } else {
-            if (this.currentAccordion && this.currentAccordion !== accordion) {
-                this.closeAccordion(this.currentAccordion, isSubAccordion);
-            }
-            this.currentAccordion = this.toggleAccordion(accordion, content, isSubAccordion) ? accordion : null;
-        }
-    }
+                    // Close the previous accordion if one is open
+                    if (currentAccordion && currentAccordion !== this) {
+                        closeAccordion(currentAccordion);
+                    }
 
-    initializeAccordions() {
-        var faqItems = document.querySelectorAll('.faq__item-top');
-        this.currentAccordion = null;
-        this.currentSubAccordion = null;
+                    // Toggle the content visibility
+                    content.style.maxHeight = isActive ? content.scrollHeight + 'px' : '0';
 
-        if (faqItems.length > 0) {
-            faqItems.forEach((item) => {
-                item.addEventListener('click', () => {
-                    this.handleAccordionClick(item, false);
+                    // If the item is active, add 'active' class to faq__item and update height
+                    if (isActive) {
+                        var faqItem = this.closest('.faq__item');
+                        faqItem.classList.add('active');
+                        updateAccordionHeight(this, content);
+                    } else {
+                        closeAccordion(this);
+                    }
+
+                    // Update the current accordion only if it's not a nested accordion
+                    if (!this.closest('.faq__sub-item')) {
+                        currentAccordion = isActive ? this : null;
+                    }
                 });
 
-                var subItems = item.nextElementSibling ? item.nextElementSibling.querySelectorAll('.faq__sub-item-top') : null;
-                if (subItems && subItems.length > 0) {
-                    subItems.forEach((subItem) => {
-                        subItem.addEventListener('click', (event) => {
-                            event.stopPropagation();
-                            this.handleAccordionClick(subItem, true);
-                        });
+                // Process nested accordions
+                var subItems = item.nextElementSibling.querySelectorAll('.faq__sub-item-top');
+                subItems.forEach(function (subItem) {
+                    subItem.addEventListener('click', function (event) {
+                        // Prevent the click event from bubbling up to the parent accordion
+                        event.stopPropagation();
+
+                        var subContent = this.nextElementSibling;
+
+                        // Close the previous nested accordion if one is open
+                        if (currentSubAccordion && currentSubAccordion !== this) {
+                            closeAccordion(currentSubAccordion);
+                        }
+
+                        // Toggle the active state
+                        this.classList.toggle('active');
+                        var isActive = this.classList.contains('active');
+
+                        // Toggle the content visibility
+                        subContent.style.maxHeight = isActive ? subContent.scrollHeight + 'px' : '0';
+
+                        // If the item is active, add 'active' class to faq__sub-item and update height
+                        if (isActive) {
+                            var faqSubItem = this.closest('.faq__sub-item');
+                            faqSubItem.classList.add('active');
+                            updateAccordionHeight(this, subContent);
+                        } else {
+                            closeAccordion(this);
+                        }
+
+                        // Update the current nested accordion
+                        currentSubAccordion = isActive ? this : null;
                     });
-                }
+                });
             });
-        }
+        });
     }
 }
-

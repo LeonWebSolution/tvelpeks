@@ -355,6 +355,8 @@
         padding-left: 6.5rem;
     }
     &__img{
+        width: 70.2rem;
+        height: 61.9rem;
         img{
             width: 70.2rem;
             height: 61.9rem;
@@ -450,6 +452,10 @@
             opacity: 1;
             transition: all 0.3s;
         }
+    }
+    .support-form__agreement{
+        font-family: 'Graphik LCG';
+        font-weight: 400;
     }
 }
 .swiper{

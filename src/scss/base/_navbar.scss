@@ -125,6 +125,9 @@
                 color: #292A29;
             }
         }
+        .production__item-text{
+            text-transform: initial;
+        }
     }
     .about__list{
         padding: 1.1rem;
@@ -162,14 +165,18 @@
         .form-question__suptitle{
             margin-bottom: 2.5rem;
         }
+        .form-question__descr{
+            text-transform: initial !important;
+        }
         .question-form{
             width: 68.1rem;
             display: flex;
             flex-wrap: wrap;
             margin-bottom: 3rem;
             gap: 1.5rem;
+            justify-content: space-between;
             .block-input{
-                width: 48.9%;
+                width: 48.5%;
             }
             .input-group{
                 position: relative;
