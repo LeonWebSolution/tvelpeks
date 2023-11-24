@@ -59,7 +59,7 @@
     &__wrapper{
         display: grid !important;
         grid-template-columns: repeat(3,1fr);
-        gap: 3rem;
+        gap: 4rem;
     }
     &__item{
         svg{
@@ -193,6 +193,9 @@
                 border-radius: 50%;
                 animation: scale-blur 2s infinite ease-in-out alternate;  // Изменено здесь
                 transition: all 0.2s;
+            }
+            svg{
+                margin-left: 0.3rem;
             }
             &:hover::before{
                 animation-play-state: paused;
@@ -397,6 +400,7 @@
     }
     .peculiarities{
         padding: 4.8rem 1.5rem 5.5rem;
+        padding-top: 0;
         gap: 2.5rem;
         border: none;
         flex-direction: column;

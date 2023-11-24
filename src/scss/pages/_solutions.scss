@@ -37,6 +37,9 @@
     border-radius: 2rem;
     background: linear-gradient(180deg, #E9E9EF 0%, #F4F4F6 100%);;
     padding: 8rem 7rem;
+    .container{
+        padding: 0;
+    }
     &__title{
         max-width: 59.9rem;
         margin-bottom: 4rem;
@@ -57,6 +60,18 @@
             display: flex;
             flex-direction: column;
             gap: 2.5rem;
+            transition: all 0.3s;
+            svg{
+                transition: all 0.3s;
+            }
+            &:hover{
+                color: $hover_yellow;
+                transition: all 0.3s;
+                svg stop{
+                    stop-color: $primary;
+                    transition: all 0.3s;
+                }
+            }
         }
     }
     &__wrapper{
@@ -261,6 +276,9 @@
     .faq{
         padding: 4rem 0;
         margin-bottom: 2.1rem;
+        .container{
+            margin: 0 1.2rem;
+        }
         &__wrapper{
             flex-direction: column;
         }
@@ -287,15 +305,28 @@
         }
         .faq__sub-name{
             font-size: 1.8rem;
+            padding-left: 2.8rem;
         }
         .faq__sub-item{
-            padding-left: 2.8rem;
+            padding-left: 0rem;
             padding-top: 1.2rem;
             padding-bottom: 1.5rem;
         }
         .faq__sub-number{
             left: 0;
             top: 0.7rem;
+            padding-left: 0;
+        }
+        .faq__sub-content__text{
+            font-size: 1.6rem;
+            padding: 0;
+           
+            &:nth-child(2){
+                font-size: 1.4rem;
+            }
+            &:nth-child(3){
+                font-size: 1.4rem;
+            }
         }
     }
 }
