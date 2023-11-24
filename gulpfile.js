@@ -53,7 +53,7 @@ function watching() {
     });
     watch(['src/scss/**/*.scss'], styles)
     watch(['src/images/'], images)
-    watch(['src/js/.js'], scripts)
+    watch(['src/js/**/*.js'], scripts)
     watch(['src/*.html']).on('change', browserSync.reload)
 }
 

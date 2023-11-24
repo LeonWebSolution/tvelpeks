@@ -267,7 +267,10 @@
         background: linear-gradient(270deg, #979FAB 0%, #818790 100%);
         background-clip: text;
         -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;   
+        -webkit-text-fill-color: transparent;
+        display: inline-block;
+        -webkit-box-decoration-break: clone; 
+        box-decoration-break: clone;
     }
 }
 
