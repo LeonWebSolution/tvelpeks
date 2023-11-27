@@ -1,0 +1,41 @@
+.production-page{
+    .faq{
+        margin-bottom: 1rem;  
+    }
+}
+
+.production-main{
+    margin-top: 19rem;
+    padding-top: 6rem;
+    margin-bottom: 9.6rem;
+    &__title{
+        margin-bottom: 2rem;
+    }
+    &__descr{
+        color: 585E63;
+        max-width: 90rem;
+        margin-bottom: 5.5rem;
+    }
+    .production__wrapper{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+.comparison-type{
+    padding-bottom: 9.7rem;
+    .container{
+        max-width: 100%;
+        padding: 0;
+    }
+    &__title{
+        margin-bottom: 3.3rem;
+        span{
+            color: #AEB2BF;
+        }
+        margin-left: 13.9rem;
+    }
+    &__minus{
+        font-size: 1.4rem;
+    }
+}
