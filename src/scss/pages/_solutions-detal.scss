@@ -573,6 +573,7 @@
         }
         &__row{
             flex-direction: column;
+            font-size: 1.4rem !important;
         }
         &__plus{
             width: 26.5rem;
@@ -586,7 +587,6 @@
             width: 50rem;
             // padding: 1.5rem 0 1.4rem;
             border: none;
-            display: block;
             p{
                 font-size: 1.4rem !important;
             }
