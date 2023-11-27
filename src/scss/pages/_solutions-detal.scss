@@ -198,9 +198,12 @@
 .block-sticky{
     position: relative;
 }
-.navigation-sticky{
-    top: 7rem;
+.navigation-stickys{
+    top: 7.15rem;
     position: sticky;
+    z-index: 7;
+}
+.navigation-sticky{
     display: flex;
     gap: 1rem;
     border-bottom: 0.1rem solid $black;
@@ -638,6 +641,19 @@
     .production__item-lable{
         font-size: 1.2rem;
     }
+    .navigation-stickys{
+        top: 0;
+        transition: all 0.5s;
+        padding-bottom: 1rem;
+        &.fixed{
+            top: 7.9rem;
+            transition: all 0.5s;
+        }
+        &.top-del{
+            top: -10rem;
+            transition: all 0.5s;
+        }
+    }
     .navigation-sticky__item:nth-child(1) {
         padding-left: 1.5rem;
     }
@@ -649,6 +665,7 @@
         min-width: 25rem;
     }
     .navigation-sticky{
+        overflow: visible;
         &::-webkit-scrollbar{
             display: none;
         }
@@ -660,10 +677,7 @@
     .navigation-sticky{
         position: absolute;
         top: 0rem;
-        &.fixed{
-            top: 0rem;
-            position: fixed;
-        }
+        overflow: auto;
     }
     .heating-production__nav-descr{
         font-size: 1.2rem;

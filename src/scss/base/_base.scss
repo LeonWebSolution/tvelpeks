@@ -53,9 +53,6 @@ body{
     html{
         font-size: calc(100vw / 360 * 7);
     }
-    .wrapper{
-        overflow: hidden;
-    }
     .hamburger{
         display: block;
     }
@@ -68,4 +65,8 @@ body{
     html{
         font-size: calc(100vw / 360 * 10);
     }
+}
+
+section{
+    overflow: hidden;
 }
