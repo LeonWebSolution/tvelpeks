@@ -1,5 +1,5 @@
 .header {
-    position: absolute;
+    position: fixed;
     top: 0;
     z-index: 7777777 !important;
     transform: translateY(-0%);
@@ -344,7 +344,7 @@ body.hidden{
   }
   .header{
     padding-top: 1.4rem;
-
+    position: absolute;
     &.fixed{
       transform: translateY(0);
       .header__top{
