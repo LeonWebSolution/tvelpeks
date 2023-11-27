@@ -553,7 +553,7 @@
         }
         &__top{
             border-radius: 0;
-            width: 58rem;
+            width: 80rem;
             gap: 2rem;
             padding: 2.1rem 1.5rem;
             &-item{
@@ -568,11 +568,14 @@
             }
         }
         &__content{
-            width: 58rem;
+            width: 80rem;
             padding: 0 1.5rem;
         }
+        .comparison-pipe__top-item:nth-child(1){
+            width: 34.3%;
+        }
         &__plus{
-            width: 50%;
+            width: 34.3%;
             font-size: 1.4rem;
             padding: 1.5rem 0 1.4rem;
             margin-right: 2rem;
@@ -580,7 +583,7 @@
         }
         &__minus{
             font-size: 1.4rem !important;
-            width: 50%;
+            width: 63.7%;
             // padding: 1.5rem 0 1.4rem;
             border: none;
         }
