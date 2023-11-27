@@ -146,6 +146,10 @@
         display: flex;
         align-items: center;
         gap: 1.8rem;
+        font-size: 1.6rem;
+        font-family: 'Graphik LCG';
+        font-weight: 400;
+        line-height: 140%;
         svg{
             min-width: 1.7rem;
             min-height: 1.1rem;
@@ -158,6 +162,10 @@
         display: flex;
         align-items: center;
         gap: 1.8rem;
+        font-size: 1.6rem;
+        font-family: 'Graphik LCG';
+        font-weight: 400;
+        line-height: 140%;
         svg{
             min-width: 1.9rem;
             min-height: 0.2rem;
@@ -572,7 +580,6 @@
             padding: 0 1.5rem;
         }
         &__row{
-            flex-direction: column;
             font-size: 1.4rem !important;
         }
         &__plus{
@@ -581,15 +588,19 @@
             padding: 1.5rem 0 1.4rem;
             margin-right: 2rem;
             border: none;
+            font-family: 'Graphik LCG';
+            font-weight: 400;
+            line-height: 140%;
         }
         &__minus{
             font-size: 1.4rem !important;
             width: 50rem;
             // padding: 1.5rem 0 1.4rem;
             border: none;
-            p{
-                font-size: 1.4rem !important;
-            }
+            font-family: 'Graphik LCG';
+            font-weight: 400;
+            line-height: 140%;
+            
         }
         &__row{
             gap: 0;
