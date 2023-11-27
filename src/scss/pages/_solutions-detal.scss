@@ -576,7 +576,7 @@
             }
         }
         &__content{
-            width: 100%;
+            min-width: 220%;
             padding: 0 1.5rem;
         }
         &__row{
@@ -593,7 +593,7 @@
             line-height: 140%;
         }
         &__minus{
-            font-size: 1.4rem !important;
+            font-size: 1.39rem !important;
             width: 50rem;
             // padding: 1.5rem 0 1.4rem;
             border: none;
