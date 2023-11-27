@@ -199,7 +199,7 @@
     position: relative;
 }
 .navigation-sticky{
-    top: 0.2rem;
+    top: 7rem;
     position: sticky;
     display: flex;
     gap: 1rem;
@@ -553,7 +553,7 @@
         }
         &__top{
             border-radius: 0;
-            width: 80rem;
+            width: 58rem;
             gap: 2rem;
             padding: 2.1rem 1.5rem;
             &-item{
@@ -568,11 +568,11 @@
             }
         }
         &__content{
-            width: 80rem;
+            width: 58rem;
             padding: 0 1.5rem;
         }
         &__plus{
-            width: 26.5rem;
+            width: 50%;
             font-size: 1.4rem;
             padding: 1.5rem 0 1.4rem;
             margin-right: 2rem;
@@ -580,7 +580,7 @@
         }
         &__minus{
             font-size: 1.4rem !important;
-            width: 50rem;
+            width: 50%;
             // padding: 1.5rem 0 1.4rem;
             border: none;
         }
@@ -659,8 +659,9 @@
     }
     .navigation-sticky{
         position: absolute;
+        top: 0rem;
         &.fixed{
-            top: 7.5rem;
+            top: 0rem;
             position: fixed;
         }
     }
