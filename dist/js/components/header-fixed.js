@@ -53,21 +53,23 @@ export class Fixed {
     // if (sticky) {
     //   document.addEventListener("DOMContentLoaded", function() {
     //     // Получаем элемент блока
-    //     var blockSticky = document.querySelector('.navigation-sticky');
+    //     var blockSticky = document.querySelector('..navigation-sticky');
+      
+    //     // Получаем начальное положение блока относительно верхней точки окна
+    //     var blockStickyOffset = blockSticky.offsetTop;
       
     //     // Добавляем обработчик события прокрутки окна
     //     window.addEventListener('scroll', function() {
-    //       // Получаем координаты верхней границы блока и верхней границы окна
-    //       var blockTop = blockSticky.getBoundingClientRect().top;
-    //       var windowTop = 0;
+    //       // Получаем текущее положение прокрутки
+    //       var scrollPosition = window.scrollY || document.documentElement.scrollTop;
       
-    //       // Проверяем, когда верхняя граница блока касается верхней границы окна
-    //       if (blockTop <= windowTop) {
+    //       // Проверяем, когда блок касается верхней точки окна
+    //       if (scrollPosition >= blockStickyOffset) {
     //         // Добавляем класс fixed
     //         blockSticky.classList.add('fixed');
-    //       // } else {
-    //       //   // Убираем класс fixed
-    //       //   blockSticky.classList.remove('fixed');
+    //       } else {
+    //         // Убираем класс fixed
+    //         blockSticky.classList.remove('fixed');
     //       }
     //     });
     //   });

@@ -579,9 +579,9 @@
             border: none;
         }
         &__minus{
-            font-size: 1.4rem;
+            font-size: 1.4rem !important;
             width: 50rem;
-            padding: 1.5rem 0 1.4rem;
+            // padding: 1.5rem 0 1.4rem;
             border: none;
         }
         &__row{
