@@ -29,5 +29,19 @@ export class Tabs {
                 });
             });
         }
+        var items = document.querySelectorAll('.navigation-sticky__item');
+
+        // Добавляем слушатель событий для каждого элемента
+        items.forEach(function(item) {
+            item.addEventListener('click', function() {
+                // Удаление класса 'active' у всех элементов
+                items.forEach(function(innerItem) {
+                    innerItem.classList.remove('active');
+                });
+    
+                // Добавление класса 'active' к текущему элементу
+                item.classList.add('active');
+            });
+        });
     }
 }

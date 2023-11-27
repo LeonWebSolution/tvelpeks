@@ -413,8 +413,8 @@ body.hidden{
         gap: 0.5rem;
         padding-left: 0.8rem;
         span{
-          width: 2rem;
-          height: 0.1rem;
+          min-width: 2rem;
+          min-height: 0.1rem;
           border-radius: 1rem;
           background-color: $black;
           display: block;
