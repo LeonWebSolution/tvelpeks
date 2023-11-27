@@ -571,6 +571,9 @@
             width: 80rem;
             padding: 0 1.5rem;
         }
+        &__row{
+            flex-direction: column;
+        }
         &__plus{
             width: 26.5rem;
             font-size: 1.4rem;
@@ -647,6 +650,11 @@
     }
     .navigation-sticky__item:nth-child(2){
         min-width: 25rem;
+    }
+    .navigation-sticky{
+        &::-webkit-scrollbar{
+            display: none;
+        }
     }
     .block-sticky{
         height: 100%;
