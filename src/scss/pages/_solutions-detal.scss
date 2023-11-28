@@ -642,11 +642,12 @@
         font-size: 1.2rem;
     }
     .navigation-stickys{
-        top: 0;
+        top: 0rem;
         transition: all 0.3s;
         padding-bottom: 1rem;
+        z-index: 777;
         &.fixed{
-            top: 7.9rem;
+            top: 7.5rem;
             transition: all 0.3s;
         }
         &.top-del{
@@ -665,7 +666,6 @@
         min-width: 25rem;
     }
     .navigation-sticky{
-        overflow: visible;
         &::-webkit-scrollbar{
             display: none;
         }
@@ -677,7 +677,9 @@
     .navigation-sticky{
         position: absolute;
         top: 0rem;
-        overflow: auto;
+        overflow-x: auto;
+        overflow-y: hidden;
+        padding-top: 0.1rem;
     }
     .heating-production__nav-descr{
         font-size: 1.2rem;

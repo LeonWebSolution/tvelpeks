@@ -345,6 +345,10 @@ body.hidden{
   .header{
     padding-top: 1.4rem;
     position: absolute;
+    z-index: 7 !important;
+    &.active{
+      z-index: 777777777777777 !important;
+    }
     &.fixed{
       transform: translateY(0);
       .header__top{

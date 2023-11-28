@@ -123,6 +123,7 @@ export class Nav {
     const productionsList = document.querySelector('.productions__list');
     const hamburgerMenu = document.querySelector('.hamburger__menu');
     const headerBottom = document.querySelector('.header__bottom');
+    const header = document.querySelector('.header'); // Новая строка
     const body = document.body;
     const contactMenu = document.querySelector('.contact__menu');
     const contactMenuBlock = document.querySelector('.contact__menu-block');
@@ -132,10 +133,10 @@ export class Nav {
     const calcLink = document.querySelector('.calc__link');
     const calcNameLink = document.querySelector('.calc__name-link');
     const calcList = document.querySelector('.calc__list');
-
+    
     function toggleList(link, list) {
       const isActive = link.classList.contains('active');
-
+    
       const allLinks = document.querySelectorAll('.solutions__name-link, .productions__name-link, .about__name-link, .calc__name-link');
       allLinks.forEach(otherLink => {
         if (otherLink !== link) {
@@ -148,84 +149,88 @@ export class Nav {
           otherList.style.maxHeight = '';
         }
       });
-
+    
       link.classList.toggle('active');
       list.classList.toggle('active');
-
+    
       const maxHeight = isActive ? '' : list.scrollHeight + 'px';
       list.style.maxHeight = maxHeight;
     }
-
+    
     if (!isDesc) {
-      // For small screens
       solutionsLink.addEventListener('click', function (event) {
         event.preventDefault();
         toggleList(solutionsLink, list);
       });
-
+    
       productionsLink.addEventListener('click', function (event) {
         event.preventDefault();
         toggleList(productionsLink, productionsList);
       });
-
+    
       aboutLink.addEventListener('click', function (event) {
         event.preventDefault();
         toggleList(aboutNameLink, aboutList);
       });
-
+    
       calcLink.addEventListener('click', function (event) {
         event.preventDefault();
         toggleList(calcNameLink, calcList);
       });
     }
-
+    
     hamburgerMenu.addEventListener('click', function () {
       const isActive = hamburgerMenu.classList.contains('active');
       const solutionsNameLink = document.querySelectorAll('.solutions__name-link');
       const solutionsList = document.querySelector('.solutions__list');
-
+      const headerBottom = document.querySelector('.header__bottom'); // Добавили эту строку
+    
       if (isActive) {
         hamburgerMenu.classList.remove('active');
-        headerBottom.classList.remove('active');
+        header.classList.remove('active');
+        headerBottom.classList.remove('active'); // Добавляем/удаляем класс active у элемента header__bottom
         body.style.overflow = 'auto';
-
+    
         solutionsNameLink.forEach(link => link.classList.remove('active'));
         solutionsList.classList.remove('active');
         solutionsList.style.maxHeight = '';
-
+    
         productionsLink.classList.remove('active');
         productionsList.classList.remove('active');
         productionsList.style.maxHeight = '';
-
+    
         aboutNameLink.classList.remove('active');
         aboutList.classList.remove('active');
         aboutList.style.maxHeight = '';
-
+    
         calcNameLink.classList.remove('active');
         calcList.classList.remove('active');
         calcList.style.maxHeight = '';
       } else {
         hamburgerMenu.classList.add('active');
-        headerBottom.classList.add('active');
+        header.classList.add('active');
+        headerBottom.classList.add('active'); // Добавляем/удаляем класс active у элемента header__bottom
         body.style.overflow = 'hidden';
-
+    
         solutionsNameLink.forEach(link => link.classList.remove('active'));
         solutionsList.classList.remove('active');
         solutionsList.style.maxHeight = '';
-
+    
         productionsLink.classList.remove('active');
         productionsList.classList.remove('active');
         productionsList.style.maxHeight = '';
-
+    
         aboutNameLink.classList.remove('active');
         aboutList.classList.remove('active');
         aboutList.style.maxHeight = '';
-
+    
         calcNameLink.classList.remove('active');
         calcList.classList.remove('active');
         calcList.style.maxHeight = '';
       }
     });
+    
+    
 
     contactMenu.addEventListener('click', function () {
       contactMenu.classList.toggle('active');
