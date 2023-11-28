@@ -556,7 +556,7 @@
         }
         &__top{
             border-radius: 0;
-            width: 58rem;
+            width: 65rem;
             gap: 2rem;
             padding: 2.1rem 1.5rem;
             &-item{
@@ -571,20 +571,20 @@
             }
         }
         &__content{
-            width: 58rem;
+            width: 65rem;
             padding: 0 1.5rem;
         }
         &__plus{
-            width: 50%;
+            width: 40%;
             font-size: 1.4rem;
-            padding: 1.5rem 0 1.4rem;
+            padding: 1rem 0;
             margin-right: 2rem;
             border: none;
         }
         &__minus{
             font-size: 1.4rem !important;
-            width: 50%;
-            // padding: 1.5rem 0 1.4rem;
+            width: 60%;
+            padding: 1rem 0;
             border: none;
         }
         &__row{
@@ -643,15 +643,15 @@
     }
     .navigation-stickys{
         top: 0;
-        transition: all 0.5s;
+        transition: all 0.3s;
         padding-bottom: 1rem;
         &.fixed{
             top: 7.9rem;
-            transition: all 0.5s;
+            transition: all 0.3s;
         }
         &.top-del{
-            top: -10rem;
-            transition: all 0.5s;
+            top: 0rem;
+            transition: all 0.3s;
         }
     }
     .navigation-sticky__item:nth-child(1) {

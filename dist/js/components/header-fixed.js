@@ -9,29 +9,59 @@ export class Fixed {
       document.addEventListener('DOMContentLoaded', () => {
         var myElement = document.querySelector('.header');
         var lastScrollTop = 0;
-  
-        window.addEventListener('scroll', function() {
-          var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-  
-          if (scrollTop > lastScrollTop) {
-            // Скролл вниз
-            if (scrollTop > 300) {
-              myElement.classList.add('top-del');
-            }
-          } else {
-            // Скролл вверх
-            if (scrollTop > 300) {
-              myElement.classList.add('fixed');
+    
+        window.addEventListener('scroll', function () {
+            var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    
+            if (scrollTop > lastScrollTop) {
+                // Скролл вниз
+                if (scrollTop > 300) {
+                    myElement.classList.add('top-del');
+                }
             } else {
-              myElement.classList.remove('fixed');
+                // Скролл вверх
+                if (scrollTop > 300) {
+                    myElement.classList.add('fixed');
+                } else {
+                    myElement.classList.remove('fixed');
+                }
+    
+                myElement.classList.remove('top-del');
             }
-  
-            myElement.classList.remove('top-del');
-          }
-  
-          lastScrollTop = scrollTop;
+    
+            lastScrollTop = scrollTop;
         });
-      });
+    });
+    document.addEventListener('DOMContentLoaded', () => {
+      var navigationSticky = document.querySelector('.navigation-stickys');
+  
+      if (navigationSticky) {
+          var lastScrollTop = 0;
+  
+          window.addEventListener('scroll', function () {
+              var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+  
+              if (scrollTop > lastScrollTop) {
+                  // Scroll down
+                  if (scrollTop > 300) {
+                      navigationSticky.classList.add('top-del');
+                  }
+              } else {
+                  // Scroll up
+                  if (scrollTop > 300) {
+                      navigationSticky.classList.add('fixed');
+                  } else {
+                      navigationSticky.classList.remove('fixed');
+                  }
+                  navigationSticky.classList.remove('top-del');
+              }
+  
+              lastScrollTop = scrollTop;
+          });
+      }
+  });
+  
+    
     }
 
 
