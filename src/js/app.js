@@ -24,6 +24,58 @@ const ModalInstance = new Modal();
 const VideoInstance = new Video();
 
 
+document.addEventListener('DOMContentLoaded', function () {
+    // Добавление <span> в пустые ячейки
+    document.querySelectorAll('#comparison-type__table td').forEach(function (cell) {
+        if (!cell.innerHTML.trim()) {
+            cell.innerHTML = '<span></span>';
+        }
+    });
+
+    // Обработчик клика на кнопке "Вперед"
+    document.querySelector('.table-arrow-next').addEventListener('click', function () {
+        document.querySelector('.comparison-type__wrapper').scrollLeft += 100;
+        updateArrowPrevState();
+    });
+
+    // Обработчик клика на кнопке "Назад"
+    document.querySelector('.table-arrow-prev').addEventListener('click', function () {
+        document.querySelector('.comparison-type__wrapper').scrollLeft -= 100;
+        updateArrowPrevState();
+    });
+
+    // Обработчик клика на кнопке "Показать/Скрыть"
+    var wrapper = document.getElementById('comparisonWrapper');
+    var maxHeight = wrapper.scrollHeight;
+    var buttonTextElement = document.querySelector('.table-btn p');
+
+    document.querySelector('.table-btn').addEventListener('click', function () {
+        if (wrapper.style.maxHeight === maxHeight + 'px') {
+            wrapper.style.maxHeight = null;
+            buttonTextElement.textContent = 'Показать еще';
+            this.classList.remove('active');
+        } else {
+            wrapper.style.maxHeight = maxHeight + 'px';
+            buttonTextElement.textContent = 'Скрыть';
+            this.classList.add('active');
+        }
+    });
+
+    // Добавление обработчика события прокрутки
+    document.querySelector('.comparison-type__wrapper').addEventListener('scroll', function () {
+        updateArrowPrevState();
+    });
+
+    // Инициализация состояния стрелки при загрузке
+    updateArrowPrevState();
+});
+
+// Обновление состояния стрелки "Назад" в зависимости от положения скролла
+function updateArrowPrevState() {
+    var arrowPrev = document.querySelector('.table-arrow-prev');
+    arrowPrev.classList.toggle('active', document.querySelector('.comparison-type__wrapper').scrollLeft > 0);
+}
+
 // export class Component1 {
 //   // Ваш код здесь
 // }
