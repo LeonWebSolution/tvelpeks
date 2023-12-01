@@ -146,6 +146,21 @@ export class SwiperInit {
         });
       }
 
+      if (document.querySelector('.subc-slider')) {
+        var workers = new Swiper('.subc-slider', {
+          slidesPerView: 'auto',
+          spaceBetween: 16,
+          initialSlide: 0,
+          centerInsufficientSlides: true,
+          freeMode: true,
+          freeModeSticky: true,
+          navigation: {
+            nextEl: '#swiper-button-next-subc',
+            prevEl: '#swiper-button-prev-subc',
+          },
+        });
+      }
+
       // Swiper for heation-peculiarities__slider
       if (document.querySelector('.heation-peculiarities__slider')) {
         var heation = new Swiper('.heation-peculiarities__slider', {
@@ -162,6 +177,8 @@ export class SwiperInit {
         });
       }
     });
+
+    
 
     document.addEventListener('DOMContentLoaded', function () {
       if (window.innerWidth < 962) {
