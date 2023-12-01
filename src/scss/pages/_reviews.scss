@@ -29,6 +29,12 @@
             svg{
                 width: 6.9rem;
                 height: 6.9rem;   
+            }
+            &:hover{
+                svg stop{
+                    stop-color: $primary;
+                    transition: all 0.3s;
+                }
             }   
             
         }
@@ -37,6 +43,12 @@
             svg{
                 width: 6.9rem;;
                 height: 6.9rem;; 
+            }
+            &:hover{
+                svg stop{
+                    stop-color: $primary;
+                    transition: all 0.3s;
+                }
             }
         }
         &-item{
@@ -49,6 +61,18 @@
                 color: #fff;
                 svg{
                     fill: $black;
+                }
+                &:hover{
+                    svg stop{
+                        stop-color: $black;
+                        transition: all 0.3s;
+                    }
+                }
+            }
+            &:hover{
+                svg stop{
+                    stop-color: $primary;
+                    transition: all 0.3s;
                 }
             }
             svg{
@@ -69,6 +93,7 @@
     .reviews-page{
         margin-top: 8rem;
         padding-top: 3rem;
+        padding-bottom: 4rem;
         .reviews{
             &__wrapper{
                 display: grid;
@@ -83,6 +108,7 @@
         }
     }
     .reviews{
+        padding-bottom: 2rem;
         &__pages{
             display: flex;
             justify-content: center;
@@ -98,8 +124,12 @@
                 svg{
                     width: 5.9rem;
                     height: 5.9rem;   
-                }   
-                
+                } 
+                &:hover{
+                    svg{
+
+                    }
+                }
             }
             &-arrow-next{
                 cursor: pointer;

@@ -59,9 +59,9 @@
         width: 99%;
         bottom: 0.1rem;
         height: 13.3rem;
-        background: linear-gradient(270deg, rgba(255, 255, 255, 0.97) 16.53%, rgba(255, 255, 255, 0.00) 92.42%);
+        background: linear-gradient(0deg, rgba(255, 255, 255, 0.97) 14.37%, rgba(255, 255, 255, 0.00) 112.64%);
         left: 0rem;
-        z-index: 7;
+        z-index: 77;
     }
     .nav-table{
         position: absolute;
@@ -85,7 +85,7 @@
         position: absolute;
         left: 50%;
         bottom: 3rem;
-        z-index: 77;
+        z-index: 777;
         padding: 1.5rem 3.5rem;
         display: flex;
         gap: 1rem;
@@ -144,7 +144,7 @@
                     position: sticky;
                     left: 0;
                     z-index: 10;
-                    white-space: wrap;
+                    white-space: normal;
                     min-width: 25.5rem;
                     border-radius: 1rem 0 0 1rem;
                     border-left: none;

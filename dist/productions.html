@@ -683,9 +683,9 @@
                     <p class="production-main__descr body__standart">
                         Надежное решение для строительства и модернизации внутриквартальных теплосетей до +115°С и 10 АТМ - легкий монтаж и высокая гибкость для оптимизации расходов и повышения эффективностиНадежное решение для строительства и модернизации внутриквартальных теплосетей до +115°С и 10 АТМ - легкий монтаж и высокая гибкость для оптимизации расходов и повышения эффективности
                     </p>
-                    <div class="swiper production__slider">
-                        <div class="swiper-wrapper production__wrapper">
-                            <div class="swiper-slide production__item">
+                    <div class="production__sliderr">
+                        <div class="production__wrapper">
+                            <div class="production__item">
                                 <a href="#" class="production__item-link">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="49" height="49" viewBox="0 0 49 49" fill="none">
                                         <circle cx="24.5" cy="24.5" r="24" fill="#EFEFF2" stroke="url(#paint0_linear_1835_21683)"/>
@@ -704,7 +704,7 @@
                                 <div class="production__item-name h4">Трубы без армирующей системы с тепловой изоляцией</div>
                                 <p class="production__item-text body__medium">Гибкий трубопровод из сшитого полиэтилена PEX-a в ППУ изоляции</p>
                             </div>
-                            <div class="swiper-slide production__item">
+                            <div class="production__item">
                                 <a href="#" class="production__item-link">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="49" height="49" viewBox="0 0 49 49" fill="none">
                                         <circle cx="24.5" cy="24.5" r="24" fill="#EFEFF2" stroke="url(#paint0_linear_1835_21683)"/>
@@ -723,7 +723,7 @@
                                 <div class="production__item-name h4">Трубы без армирующей системы с тепловой изоляцией</div>
                                 <p class="production__item-text body__medium">Трубопроводная система с армированием высокопрочными непрерывными нитями из арамидного волокна</p>
                             </div>
-                            <div class="swiper-slide production__item">
+                            <div class="production__item">
                                 <a href="#" class="production__item-link">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="49" height="49" viewBox="0 0 49 49" fill="none">
                                         <circle cx="24.5" cy="24.5" r="24" fill="#EFEFF2" stroke="url(#paint0_linear_1835_21683)"/>
@@ -846,8 +846,159 @@
                    <div class="comparison-type__title h2">
                     Сравнение <span>типов продукции</span>
                    </div>
-                   <div class="comparison-type__table">
-                    
+                   <div class="comparison-type__table-wrapper">
+                    <button class="table-btn btn btn--b">
+                        <p>Показать еще</p>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="13" height="8" viewBox="0 0 13 8" fill="none">
+                            <path d="M1 1.25L6.5 6.75L12 1.25" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                       </button>
+                       <div class="right-blur"></div>
+                        <div class="bottom-blur"></div>
+                        <div class="nav-table">
+                            <button class="table-arrow-next">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="79" height="79" viewBox="0 0 79 79" fill="none">
+                                    <circle cx="27.7503" cy="27.7503" r="27.2503" transform="matrix(0.707107 -0.707107 -0.707107 -0.707107 39.2461 78.7341)" fill="#FFD000" stroke="url(#paint0_linear_1301_31422)"/>
+                                    <path d="M31.6374 39.0888H46.8548M46.8548 39.0888L40.4475 32.6815M46.8548 39.0888L39.2461 46.6975" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <defs>
+                                    <linearGradient id="paint0_linear_1301_31422" x1="61.6703" y1="21.8623" x2="4.40483" y2="26.2673" gradientUnits="userSpaceOnUse">
+                                    <stop/>
+                                    <stop offset="1" stop-color="#292A29" stop-opacity="0"/>
+                                    </linearGradient>
+                                    </defs>
+                                </svg>
+                            </button>
+                            <button class="table-arrow-prev">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="79" height="80" viewBox="0 0 79 80" fill="none">
+                                    <circle cx="39.2461" cy="40.0005" r="27.2503" transform="rotate(-135 39.2461 40.0005)" fill="#FFD000" stroke="url(#paint0_linear_1384_41865)"/>
+                                    <path d="M46.8548 39.6H31.6374M31.6374 39.6L38.0447 33.1927M31.6374 39.6L39.2461 47.2087" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <defs>
+                                    <linearGradient id="paint0_linear_1384_41865" x1="73.1661" y1="34.1125" x2="15.9006" y2="38.5176" gradientUnits="userSpaceOnUse">
+                                    <stop/>
+                                    <stop offset="1" stop-color="#292A29" stop-opacity="0"/>
+                                    </linearGradient>
+                                    </defs>
+                                </svg>
+                            </button>
+                        </div>
+                    <div class="comparison-type__wrapper" id="comparisonWrapper">
+                        <div class="comparison-type__table-inner">
+                            <table class="comparison-type__table" id="comparison-type__table">
+                                <tr>
+                                    <th>Характеристика/свойство трубопроводной системы</th>
+                                    <th>ТВЭЛ-ПЭКС-1</th>
+                                    <th>ТВЭЛ-ПЭКС-2-К</th>
+                                    <th>ТВЭЛ-ПЭКС-ХВС</th>
+                                    <th>ТВЭЛ-ПЭКС-1</th>
+                                    <th>ТВЭЛ-ПЭКС-2</th>
+                                    <th>ТВЭЛ-ПЭКС-4</th>
+                                    <th>ТВЭЛ-ПЭКС-ХВС</th>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        Бесканальная прокладка, не требующая компенсаторов и опор
+                                    </td>
+                                    <td>Бесканальная прокладка</td>
+                                    <td>Бесканальная прокладка</td>
+                                    <td>Бесканальная прокладка</td>
+                                    <td>Бесканальная прокладка</td>
+                                    <td>Бесканальная прокладка</td>
+                                    <td>Бесканальная прокладка</td>
+                                    <td>Бесканальная прокладка</td>
+                                </tr>
+                                <tr>
+                                    <td>Однотрубная конструкция</td>
+                                    <td>40-160 / 90-225</td>
+                                    <td></td>
+                                    <td>50-160 / 110-225</td>
+                                    <td>20х1,9/90 - 110х10,0/160</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>Двухтрубная конструкция</td>
+                                    <td></td>
+                                    <td>2х40 - 2х75 / 140 - 225</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td>2х25х2,3/110 - 2х50х4,6/160</td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>Четырехтрубная конструкция</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td>22х25х2,3+2х20х 1,9 / 110 - 2х40х 3,7 + 40х 5,5+32 х4,4/160</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>Трубопровод для водоснабжения с кабель-каналом</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>Трубопровод-кожух</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>t воды до 95 °C и давление до 6 бар</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td>6 бар</td>
+                                    <td>6 бар</td>
+                                    <td>6 бар</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>Трубопровод для водоснабжения с кабель-каналом</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>Трубопровод-кожух</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>t воды до 95 °C и давление до 6 бар</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                           </table>
+                        </div>
+                       </div>
                    </div>
                 </div>
             </section>
