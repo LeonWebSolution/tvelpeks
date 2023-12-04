@@ -53,6 +53,9 @@
         border-top: 0.1rem solid $black;
         border-bottom: 0.1rem solid $black;
     }
+    &__btn{
+        display: none;
+    }
     &__title{
         white-space: nowrap;
     }
@@ -249,7 +252,7 @@
             flex-direction: column; 
         }
         &__btn{
-            display: none;
+            display: block;
         }
     }
     .about-sub{
