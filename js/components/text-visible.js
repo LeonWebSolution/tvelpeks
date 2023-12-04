@@ -8,64 +8,45 @@ export class TextVisible {
 
         if (!itMobile) {
             document.addEventListener('DOMContentLoaded', () => {
-                var button = document.querySelector('.about-descr__btn');
-                var textElement = document.querySelector('.about-descr__text');
+                this.setupElement('.about-descr__btn', '.about-descr__text', 'Смотреть все', 'Скрыть');
+                this.setupElement('.rex__btn', '.rex__content-info', 'Показать', 'Скрыть', '.txt-blur');
+                this.setupElement('.subcategoirs-advantages__btn', '.subcategoirs-advantages__info', 'Показать', 'Скрыть', '.txt-blur2');
+            });
+        }
+    }
 
-                // Проверяем, что элементы существуют
-                if (button && textElement) {
-                    // Устанавливаем начальную высоту
-                    textElement.style.maxHeight = '21rem';
+    setupElement(btnSelector, contentSelector, showText, hideText, txtBlurSelector) {
+        var button = document.querySelector(btnSelector);
+        var contentInfo = document.querySelector(contentSelector);
+        var txtBlur = document.querySelector(txtBlurSelector);
 
-                    button.addEventListener('click', () => {
-                        // Переключаем класс active
-                        textElement.classList.toggle('active');
+        // Проверяем, что элементы существуют
+        if (button && contentInfo) {
+            // Устанавливаем начальную высоту
+            contentInfo.style.maxHeight = '21rem';
 
-                        // Если элемент сейчас активен, вычисляем его высоту и устанавливаем максимальную высоту
-                        if (textElement.classList.contains('active')) {
-                            textElement.style.maxHeight = textElement.scrollHeight + 'px';
-                            button.textContent = 'Скрыть';
-                        } else {
-                            // Если элемент неактивен, устанавливаем максимальную высоту в 21rem
-                            textElement.style.maxHeight = '21rem';
-                            button.textContent = 'Смотреть все';
-                        }
-                    });
+            button.addEventListener('click', () => {
+                // Переключаем класс active
+                contentInfo.classList.toggle('active');
+
+                // Если элемент сейчас активен, вычисляем его высоту и устанавливаем максимальную высоту
+                if (contentInfo.classList.contains('active')) {
+                    contentInfo.style.maxHeight = contentInfo.scrollHeight + 'px';
+                    button.textContent = hideText;
+                } else {
+                    // Если элемент неактивен, устанавливаем максимальную высоту в 21rem
+                    contentInfo.style.maxHeight = '21rem';
+                    button.textContent = showText;
                 }
-            });
-            document.addEventListener('DOMContentLoaded', function () {
-                var contentInfo = document.querySelector('.rex__content-info');
-                var btn = document.querySelector('.rex__btn');
-                var txtBlur = document.querySelector('.txt-blur');
-            
-                btn.addEventListener('click', function () {
-                    if (contentInfo.style.maxHeight) {
-                        contentInfo.style.maxHeight = null;
-                        btn.textContent = 'Показать';
-                        txtBlur.classList.remove('hidden');
-                    } else {
-                        contentInfo.style.maxHeight = contentInfo.scrollHeight + 'px';
-                        btn.textContent = 'Скрыть';
-                        txtBlur.classList.add('hidden');
-                    }
-                });
-            });
-            document.addEventListener('DOMContentLoaded', function () {
-                var contentInfo = document.querySelector('.subcategoirs-advantages__info');
-                var btn = document.querySelector('.subcategoirs-advantages__btn');
-                var txtBlur = document.querySelector('.txt-blur2');
-            
-                btn.addEventListener('click', function () {
-                    if (contentInfo.style.maxHeight) {
-                        contentInfo.style.maxHeight = null;
-                        btn.textContent = 'Показать';
-                        txtBlur.classList.remove('hidden');
-                    } else {
-                        contentInfo.style.maxHeight = contentInfo.scrollHeight + 'px';
-                        btn.textContent = 'Скрыть';
-                        txtBlur.classList.add('hidden');
-                    }
-                });
+
+                // Toggle txtBlur visibility
+                if (txtBlur) {
+                    txtBlur.classList.toggle('hidden', !contentInfo.classList.contains('active'));
+                }
             });
         }
     }
 }
+
+// Create an instance of TextVisible to initialize the functionality
+const textVisibleInstance = new TextVisible();

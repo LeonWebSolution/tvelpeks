@@ -195,6 +195,30 @@ export class SwiperInit {
           });
         }
 
+        if (document.querySelector('.photo-main__slider')) {
+          var photo = new Swiper('.photo-main__slider', {
+            slidesPerView: 'auto',
+            spaceBetween: 30,
+            initialSlide: 0,
+            centerInsufficientSlides: true,
+            loop: false,
+            freeMode: true,
+            freeModeSticky: true,
+          });
+        }
+
+        if (document.querySelector('.video__slider')) {
+          var video= new Swiper('.video__slider', {
+            slidesPerView: 'auto',
+            spaceBetween: 30,
+            initialSlide: 0,
+            centerInsufficientSlides: true,
+            loop: false,
+            freeMode: true,
+            freeModeSticky: true,
+          });
+        }
+
         // Swiper for heating-parameters__slider
         if (document.querySelector('.heating-parameters__slider')) {
           var heatingParameters = new Swiper('.heating-parameters__slider', {
@@ -269,12 +293,23 @@ export class SwiperInit {
             freeModeSticky: true,
           });
         }
+        if (document.querySelector('.job-in__slider')) {
+          var articles = new Swiper('.job-in__slider', {
+            slidesPerView: 'auto',
+            spaceBetween: 10,
+            initialSlide: 0,
+            centerInsufficientSlides: true,
+            loop: false,
+            freeMode: true,
+            freeModeSticky: true,
+          });
+        }
 
         // Swiper for projects__tab-slider
         if (document.querySelector('.projects__tab-slider')) {
           var projectsTab = new Swiper('.projects__tab-slider', {
             slidesPerView: 'auto',
-            spaceBetween: 10,
+            spaceBetween: 13,
             initialSlide: 0,
             centerInsufficientSlides: true,
             loop: false,
