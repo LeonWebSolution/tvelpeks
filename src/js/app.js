@@ -24,62 +24,96 @@ const ModalInstance = new Modal();
 const VideoInstance = new Video();
 
 var wrapperr = document.querySelector('.document__wrapper');
-var maxHeight = wrapperr.scrollHeight;
-var buttonTextElemente = document.querySelector('.document__btn p');
+if (wrapperr) {
+    // Get the maximum height
+    var maxHeight = wrapperr.scrollHeight;
 
-document.querySelector('.document__btn').addEventListener('click', function () {
-    if (wrapperr.style.maxHeight === maxHeight + 'px') {
-        wrapperr.style.maxHeight = null;
-        buttonTextElemente.textContent = 'Показать еще';
-        this.classList.remove('active');
-    } else {
-        wrapperr.style.maxHeight = maxHeight + 'px';
-        buttonTextElemente.textContent = 'Скрыть';
-        this.classList.add('active');
+    // Check if the button text element exists
+    var buttonTextElement = document.querySelector('.document__btn p');
+    if (buttonTextElement) {
+        // Check if the button element exists
+        var buttonElement = document.querySelector('.document__btn');
+        if (buttonElement) {
+            // Add a click event listener to the button
+            buttonElement.addEventListener('click', function () {
+                if (wrapperr.style.maxHeight === maxHeight + 'px') {
+                    wrapperr.style.maxHeight = null;
+                    buttonTextElement.textContent = 'Показать еще';
+                    this.classList.remove('active');
+                } else {
+                    wrapperr.style.maxHeight = maxHeight + 'px';
+                    buttonTextElement.textContent = 'Скрыть';
+                    this.classList.add('active');
+                }
+            });
+        }
     }
-});
+}
 
 document.addEventListener('DOMContentLoaded', function () {
     // Добавление <span> в пустые ячейки
-    document.querySelectorAll('#comparison-type__table td').forEach(function (cell) {
-        if (!cell.innerHTML.trim()) {
-            cell.innerHTML = '<span></span>';
-        }
-    });
+    var comparisonTable = document.getElementById('comparison-type__table');
+    if (comparisonTable) {
+        comparisonTable.querySelectorAll('td').forEach(function (cell) {
+            if (!cell.innerHTML.trim()) {
+                cell.innerHTML = '<span></span>';
+            }
+        });
+    }
 
     // Обработчик клика на кнопке "Вперед"
-    document.querySelector('.table-arrow-next').addEventListener('click', function () {
-        document.querySelector('.comparison-type__wrapper').scrollLeft += 100;
-        updateArrowPrevState();
-    });
+    var arrowNextBtn = document.querySelector('.table-arrow-next');
+    if (arrowNextBtn) {
+        arrowNextBtn.addEventListener('click', function () {
+            var comparisonWrapper = document.querySelector('.comparison-type__wrapper');
+            if (comparisonWrapper) {
+                comparisonWrapper.scrollLeft += 100;
+                updateArrowPrevState();
+            }
+        });
+    }
 
     // Обработчик клика на кнопке "Назад"
-    document.querySelector('.table-arrow-prev').addEventListener('click', function () {
-        document.querySelector('.comparison-type__wrapper').scrollLeft -= 100;
-        updateArrowPrevState();
-    });
+    var arrowPrevBtn = document.querySelector('.table-arrow-prev');
+    if (arrowPrevBtn) {
+        arrowPrevBtn.addEventListener('click', function () {
+                var comparisonWrapper = document.querySelector('.comparison-type__wrapper');
+            if (comparisonWrapper) {
+                comparisonWrapper.scrollLeft -= 100;
+                updateArrowPrevState();
+            }
+        });
+    }
 
     // Обработчик клика на кнопке "Показать/Скрыть"
-    var wrapper = document.getElementById('comparisonWrapper');
-    var maxHeight = wrapper.scrollHeight;
-    var buttonTextElement = document.querySelector('.table-btn p');
-
-    document.querySelector('.table-btn').addEventListener('click', function () {
-        if (wrapper.style.maxHeight === maxHeight + 'px') {
-            wrapper.style.maxHeight = null;
-            buttonTextElement.textContent = 'Показать еще';
-            this.classList.remove('active');
-        } else {
-            wrapper.style.maxHeight = maxHeight + 'px';
-            buttonTextElement.textContent = 'Скрыть';
-            this.classList.add('active');
+    var comparisonWrapper = document.getElementById('comparisonWrapper');
+    if (comparisonWrapper) {
+        var maxHeight = comparisonWrapper.scrollHeight;
+        var buttonTextElement = document.querySelector('.table-btn p');
+        var tableBtn = document.querySelector('.table-btn');
+        
+        if (tableBtn) {
+            tableBtn.addEventListener('click', function () {
+                if (comparisonWrapper.style.maxHeight === maxHeight + 'px') {
+                    comparisonWrapper.style.maxHeight = null;
+                    buttonTextElement.textContent = 'Показать еще';
+                    this.classList.remove('active');
+                } else {
+                    comparisonWrapper.style.maxHeight = maxHeight + 'px';
+                    buttonTextElement.textContent = 'Скрыть';
+                    this.classList.add('active');
+                }
+            });
         }
-    });
+    }
 
     // Добавление обработчика события прокрутки
-    document.querySelector('.comparison-type__wrapper').addEventListener('scroll', function () {
-        updateArrowPrevState();
-    });
+    var comparisonWrapperScroll = document.querySelector('.comparison-type__wrapper');
+    if (comparisonWrapperScroll) {
+        comparisonWrapperScroll.addEventListener('scroll', function () {
+            updateArrowPrevState();
+        });
+    }
 
     // Инициализация состояния стрелки при загрузке
     updateArrowPrevState();
@@ -88,7 +122,9 @@ document.addEventListener('DOMContentLoaded', function () {
 // Обновление состояния стрелки "Назад" в зависимости от положения скролла
 function updateArrowPrevState() {
     var arrowPrev = document.querySelector('.table-arrow-prev');
-    arrowPrev.classList.toggle('active', document.querySelector('.comparison-type__wrapper').scrollLeft > 0);
+    if (arrowPrev) {
+        arrowPrev.classList.toggle('active', document.querySelector('.comparison-type__wrapper').scrollLeft > 0);
+    }
 }
 
 // export class Component1 {
