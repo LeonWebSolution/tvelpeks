@@ -23,6 +23,21 @@ const AccordionInstance = new Accordion();
 const ModalInstance = new Modal();
 const VideoInstance = new Video();
 
+var wrapperr = document.querySelector('.document__wrapper');
+var maxHeight = wrapperr.scrollHeight;
+var buttonTextElemente = document.querySelector('.document__btn p');
+
+document.querySelector('.document__btn').addEventListener('click', function () {
+    if (wrapperr.style.maxHeight === maxHeight + 'px') {
+        wrapperr.style.maxHeight = null;
+        buttonTextElemente.textContent = 'Показать еще';
+        this.classList.remove('active');
+    } else {
+        wrapperr.style.maxHeight = maxHeight + 'px';
+        buttonTextElemente.textContent = 'Скрыть';
+        this.classList.add('active');
+    }
+});
 
 document.addEventListener('DOMContentLoaded', function () {
     // Добавление <span> в пустые ячейки

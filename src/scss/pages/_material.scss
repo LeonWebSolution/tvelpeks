@@ -1,0 +1,45 @@
+.material-main{
+    margin-top: 19rem;
+    .news__img img{
+       height: 39.4rem;
+       object-fit: cover; 
+    }
+}
+.document__btn{
+    padding: 1.5rem 3.5rem;
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    margin: auto;
+    margin-top: 3rem;
+}
+
+.document-scroll{
+    position: relative;
+    .document__blur{
+        width: 100%;
+        background: linear-gradient(0deg, rgba(255, 255, 255, 0.97) 14.37%, rgba(255, 255, 255, 0.00) 112.64%);
+        height: 9.5rem;
+        position: absolute;
+        bottom: 13rem;
+        left: 0;
+    }
+    .document__wrapper{
+        max-height: 30rem;
+        overflow: hidden;
+        transition: all 0.3s;
+        overflow-y: scroll;
+        padding-right: 2rem;
+        &::-webkit-scrollbar {
+            height: 0.3rem;
+            width: 0.2rem;
+        }
+        &::-webkit-scrollbar-thumb {
+            background-color: #292A29;
+            border-radius: 0.6rem;
+        }
+        &::-webkit-scrollbar-track {
+            background-color: #BDC0CA;
+        }
+    }
+}

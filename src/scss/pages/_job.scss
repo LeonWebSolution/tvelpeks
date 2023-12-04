@@ -1,0 +1,242 @@
+.job-in{
+    margin-bottom: 7.6rem;
+    &__inner{
+        display: flex;
+        gap: 6.9rem;
+        padding-bottom: 9.2rem;
+        border-bottom: 0.1rem solid $black;
+    }
+    .swiper-slide{
+        width: 34rem;
+    }
+    &__num{
+        color: $black;
+        opacity: 0.6;
+        font-size: 1.4rem;
+        line-height: 100%;
+        text-transform: uppercase;
+        margin-bottom: 2.4rem;
+    }
+    &__wrapper{
+        gap: 2.9rem;
+    }
+    &__icon{
+        margin-bottom: 3rem;
+        img{
+            width: 10rem;
+            height: 10rem;
+            object-fit: cover;
+        }
+    }
+    &__name{
+        margin-bottom: 1.5rem;
+    }
+    &__text{
+        color: #585E63 ;
+    }
+}
+.faq__item-name span{
+    color: #8C919F;
+}
+.job__accordion{
+    .faq__sub-name{
+        font-size: 2rem;
+        font-weight: 500;
+        line-height: 120%;
+        font-family: 'Graphik LCG';
+        text-transform: none;
+        max-width: 57.6rem;
+    }
+}
+.faq__item{
+    &:nth-child(4){
+        border-bottom: 0.1rem solid $black;
+        margin-bottom: 2.9rem;
+    }
+}
+.vacancy-city{
+    margin-bottom: 1.7rem;
+}
+.hh-btn-vac{
+    display: flex;
+    gap: 1rem;
+    padding: 1rem 2rem;
+    margin-bottom: 3.5rem;
+}
+.hh-btn{
+    display: flex;
+    gap: 1rem;
+    padding: 1.5rem 3.5rem;
+    margin-bottom: 3.5rem;
+    img{
+        width: 2rem;
+        height: 2rem;
+    }
+}
+
+.vacancies-contact{
+    padding: 8rem 0 10rem;
+    &__title{
+        span{
+            font-size: 4.8rem;
+            display: block;
+            margin-top: -2rem;
+        }
+    }
+    &__wrapper{
+        display: flex;
+        justify-content: space-between;
+    }
+    &__cont-img{
+        width: 10.2rem;
+        height: 10.2rem;
+        border-radius: 50%;
+    }
+    &__cont{
+        display: flex;
+        align-items: center;
+        gap: 2.7rem;
+    }
+    &__content{
+        width: 69.9rem;
+    }
+    &__contacts{
+        margin-top: 4rem;
+        display: flex;
+        gap: 2.9rem;
+        border-top: 0.1rem solid $black;
+        border-bottom: 0.1rem solid $black;
+        align-items: center;
+    }
+    &__tel{
+        font-size: 3.4rem;
+        font-weight: 400;
+        line-height: 120%;
+        text-transform: uppercase;
+        color: $black;
+        padding: 1.5rem 2.7rem 1.5rem 2.4rem;
+        background: linear-gradient(180deg, #E9E9EF 0%, #F4F4F6 100%);
+        span{
+            font-size: 2rem;
+            font-family: 'Graphik LCG';
+            text-transform: lowercase;
+        }
+    }
+    &__mail{
+        color: $black;
+    }
+}
+
+@media (max-width: 962px){
+    .job-in{
+        &__inner{
+            display: block;
+            padding-bottom: 4rem;
+        }
+        &__title{
+            margin-bottom: 3rem;
+        }
+        &__wrapper{
+            gap: 0;
+        }
+        .swiper-slide{
+           width: 23.1rem; 
+        }
+        &__num{
+            margin-bottom: 1.6rem;
+        }
+        &__icon{
+            margin-bottom: 1.9rem;
+        }
+        &__icon img{
+            width: 6rem;
+            height: 6rem;
+        }
+        &__text{
+            font-size: 1.4rem;
+        }
+    }
+    .words-vacancies{
+        margin-top: 4.5rem;
+        .words__title{
+            display: block;
+            br{
+                display: none;
+            }
+        }
+        .words__wrapper{
+            gap: 2.7rem;
+        }
+    }
+    .job__accordion{
+        .faq__sub-name{
+            font-size: 1.6rem !important;
+            font-weight: 400;
+        }
+        .faq__sub-item-content{
+            padding-left: 3rem;
+        }
+        .vacancy-city{
+            font-size: 1.4rem;
+            color: #838C95;
+        }
+    }
+    .hh-btn-vac{
+        width: 100%;
+        justify-content: center;
+        img{
+            width: 2rem;
+            height: 2rem;
+        }
+    }
+    .hh-btn{
+        width: 100%;
+        justify-content: center;
+    }
+    .vacancies-contact{
+        padding: 4rem 0 4.5rem;
+        &__title{
+            font-size: 2.8rem;
+            margin-bottom: 3rem;
+            span{
+                margin-top: 0;
+                font-size: 2rem;
+            }
+        }
+        &__cont-name{
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+        }
+        &__contacts{
+            margin-top: 2.8rem;
+            border-top: 0;
+            display: block;
+            background: linear-gradient(180deg, #E9E9EF 0%, #F4F4F6 100%);
+            border-radius: 1rem;
+            padding: 1.5rem 1.5rem 1.8rem;
+        }
+        &__cont-img{
+            width: 7.5rem;
+            height: 7.5rem;
+        }
+        &__tel{
+            padding: 0;
+            background: transparent;
+            font-size: 2.4rem;
+            margin-bottom: 0.8rem;
+        }
+        &__mail{
+            font-size: 2rem;
+        }
+        &__cont-job{
+            color:#838C95;
+            font-size: 1.4rem;
+        }
+        &__wrapper{
+            display: block;
+        }
+        &__content{
+            width: 100%;
+        }
+    }
+}

@@ -32,6 +32,40 @@ export class TextVisible {
                     });
                 }
             });
+            document.addEventListener('DOMContentLoaded', function () {
+                var contentInfo = document.querySelector('.rex__content-info');
+                var btn = document.querySelector('.rex__btn');
+                var txtBlur = document.querySelector('.txt-blur');
+            
+                btn.addEventListener('click', function () {
+                    if (contentInfo.style.maxHeight) {
+                        contentInfo.style.maxHeight = null;
+                        btn.textContent = 'Показать';
+                        txtBlur.classList.remove('hidden');
+                    } else {
+                        contentInfo.style.maxHeight = contentInfo.scrollHeight + 'px';
+                        btn.textContent = 'Скрыть';
+                        txtBlur.classList.add('hidden');
+                    }
+                });
+            });
+            document.addEventListener('DOMContentLoaded', function () {
+                var contentInfo = document.querySelector('.subcategoirs-advantages__info');
+                var btn = document.querySelector('.subcategoirs-advantages__btn');
+                var txtBlur = document.querySelector('.txt-blur2');
+            
+                btn.addEventListener('click', function () {
+                    if (contentInfo.style.maxHeight) {
+                        contentInfo.style.maxHeight = null;
+                        btn.textContent = 'Показать';
+                        txtBlur.classList.remove('hidden');
+                    } else {
+                        contentInfo.style.maxHeight = contentInfo.scrollHeight + 'px';
+                        btn.textContent = 'Скрыть';
+                        txtBlur.classList.add('hidden');
+                    }
+                });
+            });
         }
     }
 }

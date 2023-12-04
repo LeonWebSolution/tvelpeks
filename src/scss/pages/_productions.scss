@@ -150,6 +150,11 @@
                     border-left: none;
                     
                 }
+                &:last-child{
+                    max-width: 30rem;
+                    min-width: 30rem;
+                    text-align: left;
+                }
             }
             td{
                 border-right: 0.1rem solid #BDC0CA;
@@ -178,13 +183,25 @@
                    position: sticky;
                    left: 0;
                    z-index: 7;   
-                   background: linear-gradient(180deg, #E9E9EF 0%, #F4F4F6 100%);
+                   background: #EFEFF2;
                    border-left: none;
+                }
+                &:last-child{
+                    max-width: 30rem;
+                    min-width: 30rem;
+                    text-align: left;
+                    padding-right: 10rem;
                 }
             }
         }
     }
 
+}
+
+@media (max-width: 1440px){
+    .comparison-type__table-wrapper{
+        margin-left: 6.5rem;
+    }
 }
 
 @media (max-width: 962px){
@@ -256,6 +273,7 @@
                 font-size: 1.2rem;
                 border-radius: 0 0 0 0;
                 z-index: 6;
+                position: static;
             }
             .comparison-type__table th{
                 padding: 1rem;
@@ -264,6 +282,11 @@
                 min-width: 14.1rem;
                 text-align: left;
                 z-index: 5;
+                &:last-child{
+                    max-width: 14.1rem;
+                    min-width: 14.1rem;
+                    text-align: left;
+                }
             }
             .comparison-type__table td{
                 font-size: 1.4rem;
@@ -273,7 +296,15 @@
                 &:nth-child(1){
                     font-size: 1.2rem;
                     font-weight: 500;
+                    position: static;
                 }
+                &:last-child{
+                    max-width: 14.1rem;
+                    min-width: 14.1rem;
+                    text-align: left;
+                    padding-right: 0;
+                }
+                
             }
             .comparison-type__table td:nth-child(1){
                 padding: 1.2rem 1.3rem 1.2rem 1.5rem;
