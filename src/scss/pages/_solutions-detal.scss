@@ -620,7 +620,7 @@
     }
     .heating-production{
         &__main {
-            margin-top: 7rem;
+            margin-top: 0rem;
         }
         &__slider-items{
             display: none;
@@ -667,8 +667,13 @@
     .navigation-stickys{
         top: 0rem;
         transition: all 0.3s;
-        padding-bottom: 1rem;
         z-index: 777;
+        width: 100%;
+        overflow-x: scroll;
+        padding-bottom: 1rem;
+        &::-webkit-scrollbar{
+            display: none;
+        }
         &.fixed{
             top: 7.5rem;
             transition: all 0.3s;
@@ -693,16 +698,27 @@
             display: none;
         }
     }
+    .navigation-sticky__item.active::before {
+        content: "";
+        position: absolute;
+        width: 101%;
+        height: 0.25rem;
+        left: 0rem;
+        bottom: -0.647rem;
+        background-color: #fff;
+        z-index: 777;
+    }
     .block-sticky{
         height: 100%;
         min-height: 100%;
     }
     .navigation-sticky{
-        position: absolute;
+        position: static;
         top: 0rem;
-        overflow-x: auto;
-        overflow-y: hidden;
         padding-top: 0.1rem;
+        border: none;
+        width: 145%;
+        border-bottom: 0.1rem solid $black;
     }
     .heating-production__nav-descr{
         font-size: 1.2rem;

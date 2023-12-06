@@ -51,8 +51,10 @@
       }
       .header__bottom .header__logo-bottom{
         display: block;
-        width: 13.6rem;
-        height: 2.7rem;
+        svg{
+          width: 13.6rem;
+          height: 2.7rem;
+        }
       }
       .nav__link{
         font-size: 1.6rem;
@@ -432,8 +434,8 @@ body.hidden{
       position: absolute;
       flex-direction: column;
       padding: 0 1.5rem 4rem 1.5rem;
-      min-height: 93svh;
-      max-height: 93svh;
+      min-height: 91svh;
+      max-height: 91svh;
       left: 0;
       overflow: hidden;
       .header__logo-bottom{

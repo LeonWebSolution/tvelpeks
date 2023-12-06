@@ -39,7 +39,7 @@
     }
 }
 
-.subcat-vid{
+.block-sticky{
     .heating-production__title{
         margin-left: 14rem;
     }
@@ -112,14 +112,17 @@
         }
     }
     .swiper-slide{
-        width: 34.1rem;
+        width: 31.4rem;
     }
     .subc__slide{
         img{
-            width: 34.1rem;
+            width: 31.4rem;
             height: 21.5rem;
             border-radius: 1.5rem;
             margin-bottom: 2rem;
+        }
+        &-text{
+            color: #585E63;
         }
     }
     &__slider-top{
@@ -199,6 +202,19 @@
     }
 }
 
+.document-download{
+   svg circle{
+        transition: all 0.3s;
+    }
+}
+
+.document-download:hover{
+    svg circle{
+        fill: $primary;
+        transition: all 0.3s;
+    }
+}
+
 .document{
     background: linear-gradient(180deg, #E9E9EF 0%, #F4F4F6 100%);
     border-radius: 2rem;
@@ -237,8 +253,38 @@
         }
     }
 }
+.navigation-sticky__item{
+    min-width: 20rem;
+    &:first-child{
+        min-width: 33rem;  
+    }
+}
+
+@media (max-width: 1440px){
+    .block-sticky{
+        .heating-production__title{
+            margin-left: 6.5rem;
+        }
+    }
+    .navigation-sticky__item{
+        min-width: 20rem;
+        &:first-child{
+            min-width: 25rem;  
+        }
+    }
+}
 
 @media (max-width: 962px){
+    .about-main.subcategories{
+        .about-main__title{
+            padding-right: 3rem;
+        }
+    }
+    .heating-production__slider{
+        .production__item-text{
+            padding-right: 1rem !important;
+        }
+    }
     .about-sub{
        &__wrapper{
         flex-direction: column;
@@ -318,12 +364,48 @@
             }
         }
     }
-    .subcat-vid .heating-production__title{
+    .block-sticky .heating-production__title{
         margin-left: 1.5rem;
         max-width: 28.9rem;
     }
     .document{
-        display: none;
+        .container{
+            padding: 0;
+        }
+        &__top{
+            padding: 0 1.2rem;
+        }
+        padding: 4.1rem 0rem 2.5rem;
+        &__title{
+            font-size: 2.8rem;
+        }
+        &__col{
+            font-size: 1.4rem;
+        }
+        &__wrapper{
+            display: flex;
+            flex-direction: column;
+            max-height: 40rem;
+            overflow-y: scroll;
+            padding: 0 1.8rem;
+            margin-right: 0.3rem;
+            &::-webkit-scrollbar {
+                height: 3px;
+                width: 2px;
+            }
+            &::-webkit-scrollbar-thumb {
+                background-color: #292A29;
+                border-radius: 6px;
+            }
+            &::-webkit-scrollbar-track {
+                background-color: #BDC0CA;
+            }
+        }
+        &__item{
+            .heation-services__document-name{
+                width: 23rem;
+            }
+        }
     }
     .rex{
         margin-bottom: 5.5rem;

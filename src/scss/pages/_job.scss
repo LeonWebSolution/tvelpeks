@@ -1,5 +1,5 @@
 .job-in{
-    margin-bottom: 7.6rem;
+    margin-bottom: 0rem;
     &__inner{
         display: flex;
         gap: 6.9rem;
@@ -38,6 +38,12 @@
 .faq__item-name span{
     color: #8C919F;
 }
+.job-faq{
+    padding: 7rem 0 !important;
+    .faq__title{
+
+    }
+}
 .job__accordion{
     .faq__sub-name{
         font-size: 2rem;
@@ -67,7 +73,6 @@
     display: flex;
     gap: 1rem;
     padding: 1.5rem 3.5rem;
-    margin-bottom: 3.5rem;
     img{
         width: 2rem;
         height: 2rem;
@@ -128,6 +133,19 @@
 }
 
 @media (max-width: 962px){
+    .job-faq{
+        .faq__title{
+            margin-bottom: 2.4rem;
+        }
+        .faq__question a svg{
+            position: absolute;
+            right: 0;
+            top: 1rem;
+        }
+        .faq__question a{
+            margin-bottom: 3rem;
+        }
+    }
     .job-in{
         &__inner{
             display: block;

@@ -78,9 +78,18 @@
 }
 
 @media (max-width: 962px){
+    .faq__title{
+        margin-bottom: 2.5rem !important; 
+    }
     .gallery-section{
         .work__slider{
             margin-bottom: 0;
+        }
+        .work__title{
+            font-size: 2.8rem;
+        }
+        .tabs .tab:nth-child(1){
+            display: block;
         }
         .work__top{
             flex-direction: column;
@@ -114,6 +123,7 @@
         &__text{
             font-size: 1.44rem;
             margin-bottom: 3rem;
+            color: #585E63;
         }
         &__items{
             flex-wrap: wrap;

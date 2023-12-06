@@ -1,0 +1,100 @@
+export class Table {
+    constructor() {
+        this.init();
+    }
+
+    init() {
+        const wrapper = document.querySelector('.document__wrapper');
+        if (wrapper) {
+            const maxHeight = wrapper.scrollHeight;
+
+            const buttonTextElement = document.querySelector('.document__btn p');
+            if (buttonTextElement) {
+                const buttonElement = document.querySelector('.document__btn');
+                if (buttonElement) {
+                    buttonElement.addEventListener('click', () => {
+                        if (wrapper.style.maxHeight === maxHeight + 'px') {
+                            wrapper.style.maxHeight = null;
+                            buttonTextElement.textContent = 'Показать еще';
+                            buttonElement.classList.remove('active');
+                        } else {
+                            wrapper.style.maxHeight = maxHeight + 'px';
+                            buttonTextElement.textContent = 'Скрыть';
+                            buttonElement.classList.add('active');
+                        }
+                    });
+                }
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const comparisonTable = document.getElementById('comparison-type__table');
+            if (comparisonTable) {
+                comparisonTable.querySelectorAll('td').forEach((cell) => {
+                    if (!cell.innerHTML.trim()) {
+                        cell.innerHTML = '<span></span>';
+                    }
+                });
+            }
+
+            const arrowNextBtn = document.querySelector('.table-arrow-next');
+            if (arrowNextBtn) {
+                arrowNextBtn.addEventListener('click', () => {
+                    const comparisonWrapper = document.querySelector('.comparison-type__wrapper');
+                    if (comparisonWrapper) {
+                        comparisonWrapper.scrollLeft += 100;
+                        this.updateArrowPrevState();
+                    }
+                });
+            }
+
+            const arrowPrevBtn = document.querySelector('.table-arrow-prev');
+            if (arrowPrevBtn) {
+                arrowPrevBtn.addEventListener('click', () => {
+                    const comparisonWrapper = document.querySelector('.comparison-type__wrapper');
+                    if (comparisonWrapper) {
+                        comparisonWrapper.scrollLeft -= 100;
+                        this.updateArrowPrevState();
+                    }
+                });
+            }
+
+            const comparisonWrapper = document.getElementById('comparisonWrapper');
+            if (comparisonWrapper) {
+                const maxHeight = comparisonWrapper.scrollHeight;
+                const buttonTextElement = document.querySelector('.table-btn p');
+                const tableBtn = document.querySelector('.table-btn');
+
+                if (tableBtn) {
+                    tableBtn.addEventListener('click', () => {
+                        if (comparisonWrapper.style.maxHeight === maxHeight + 'px') {
+                            comparisonWrapper.style.maxHeight = null;
+                            buttonTextElement.textContent = 'Показать еще';
+                            tableBtn.classList.remove('active');
+                        } else {
+                            comparisonWrapper.style.maxHeight = maxHeight + 'px';
+                            buttonTextElement.textContent = 'Скрыть';
+                            tableBtn.classList.add('active');
+                        }
+                    });
+                }
+            }
+
+            const comparisonWrapperScroll = document.querySelector('.comparison-type__wrapper');
+            if (comparisonWrapperScroll) {
+                comparisonWrapperScroll.addEventListener('scroll', () => {
+                    this.updateArrowPrevState();
+                });
+            }
+
+            this.updateArrowPrevState();
+        });
+    }
+
+    updateArrowPrevState() {
+        const arrowPrev = document.querySelector('.table-arrow-prev');
+        if (arrowPrev) {
+            arrowPrev.classList.toggle('active', document.querySelector('.comparison-type__wrapper')?.scrollLeft > 0);
+        }
+    }
+}

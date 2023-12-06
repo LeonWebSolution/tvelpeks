@@ -67,20 +67,20 @@
             height: 10rem;
             margin-bottom: 2.9rem;
         }
-        &-num{
-            color: $black;
-            opacity: 0.6;
-            margin-bottom: 2.5rem;
-        }
-        &-name{
-            color: $black;
-            margin-bottom: 1.5rem;
-        }
-        &-text{
-            color: $body_text;
-            font-family: 'Graphik LCG';
-            line-height: 140%
-        }
+    }
+    &__item-num{
+        color: $black;
+        opacity: 0.6;
+        margin-bottom: 2.5rem;
+    }
+    &__item-name{
+        color: $black;
+        margin-bottom: 1.5rem;
+    }
+    &__item-text{
+        color: $body_text;
+        font-family: 'Graphik LCG';
+        line-height: 140%
     }
 }
 
@@ -419,9 +419,9 @@
                 height: 6rem;
                 margin-bottom: 2.1rem;
             }
-            &-text{
-                font-size: 1.4rem;
-            }
+        }
+        &__item-text{
+            font-size: 1.4rem;
         }
         .swiper-slide{
             width: 24rem;

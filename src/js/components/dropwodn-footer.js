@@ -5,11 +5,11 @@ export class Footer {
   
     initDropdowns() {
       document.addEventListener('DOMContentLoaded', () => {
-        var dropdowns = document.querySelectorAll('.footer__nav-list');
+        const dropdowns = document.querySelectorAll('.footer__nav-list');
   
         dropdowns.forEach(function (dropdown) {
-          var dropdownName = dropdown.querySelector('.footer__nav-list-name');
-          var dropdownContent = dropdown.querySelector('.footer__nav-list-b');
+          const dropdownName = dropdown.querySelector('.footer__nav-list-name');
+          const dropdownContent = dropdown.querySelector('.footer__nav-list-b');
   
           dropdownName.addEventListener('click', function () {
             // Проверяем, есть ли у элемента класс 'all-list'
