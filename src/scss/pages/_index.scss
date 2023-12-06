@@ -1013,6 +1013,9 @@
     border-radius: 2rem;
     background: linear-gradient(180deg, #EFEFF2 0%, #F4F4F6 100%);
     padding-bottom: 10rem;
+    *{
+        transition: all 0.3s;
+    }
     &__tabs{
         display: flex;
         align-items: center;

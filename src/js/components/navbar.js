@@ -128,6 +128,19 @@ calcLink.addEventListener('mouseout', function () {
   calcList.classList.remove('active');
 });
 
+const contactMenu = document.querySelector('.contact__menu'); // Replace with your actual class or selector
+const contactMenuBlock = document.querySelector('.contact__menu-block'); // Replace with your actual class or selector
+
+contactMenu.addEventListener('mouseover', function () {
+  contactMenu.classList.add('active');
+  contactMenuBlock.classList.add('active');
+});
+
+contactMenu.addEventListener('mouseout', function () {
+  contactMenu.classList.remove('active');
+  contactMenuBlock.classList.remove('active');
+});
+
   }
 
   setupMobileNav() {
