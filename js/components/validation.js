@@ -1,9 +1,9 @@
 // document.getElementById('supportForm').addEventListener('submit', function(event) {
-//     var phoneNumberInput = document.getElementById('phoneNumber');
-//     var inputErrorLabel = document.querySelector('.input-arror');
+//     const phoneNumberInput = document.getElementById('phoneNumber');
+//     const inputErrorLabel = document.querySelector('.input-arror');
 
 //     // Regular expression to check if the phone number is in the correct format
-//     var phoneNumberPattern = /^\d{10}$/;
+//     const phoneNumberPattern = /^\d{10}$/;
 
 //     if (!phoneNumberPattern.test(phoneNumberInput.value)) {
 //         // If the phone number is not in the correct format, add the 'visible' class to the error label

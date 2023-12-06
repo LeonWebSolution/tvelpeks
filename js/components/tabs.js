@@ -7,8 +7,8 @@ export class Tabs {
 
     initTabs() {
         // Получаем все вкладки и слайдеры
-        var tabs = document.querySelectorAll('.projects__tab');
-        var sliders = document.querySelectorAll('.projects__slider');
+        const tabs = document.querySelectorAll('.projects__tab');
+        const sliders = document.querySelectorAll('.projects__slider');
 
         // Проверяем, что есть хотя бы одна вкладка и один слайдер
         if (tabs.length > 0 && sliders.length > 0) {
@@ -29,7 +29,7 @@ export class Tabs {
                 });
             });
         }
-        var items = document.querySelectorAll('.navigation-sticky__item');
+        const items = document.querySelectorAll('.navigation-sticky__item');
 
         // Добавляем слушатель событий для каждого элемента
         items.forEach(function(item) {
@@ -42,6 +42,24 @@ export class Tabs {
                 // Добавление класса 'active' к текущему элементу
                 item.classList.add('active');
             });
+        });
+
+        const tabsContainers = document.querySelectorAll('.tabs');
+
+        // Добавляем обработчик события click к каждому контейнеру
+        tabsContainers.forEach((container) => {
+          container.addEventListener('click', (event) => {
+            // Проверяем, был ли клик на элементе с классом "tab"
+            if (event.target.classList.contains('tab')) {
+              // Удаляем класс "active" у всех дочерних элементов текущего контейнера
+              container.querySelectorAll('.tab').forEach((tab) => {
+                tab.classList.remove('active');
+              });
+      
+              // Добавляем класс "active" только к выбранному элементу
+              event.target.classList.add('active');
+            }
+          });
         });
     }
 }
