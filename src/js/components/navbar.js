@@ -20,99 +20,114 @@ export class Nav {
 
   setupDesktopNav() {
     const solutionLink = document.querySelector('.solution__link');
-    const nameLinks = document.querySelectorAll('.solutions__name-link');
-    const solutionsList = document.querySelector('.solutions__list');
+const nameLinks = document.querySelectorAll('.solutions__name-link');
+const solutionsList = document.querySelector('.solutions__list');
 
-    const productionLink = document.querySelector('.production__link');
-    const productionNameLinks = document.querySelectorAll('.productions__name-link');
-    const productionsList = document.querySelector('.productions__list');
+const productionLink = document.querySelector('.production__link');
+const productionNameLinks = document.querySelectorAll('.productions__name-link');
+const productionsList = document.querySelector('.productions__list');
 
-    const aboutLink = document.querySelector('.about__link');
-    const aboutNameLinks = document.querySelectorAll('.about__name-link');
-    const aboutList = document.querySelector('.about__list');
+const aboutLink = document.querySelector('.about__link');
+const aboutNameLinks = document.querySelectorAll('.about__name-link');
+const aboutList = document.querySelector('.about__list');
 
-    const calcLink = document.querySelector('.calc__link');
-    const calcNameLinks = document.querySelectorAll('.calc__name-link');
-    const calcList = document.querySelector('.calc__list');
+const calcLink = document.querySelector('.calc__link');
+const calcNameLinks = document.querySelectorAll('.calc__name-link');
+const calcList = document.querySelector('.calc__list');
 
-    function toggleList(link, list) {
-      const isActive = link.classList.contains('active');
+const blurOverlay = document.querySelector('.blur-overlay');
 
-      const allLinks = document.querySelectorAll('.solutions__name-link, .productions__name-link, .about__name-link, .calc__name-link');
-      allLinks.forEach(otherLink => {
-        if (otherLink !== link) {
-          otherLink.classList.remove('active');
-          const otherList = otherLink.classList.contains('solutions__name-link') ? document.querySelector('.solutions__list') :
-            (otherLink.classList.contains('productions__name-link') ? document.querySelector('.productions__list') :
-              (otherLink.classList.contains('about__name-link') ? document.querySelector('.about__list') :
-                document.querySelector('.calc__list')));
-          otherList.classList.remove('active');
-          otherList.style.maxHeight = '';
-        }
-      });
+function toggleList(link, list) {
+  const isActive = link.classList.contains('active');
 
-      link.classList.toggle('active');
-      list.classList.toggle('active');
-
-      const maxHeight = isActive ? '' : list.scrollHeight + 'px';
-      list.style.maxHeight = maxHeight;
+  const allLinks = document.querySelectorAll('.solutions__name-link, .productions__name-link, .about__name-link, .calc__name-link');
+  allLinks.forEach(otherLink => {
+    if (otherLink !== link) {
+      otherLink.classList.remove('active');
+      const otherList = otherLink.classList.contains('solutions__name-link') ? document.querySelector('.solutions__list') :
+        (otherLink.classList.contains('productions__name-link') ? document.querySelector('.productions__list') :
+          (otherLink.classList.contains('about__name-link') ? document.querySelector('.about__list') :
+            document.querySelector('.calc__list')));
+      otherList.classList.remove('active');
+      otherList.style.maxHeight = '';
     }
+  });
 
-    solutionLink.addEventListener('mouseover', function () {
-      nameLinks.forEach(function (link) {
-        link.classList.add('active');
-      });
-      solutionsList.classList.add('active');
-    });
+  link.classList.toggle('active');
+  list.classList.toggle('active');
 
-    solutionLink.addEventListener('mouseout', function () {
-      nameLinks.forEach(function (link) {
-        link.classList.remove('active');
-      });
-      solutionsList.classList.remove('active');
-    });
+  const maxHeight = isActive ? '' : list.scrollHeight + 'px';
+  list.style.maxHeight = maxHeight;
+}
 
-    productionLink.addEventListener('mouseover', function () {
-      productionNameLinks.forEach(function (link) {
-        link.classList.add('active');
-      });
-      productionsList.classList.add('active');
-    });
+function toggleBlurOverlay() {
+  blurOverlay.classList.toggle('active');
+}
 
-    productionLink.addEventListener('mouseout', function () {
-      productionNameLinks.forEach(function (link) {
-        link.classList.remove('active');
-      });
-      productionsList.classList.remove('active');
-    });
+solutionLink.addEventListener('mouseover', function () {
+  toggleBlurOverlay();
+  nameLinks.forEach(function (link) {
+    link.classList.add('active');
+  });
+  solutionsList.classList.add('active');
+});
 
-    aboutLink.addEventListener('mouseover', function () {
-      aboutNameLinks.forEach(function (link) {
-        link.classList.add('active');
-      });
-      aboutList.classList.add('active');
-    });
+solutionLink.addEventListener('mouseout', function () {
+  toggleBlurOverlay();
+  nameLinks.forEach(function (link) {
+    link.classList.remove('active');
+  });
+  solutionsList.classList.remove('active');
+});
 
-    aboutLink.addEventListener('mouseout', function () {
-      aboutNameLinks.forEach(function (link) {
-        link.classList.remove('active');
-      });
-      aboutList.classList.remove('active');
-    });
+productionLink.addEventListener('mouseover', function () {
+  toggleBlurOverlay();
+  productionNameLinks.forEach(function (link) {
+    link.classList.add('active');
+  });
+  productionsList.classList.add('active');
+});
 
-    calcLink.addEventListener('mouseover', function () {
-      calcNameLinks.forEach(function (link) {
-        link.classList.add('active');
-      });
-      calcList.classList.add('active');
-    });
+productionLink.addEventListener('mouseout', function () {
+  toggleBlurOverlay();
+  productionNameLinks.forEach(function (link) {
+    link.classList.remove('active');
+  });
+  productionsList.classList.remove('active');
+});
 
-    calcLink.addEventListener('mouseout', function () {
-      calcNameLinks.forEach(function (link) {
-        link.classList.remove('active');
-      });
-      calcList.classList.remove('active');
-    });
+aboutLink.addEventListener('mouseover', function () {
+  toggleBlurOverlay();
+  aboutNameLinks.forEach(function (link) {
+    link.classList.add('active');
+  });
+  aboutList.classList.add('active');
+});
+
+aboutLink.addEventListener('mouseout', function () {
+  toggleBlurOverlay();
+  aboutNameLinks.forEach(function (link) {
+    link.classList.remove('active');
+  });
+  aboutList.classList.remove('active');
+});
+
+calcLink.addEventListener('mouseover', function () {
+  toggleBlurOverlay();
+  calcNameLinks.forEach(function (link) {
+    link.classList.add('active');
+  });
+  calcList.classList.add('active');
+});
+
+calcLink.addEventListener('mouseout', function () {
+  toggleBlurOverlay();
+  calcNameLinks.forEach(function (link) {
+    link.classList.remove('active');
+  });
+  calcList.classList.remove('active');
+});
+
   }
 
   setupMobileNav() {

@@ -16,9 +16,9 @@ export class TextVisible {
     }
 
     setupElement(btnSelector, contentSelector, showText, hideText, txtBlurSelector) {
-        var button = document.querySelector(btnSelector);
-        var contentInfo = document.querySelector(contentSelector);
-        var txtBlur = document.querySelector(txtBlurSelector);
+        const button = document.querySelector(btnSelector);
+        const contentInfo = document.querySelector(contentSelector);
+        const txtBlur = document.querySelector(txtBlurSelector);
 
         // Проверяем, что элементы существуют
         if (button && contentInfo) {
