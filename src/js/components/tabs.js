@@ -6,6 +6,23 @@ export class Tabs {
     }
 
     initTabs() {
+        const newsTabs = document.querySelectorAll('.news__tab');
+
+        // Добавляем слушатель события клика для каждого элемента
+        newsTabs.forEach(function (tab) {
+          tab.addEventListener('click', function () {
+            // Удаляем класс active у предыдущего элемента
+            const currentActiveTab = document.querySelector('.news__tab.active');
+            if (currentActiveTab) {
+              currentActiveTab.classList.remove('active');
+            }
+      
+            // Добавляем класс active к текущему элементу
+            tab.classList.add('active');
+          });
+        });
+        
+
         // Получаем все вкладки и слайдеры
         const tabs = document.querySelectorAll('.projects__tab');
         const sliders = document.querySelectorAll('.projects__slider');
@@ -46,20 +63,24 @@ export class Tabs {
 
         const tabsContainers = document.querySelectorAll('.tabs');
 
-        // Добавляем обработчик события click к каждому контейнеру
-        tabsContainers.forEach((container) => {
-          container.addEventListener('click', (event) => {
-            // Проверяем, был ли клик на элементе с классом "tab"
-            if (event.target.classList.contains('tab')) {
-              // Удаляем класс "active" у всех дочерних элементов текущего контейнера
-              container.querySelectorAll('.tab').forEach((tab) => {
-                tab.classList.remove('active');
-              });
-      
-              // Добавляем класс "active" только к выбранному элементу
-              event.target.classList.add('active');
-            }
-          });
-        });
+tabsContainers.forEach((container) => {
+  container.addEventListener('click', (event) => {
+    // Check if the click was on an element with the class "tab"
+    const clickedTab = event.target.closest('.tab');
+    if (clickedTab) {
+      // Remove the "active" class from all tabs in the current container
+      container.querySelectorAll('.tab').forEach((tab) => {
+        tab.classList.remove('active');
+      });
+
+      // Add the "active" class only to the clicked tab
+      clickedTab.classList.add('active');
+    }
+  });
+});
+
+
+
+        
     }
 }

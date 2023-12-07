@@ -33,6 +33,45 @@
         }
     }
 }
+.production__item:hover{
+    .production__item-btns{
+        transform: translateY(-101%);
+        transition: all 0.3s;
+        z-index: 77;
+        background-color: $white;
+        width: 100%;
+    }
+}
+.production__item-btns{
+    display: flex !important;
+    align-items: center;
+    gap: 0.6rem;
+    padding-top: 1.5rem;
+    border-top: 0.1rem solid $black;
+    position: absolute;
+    transform: translateY(100%);
+    transition: all 0.3s;
+    .razmers-btn{
+        font-size: 1.4rem;
+        padding: 1.3rem 1.1rem;
+        white-space: nowrap;
+        width: 49%;
+    }
+    .question-btn{
+        font-size: 1.4rem;
+        padding: 1.3rem 1.1rem;
+        white-space: nowrap;
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        width: 49%;
+        svg{
+            width: 1.8rem;
+            height: 1.8rem;
+        }
+    }
+}
+
 .heating-parameters{
     padding: 5rem 0 6.5rem;
     background: linear-gradient(180deg, #E9E9EF 0%, #F4F4F6 100%);
@@ -164,9 +203,6 @@
         }
     }
 }
-.production__item-btns{
-    display: none;
-}
 .heating-production{
     overflow: hidden;
     margin-bottom: 8.4rem;
@@ -199,7 +235,7 @@
     position: relative;
 }
 .navigation-stickys{
-    top: 7.15rem;
+    top: 7.08rem;
     position: sticky;
     z-index: 7;
 }
@@ -280,8 +316,11 @@
                 border-left: 0.1rem solid $black;
                 border-bottom: 0.1rem solid $black;
                 right: -1rem;
-                bottom: -0.61rem;
+                bottom: -0.55rem;
                 z-index: 777;
+                @media (max-width: 1440px) {
+                    bottom: -0.6rem;
+                }
             }
         }
     }
@@ -360,6 +399,13 @@
             width: 28.1rem;
         }
     }
+    &__free-img{
+        position: absolute;
+        right: 2.6rem;
+        bottom: 3.7rem;
+        width: 23rem;
+        height: 13rem;
+    }
     &__item{
         background-repeat: no-repeat;
         background-size: cover;
@@ -378,6 +424,8 @@
             display: flex;
             flex-direction: column;
             justify-content: space-between;
+            background-color: #C9DBF2;
+            position: relative;
         }
         &:nth-child(4){
             grid-area: 2 / 2 / 3 / 3;
@@ -482,6 +530,16 @@
     }
 }
 @media (max-width: 962px){
+    .order-block{
+        display: flex;
+        flex-direction: column;
+        .detal-solutions{
+            padding-top: 3rem;
+        }
+        .form-question{
+            order: 1;
+        }
+    }
     .solutions-heating{
         margin-top: 7.7rem;
         padding: 0 0.3rem;
@@ -639,10 +697,14 @@
         z-index: 777;
     }
     .production__item-btns{
+        position: static;
+        transform: translateY(0);
         display: flex;
         align-items: center;
         gap: 0.6rem;
         margin-top: 1.5rem;
+        padding: 0;
+        border: none;
         .razmers-btn{
             font-size: 1.2rem;
             padding: 1.3rem 1.1rem;
@@ -727,6 +789,14 @@
         margin-bottom: 6.5rem;
         .container{
             padding: 0 0.3rem;
+        }
+        &__free-img{
+            position: absolute;
+            right: 0.3rem;
+            top: 2.3rem;
+            bottom: auto;
+            width: 17rem;
+            height: 10rem;
         }
         &__wrapper{
             display: flex;

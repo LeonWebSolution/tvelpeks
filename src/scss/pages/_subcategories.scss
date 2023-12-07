@@ -108,6 +108,7 @@
     &__text{
         color: #585E63;
         &:nth-child(1){
+            width: 100%;
             max-width: 51.2rem;
         }
     }
@@ -145,6 +146,12 @@
     .support-form__title{
         max-width: 59.7rem;
     }
+    .support-form__suptitle{
+        margin-bottom: 12rem;
+        @media (max-width: 962px) {
+            margin-bottom: 2.5rem;
+        }
+    }
 }
 .installation{
     margin-bottom: 8.7rem;
@@ -169,11 +176,23 @@
         width: 31.4rem;
         height: 22.8rem;
         position: relative;
+        overflow: hidden;
+        isolation: isolate;
+        border-radius: 1.5rem;
+        cursor: pointer;
+        transition: all 0.3s;
+        &:hover{
+            img{
+                transform: scale(1.2);
+                transition: all 0.3s;
+            }
+        }
         img{
             width: 100%;
             height: 100%;
             object-fit: cover;
             border-radius: 1.5rem;
+            transition: all 0.3s;
         }
         &-name{
             position: absolute;
@@ -369,6 +388,7 @@
         max-width: 28.9rem;
     }
     .document{
+        margin-bottom: 5rem;
         .container{
             padding: 0;
         }

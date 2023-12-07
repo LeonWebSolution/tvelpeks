@@ -62,6 +62,14 @@
         background: linear-gradient(0deg, rgba(255, 255, 255, 0.97) 14.37%, rgba(255, 255, 255, 0.00) 112.64%);
         left: 0rem;
         z-index: 77;
+        opacity: 1;
+        visibility: visible;
+        transition:  all 0.3s;
+        &.hidden{
+            opacity: 0;
+            visibility: hidden;
+            transition:  all 0.3s;
+        }
     }
     .nav-table{
         position: absolute;
@@ -272,8 +280,8 @@
                 min-width: 18rem;
                 font-size: 1.2rem;
                 border-radius: 0 0 0 0;
-                z-index: 6;
-                position: static;
+                z-index: 5;
+                position: sticky;
             }
             .comparison-type__table th{
                 padding: 1rem;
@@ -281,7 +289,7 @@
                 max-width: 14.1rem;
                 min-width: 14.1rem;
                 text-align: left;
-                z-index: 5;
+                z-index: 6;
                 &:last-child{
                     max-width: 14.1rem;
                     min-width: 14.1rem;

@@ -11,12 +11,18 @@
         background: var(--2, #FFD000);
         font-size: 1.8rem;
         color: #292A29;
+        transition: all 0.3s;
         text-transform: uppercase;
+        
         &:hover{
             background-color: $hover_yellow;
-            transition: all 0.3s;
+            transition: all 0.3s !important;
             color: #292A29;
             transform: scale(1.02);
+        }
+        p{
+            transform: scale(1) !important;
+            transition: all 0.1s;
         }
     }
     &--b{
@@ -30,6 +36,10 @@
             color: #292A29;
             transform: scale(1.02);
         }
+        p{
+            transform: scale(1) !important;
+            transition: all 0.1s;
+        }
     }
     &--ba{
         transition: all 0.3s;
@@ -37,6 +47,10 @@
             background-color: $hover_yellow;
             transition: all 0.3s;
             transform: scale(1.02);
+        }
+        p{
+            transform: scale(1) !important;
+            transition: all 0.1s;
         }
     }
     &--bay{
@@ -50,6 +64,10 @@
             color: $white;
             transform: scale(1.02);
         }
+        p{
+            transform: scale(1) !important;
+            transition: all 0.1s;
+        }
     }
     &--stroke{
         border-radius: 59px;
@@ -61,6 +79,10 @@
             transition: all 0.3s;
             border-color: $hover_yellow;
             transform: scale(1.02);
+        }
+        p{
+            transform: scale(1) !important;
+            transition: all 0.1s;
         }
     }
 }

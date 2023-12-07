@@ -326,7 +326,7 @@
         }
         &-text{
             color: $gray3;
-            padding-right: 2rem;
+            padding-right: 1.4rem;
         }
         &-link{
             position: absolute;
@@ -1487,6 +1487,9 @@
         }
     }
    }
+   .solutions__slide-link svg{
+    fill: #FFD000;
+   }
    .advantages{
     padding: 2.8rem 1.5rem 3.6rem;
     .swiper-slide{
@@ -1919,9 +1922,16 @@
             display: flex;
             align-items: center;
             gap: 1rem;
+            transition: all 0.3s;
             svg{
                 width: 3.3rem;
                 height: 3.3rem;
+            }
+            &:hover{
+                color: $primary;
+                svg stop{
+                    stop-color: $primary;
+                }
             }
         }
     }

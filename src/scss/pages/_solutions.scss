@@ -298,6 +298,9 @@
         &__content{
             position: static;
         }
+        &__item-name{
+            max-width: 22rem;
+        }
         .container{
             margin: 0 1.2rem;
         }
