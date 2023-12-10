@@ -365,6 +365,9 @@
     &__title{
         color: $white;
         margin-bottom: 2.4rem;
+        span{
+            display: block;
+        }
     }
     &__suptitle{
         color: $white;
@@ -1034,7 +1037,7 @@
             transition: all 0.3s;
         }
         &.active{
-            border: none;
+            border: 0.1rem solid $black;
             background-color: $black;
             color: $white;
         }
@@ -1200,6 +1203,9 @@
     &__title{
         color: $black;
         margin-bottom: 1.2rem;
+        span{
+            display: block;
+        }
     }
     &__suptitle{
         color: $black;
@@ -1583,6 +1589,7 @@
         &__title{
             font-size: 3.4rem;
             margin-bottom: 2rem;
+            
         }
         &__suptitle{
             font-size: 2rem;

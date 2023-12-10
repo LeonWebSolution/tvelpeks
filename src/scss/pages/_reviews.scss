@@ -11,6 +11,11 @@
         &__slide{
             height: 32.9rem;
         }
+        &__slide-content{
+            flex-direction: column;
+            display: flex;
+            justify-content: space-between;
+        }
     }
 }
 

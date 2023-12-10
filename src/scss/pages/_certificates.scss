@@ -1,0 +1,29 @@
+.certificates-page{
+    .reviews__slide-name{
+        max-width: 30rem;
+    }
+    .reviews__top{
+        @media (max-width: 962px) {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 2.5rem;
+        }
+    }
+    .tabs{
+        @media (max-width: 962px) {
+            width: 100%;
+            overflow: auto;
+            &::-webkit-scrollbar{
+                display: none;
+            }
+            .tab:nth-child(1) {
+                display: block;
+            }
+        }
+    }
+    .tab{
+        @media (max-width: 962px) {
+            white-space: nowrap;
+        }
+    }
+}

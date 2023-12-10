@@ -1,0 +1,95 @@
+.disctributors-main{
+    margin-top: 19rem;
+    padding-top: 6rem;
+    padding-bottom: 4.8rem;
+    &__title{
+        margin-bottom: 2rem;
+    }
+    &__text{
+        color: #585E63;
+        max-width: 90rem;
+    }
+}
+
+.disctributors-social{
+    padding: 2.2rem 0;
+    border-radius: 2rem;
+    background: linear-gradient(180deg, #E9E9EF 0%, #F4F4F6 100%);
+    margin-bottom: 11.1rem;
+    .container{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__tel-it{
+        color: $black;
+        margin-bottom: 0.9rem;
+    }
+    &__tel-text{
+        color: 1.4rem;
+    }
+    &__inner{
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        padding-right: 5rem;
+        border-right: 0.1rem solid $black;
+        margin-right: 4.7rem;
+        height: 12.6rem;
+        align-items: center;
+    }
+    &__descr{
+        display: flex;
+        flex-direction: column;
+        min-width: 29.8rem;
+        max-width: 29.8rem;
+        gap: 2.2rem;
+    }
+    &__descr-text{
+        color:  #292A29;
+        font-family: 'Graphik LCG';
+        font-size: 1.4rem;
+        font-weight: 500;
+        line-height: 120%;
+    }
+    &__descr-btn{
+        border-radius: 6rem;
+        padding: 0.8rem 2rem;
+        width: 15rem;
+    }
+}
+
+.distrib-support{
+    .support-form__suptitle{
+        max-width: 40rem;
+    }
+    .support-form__action{
+        display: flex;
+        flex-wrap: wrap;
+        max-width: 61rem;
+    }
+    .support-form__input-box{
+        width: 29.4rem;
+    }
+    .support-form__btn{
+        width: 100%;
+        margin-top: 3.5rem;
+    }
+    .support-form__content{
+        padding-top: 6rem;
+    }
+    .support-form__title{
+        margin-bottom: 1rem;
+    }
+    .support-form__suptitle{
+        margin-bottom: 3.3rem;
+    }
+    .support-form__img img{
+        width: 69.2rem;
+        height: 67.9rem;
+    }
+    .support-form__img{
+        width: 69.2rem;
+        height: 67.9rem;
+    }
+}

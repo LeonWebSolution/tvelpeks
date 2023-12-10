@@ -33,6 +33,9 @@
         }
     }
 }
+.production__item{
+    overflow: hidden;
+}
 .production__item:hover{
     .production__item-btns{
         transform: translateY(-101%);
@@ -42,14 +45,15 @@
         width: 100%;
     }
 }
-.production__item-btns{
+
+ .production__item-btns{
     display: flex !important;
     align-items: center;
     gap: 0.6rem;
     padding-top: 1.5rem;
     border-top: 0.1rem solid $black;
     position: absolute;
-    transform: translateY(100%);
+    transform: translateY(130%);
     transition: all 0.3s;
     .razmers-btn{
         font-size: 1.4rem;
@@ -69,6 +73,15 @@
             width: 1.8rem;
             height: 1.8rem;
         }
+    }
+    @media (max-width: 962px) {
+        display: none !important;
+    }
+}
+
+.production__inner-btn .production__item-btns{
+    @media (max-width: 962px) {
+        display: flex !important;
     }
 }
 
@@ -698,7 +711,7 @@
     }
     .production__item-btns{
         position: static;
-        transform: translateY(0);
+        transform: translateY(0) !important;
         display: flex;
         align-items: center;
         gap: 0.6rem;

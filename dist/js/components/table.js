@@ -64,17 +64,20 @@ export class Table {
                 const maxHeight = comparisonWrapper.scrollHeight;
                 const buttonTextElement = document.querySelector('.table-btn p');
                 const tableBtn = document.querySelector('.table-btn');
+                const bottomBlur = document.querySelector('.bottom-blur'); // Assuming this is the element you want to hide/show
 
-                if (tableBtn) {
+                if (tableBtn && bottomBlur) {
                     tableBtn.addEventListener('click', () => {
                         if (comparisonWrapper.style.maxHeight === maxHeight + 'px') {
                             comparisonWrapper.style.maxHeight = null;
                             buttonTextElement.textContent = 'Показать еще';
                             tableBtn.classList.remove('active');
+                            bottomBlur.classList.remove('hidden'); // Add this line to remove the 'hidden' class
                         } else {
                             comparisonWrapper.style.maxHeight = maxHeight + 'px';
                             buttonTextElement.textContent = 'Скрыть';
                             tableBtn.classList.add('active');
+                            bottomBlur.classList.add('hidden'); // Add this line to add the 'hidden' class
                         }
                     });
                 }
@@ -88,7 +91,8 @@ export class Table {
             }
 
             this.updateArrowPrevState();
-        });
+        }); 
+        
     }
 
     updateArrowPrevState() {

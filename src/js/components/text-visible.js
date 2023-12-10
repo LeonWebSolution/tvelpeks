@@ -3,53 +3,50 @@ export class TextVisible {
         this.init();
     }
 
-    init() {
-        const screenWidth = window.innerWidth;
+    handleButtonClick(rexContentInfoSelector, buttonSelector, showText, hideText, txtBlurElementSelector) {
+        const rexContentInfo = document.querySelector(rexContentInfoSelector);
+        const button = document.querySelector(buttonSelector);
 
-        if (screenWidth < 962) {
-            document.addEventListener('DOMContentLoaded', () => {
-                this.setupElement('.about-descr__btn', '.about-descr__text', 'Смотреть все', 'Скрыть');
-                this.setupElement('.rex__btn', '.rex__content-info', 'Показать', 'Скрыть', '.txt-blur');
-                this.setupElement('.subcategoirs-advantages__btn', '.subcategoirs-advantages__info', 'Показать', 'Скрыть', '.txt-blur2');
+        if (rexContentInfo && button) {
+            rexContentInfo.style.maxHeight = '21rem';
 
-                // Change text for the support-form__btn class
-                const supportFormBtn = document.querySelector('.support-form__btn');
-                if (supportFormBtn) {
-                    supportFormBtn.textContent = 'Отправить заявку';
+            button.addEventListener('click', function () {
+                const txtBlurElement = document.querySelector(txtBlurElementSelector);
+
+                txtBlurElement.classList.toggle('hidden');
+                rexContentInfo.classList.toggle('active');
+
+                if (rexContentInfo.classList.contains('active')) {
+                    rexContentInfo.style.maxHeight = rexContentInfo.scrollHeight + 'px';
+                    button.textContent = hideText;
+                } else {
+                    rexContentInfo.style.maxHeight = '21rem';
+                    button.textContent = showText;
                 }
             });
         }
     }
 
-    setupElement(btnSelector, contentSelector, showText, hideText, txtBlurSelector) {
-        const button = document.querySelector(btnSelector);
-        const contentInfo = document.querySelector(contentSelector);
-        const txtBlur = document.querySelector(txtBlurSelector);
+    init() {
+        const isMobile = window.matchMedia("(max-width: 962px)").matches;
 
-        // Проверяем, что элементы существуют
-        if (button && contentInfo) {
-            // Устанавливаем начальную высоту
-            contentInfo.style.maxHeight = '21rem';
-
-            button.addEventListener('click', () => {
-                // Переключаем класс active
-                contentInfo.classList.toggle('active');
-
-                // Если элемент сейчас активен, вычисляем его высоту и устанавливаем максимальную высоту
-                if (contentInfo.classList.contains('active')) {
-                    contentInfo.style.maxHeight = contentInfo.scrollHeight + 'px';
-                    button.textContent = hideText;
-                } else {
-                    // Если элемент неактивен, устанавливаем максимальную высоту в 21rem
-                    contentInfo.style.maxHeight = '21rem';
-                    button.textContent = showText;
-                }
-
-                // Toggle txtBlur visibility
-                if (txtBlur) {
-                    txtBlur.classList.toggle('hidden', !contentInfo.classList.contains('active'));
-                }
+        if (isMobile) {
+            document.addEventListener('DOMContentLoaded', () => {
+                this.handleButtonClick('.about-descr__text', '.about-descr__btn', 'Смотреть все', 'Скрыть', '.txt-blur');
+                this.handleButtonClick('.rex__content-info', '.rex__btn', 'Смотреть все', 'Скрыть', '.txt-blur');
+                this.handleButtonClick('.subcategoirs-advantages__info', '.subcategoirs-advantages__btn', 'Смотреть все', 'Скрыть', '.txt-blur2');
             });
+        }
+
+        const isMobil = window.matchMedia("(max-width: 962px)").matches;
+
+        if (isMobil) {
+            const mobileButton = document.querySelector('.support-form__btn--mobile');
+
+            if (mobileButton) {
+                // Устанавливаем новый текст
+                mobileButton.textContent = 'Отправить заявку';
+            }
         }
     }
 }

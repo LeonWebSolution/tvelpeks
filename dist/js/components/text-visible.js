@@ -4,13 +4,19 @@ export class TextVisible {
     }
 
     init() {
-        const itMobile = window.matchMedia("(min-width: 962px)").matches;
+        const screenWidth = window.innerWidth;
 
-        if (!itMobile) {
+        if (screenWidth < 962) {
             document.addEventListener('DOMContentLoaded', () => {
                 this.setupElement('.about-descr__btn', '.about-descr__text', 'Смотреть все', 'Скрыть');
                 this.setupElement('.rex__btn', '.rex__content-info', 'Показать', 'Скрыть', '.txt-blur');
                 this.setupElement('.subcategoirs-advantages__btn', '.subcategoirs-advantages__info', 'Показать', 'Скрыть', '.txt-blur2');
+
+                // Change text for the support-form__btn class
+                const supportFormBtn = document.querySelector('.support-form__btn');
+                if (supportFormBtn) {
+                    supportFormBtn.textContent = 'Отправить заявку';
+                }
             });
         }
     }
@@ -47,6 +53,3 @@ export class TextVisible {
         }
     }
 }
-
-// Create an instance of TextVisible to initialize the functionality
-const textVisibleInstance = new TextVisible();
