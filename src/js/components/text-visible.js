@@ -6,21 +6,25 @@ export class TextVisible {
     handleButtonClick(rexContentInfoSelector, buttonSelector, showText, hideText, txtBlurElementSelector) {
         const rexContentInfo = document.querySelector(rexContentInfoSelector);
         const button = document.querySelector(buttonSelector);
-
-        if (rexContentInfo && button) {
-            rexContentInfo.style.maxHeight = '21rem';
-
+        const txtBlurElement = document.querySelector(txtBlurElementSelector);
+    
+        if (rexContentInfo && button && txtBlurElement) {
+            // Store the initial max-height value from CSS
+            const initialMaxHeight = window.getComputedStyle(rexContentInfo).maxHeight;
+    
+            // Set initial max-height based on CSS value
+            rexContentInfo.style.maxHeight = initialMaxHeight;
+    
             button.addEventListener('click', function () {
-                const txtBlurElement = document.querySelector(txtBlurElementSelector);
-
                 txtBlurElement.classList.toggle('hidden');
                 rexContentInfo.classList.toggle('active');
-
+    
                 if (rexContentInfo.classList.contains('active')) {
                     rexContentInfo.style.maxHeight = rexContentInfo.scrollHeight + 'px';
                     button.textContent = hideText;
                 } else {
-                    rexContentInfo.style.maxHeight = '21rem';
+                    // Reset max-height to the initial CSS value
+                    rexContentInfo.style.maxHeight = initialMaxHeight;
                     button.textContent = showText;
                 }
             });
@@ -35,6 +39,7 @@ export class TextVisible {
                 this.handleButtonClick('.about-descr__text', '.about-descr__btn', 'Смотреть все', 'Скрыть', '.txt-blur');
                 this.handleButtonClick('.rex__content-info', '.rex__btn', 'Смотреть все', 'Скрыть', '.txt-blur');
                 this.handleButtonClick('.subcategoirs-advantages__info', '.subcategoirs-advantages__btn', 'Смотреть все', 'Скрыть', '.txt-blur2');
+                this.handleButtonClick('.tabs__content', '.filials__btn--all', 'Смотреть все', 'Скрыть', '.txt-blur');
             });
         }
 

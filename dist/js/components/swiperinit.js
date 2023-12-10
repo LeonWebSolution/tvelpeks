@@ -305,7 +305,6 @@ export class SwiperInit {
           });
         }
 
-        // Swiper for projects__tab-slider
         if (document.querySelector('.projects__tab-slider')) {
           const projectsTab = new Swiper('.projects__tab-slider', {
             slidesPerView: 'auto',
