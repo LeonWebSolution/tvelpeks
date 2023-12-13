@@ -153,6 +153,11 @@
             margin-bottom: 1rem;
         }
     }
+    &__title{
+        @media (max-width: 962px) {
+            font-size: 2.8rem;
+        }
+    }
 }
 
 .criteria{
@@ -215,6 +220,10 @@
     height: 100%;
     @media (max-width: 962px) {
         margin-bottom: 5.5rem;;
+    }
+    .txt-blur{
+        height: 11.7rem;
+        bottom: 3rem;
     }
     &__wrapper{
         display: flex;
@@ -334,7 +343,7 @@
     }
     .tabs__content{
         @media (max-width: 962px) {
-            max-height: 73rem;
+            max-height: 72.8rem;
             overflow: hidden;
             position: relative;
             transition: all 0.3s;
@@ -488,6 +497,14 @@
         max-width: 61rem;
         @media (max-width: 962px) {
             max-width: 100%;
+        }
+    }
+    .support-form__title{
+        @media (max-width: 962px) {
+            font-size: 3rem;
+            span{
+                display: inline;
+            }
         }
     }
     .support-form__input-box{

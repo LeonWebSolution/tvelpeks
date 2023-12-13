@@ -81,8 +81,8 @@
             transform: scale(1.02);
         }
         p{
-            transform: scale(1) !important;
-            transition: all 0.1s;
+            transform: none !important;
+            transition: all 0s !important;
         }
     }
 }

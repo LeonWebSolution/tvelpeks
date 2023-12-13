@@ -194,6 +194,18 @@ export class SwiperInit {
             freeModeSticky: true,
           });
         }
+        
+        if (document.querySelector('.peculiarities-dilers__slider')) {
+          const peculiaritiesd = new Swiper('.peculiarities-dilers__slider', {
+            slidesPerView: 'auto',
+            spaceBetween: 30,
+            initialSlide: 0,
+            centerInsufficientSlides: true,
+            loop: false,
+            freeMode: true,
+            freeModeSticky: true,
+          });
+        }
 
         if (document.querySelector('.material__slider')) {
           const photo = new Swiper('.material__slider', {
