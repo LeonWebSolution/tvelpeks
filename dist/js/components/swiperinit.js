@@ -219,6 +219,18 @@ export class SwiperInit {
           });
         }
 
+        if (document.querySelector('.payment-option__slider')) {
+          const peculiaritiesd = new Swiper('.payment-option__slider', {
+            slidesPerView: 'auto',
+            spaceBetween: 5,
+            initialSlide: 0,
+            centerInsufficientSlides: true,
+            loop: false,
+            freeMode: true,
+            freeModeSticky: true,
+          });
+        }
+
         if (document.querySelector('.material__slider')) {
           const photo = new Swiper('.material__slider', {
             slidesPerView: 'auto',

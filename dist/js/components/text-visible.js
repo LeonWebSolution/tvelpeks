@@ -40,6 +40,7 @@ export class TextVisible {
                 this.handleButtonClick('.rex__content-info', '.rex__btn', 'Смотреть все', 'Скрыть', '.txt-blur');
                 this.handleButtonClick('.subcategoirs-advantages__info', '.subcategoirs-advantages__btn', 'Смотреть все', 'Скрыть', '.txt-blur2');
                 this.handleButtonClick('.tabs__content', '.filials__btn--all', 'Смотреть все', 'Скрыть', '.txt-blur');
+                this.handleButtonClick('.payment-requirements__inner', '.payment-requirements__all-btn', 'Смотреть все', 'Скрыть', '.text-blur');
             });
         }
 

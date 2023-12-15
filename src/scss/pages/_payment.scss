@@ -203,15 +203,19 @@
         }
     }
     .text-blur{
-        background: linear-gradient(180deg, rgba(255, 255, 255, 0.00) 0%, #FFF 100%);
-        width: 36rem;
-        height: 21.1rem;
-        position: absolute;
-        left: 0;
-        bottom: 0;
-        z-index: 7;
-        &.hidden{
-            opacity: 0;
+        display: none;
+        @media (max-width: 962px){
+            display: block;
+            background: linear-gradient(180deg, rgba(255, 255, 255, 0.00) 0%, #FFF 100%);
+            width: 36rem;
+            height: 21.1rem;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            z-index: 7;
+            &.hidden{
+                opacity: 0;
+            }
         }
     }
 }
