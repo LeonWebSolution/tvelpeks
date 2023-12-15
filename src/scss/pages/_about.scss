@@ -21,6 +21,9 @@
         position: absolute;
         top: 6rem;
         left: 12.5rem;
+        @media (max-width: 1440px){
+            left: 5.5rem;
+        }
     }
     &__title {
         color: $white;
@@ -337,6 +340,8 @@
 .about-descr__btn{
     display: none;
 }
+
+
 @media (max-width: 962px){
     .about-main{
         margin: 8rem 0.3rem 4rem;

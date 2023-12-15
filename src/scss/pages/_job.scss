@@ -40,8 +40,8 @@
 }
 .job-faq{
     padding: 7rem 0 !important;
-    .faq__title{
-
+    @media (max-width: 962px){
+        padding: 4rem 0 2.5rem !important;
     }
 }
 .job__accordion{
@@ -175,6 +175,7 @@
         }
     }
     .words-vacancies{
+        padding-bottom: 4.9rem;
         margin-top: 4.5rem;
         .words__title{
             display: block;

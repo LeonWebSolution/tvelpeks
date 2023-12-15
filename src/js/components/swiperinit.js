@@ -206,6 +206,18 @@ export class SwiperInit {
             freeModeSticky: true,
           });
         }
+        
+        if (document.querySelector('.people-support__slider')) {
+          const peculiaritiesd = new Swiper('.people-support__slider', {
+            slidesPerView: 'auto',
+            spaceBetween: 5,
+            initialSlide: 0,
+            centerInsufficientSlides: true,
+            loop: false,
+            freeMode: true,
+            freeModeSticky: true,
+          });
+        }
 
         if (document.querySelector('.material__slider')) {
           const photo = new Swiper('.material__slider', {

@@ -80,7 +80,20 @@ tabsContainers.forEach((container) => {
 });
 
 
+const tabss = document.querySelectorAll('.filials__tabs-item');
 
+  // Добавляем слушатель события click к каждой вкладке
+  tabss.forEach((tab) => {
+    tab.addEventListener('click', () => {
+      // Убираем класс active у всех элементов
+      tabss.forEach((item) => {
+        item.classList.remove('active');
+      });
+
+      // Добавляем класс active к текущему элементу
+      tab.classList.add('active');
+    });
+  });
         
     }
 }
