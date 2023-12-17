@@ -219,11 +219,36 @@
         }
     }
 }
-
+.payment-question{
+    .form-question__title{
+        @media (max-width: 962px){
+            font-size: 3.4rem;
+            font-weight: 500;
+        }
+    }
+    .form-question__suptitle {
+        max-width: 46.7rem;
+        margin-bottom: 4rem;
+        @media (max-width: 962px){
+            font-size: 1.8rem;
+        }
+    }
+}
 .payment-option{
     margin-bottom: 9rem;
     @media (max-width: 962px){
         margin-bottom: 5rem;
+    }
+    &__lable{
+        position: absolute;
+        top: 1.5rem;
+        right: 1.7rem;
+        padding: 1rem;
+        border-radius: 10rem;
+        color: #585E63;
+        font-size: 1.4rem;
+        text-transform: uppercase;
+        background-color: $white;
     }
     &__wrapper{
         gap: 1.5rem;
@@ -264,7 +289,7 @@
         svg{
             position: absolute;
             left: 0;
-            top: 2.2rem;
+            top: 1.7rem;
             width: 4.2rem;
             height: 4.2rem;
         }
@@ -273,6 +298,8 @@
         display: flex; 
         gap: 14.8rem;
         margin-top: 5.5rem;
+        padding-bottom: 11.7rem;
+        border-bottom: 0.1rem solid $black;
         @media (max-width: 962px){
             flex-direction: column;
             display: none;

@@ -39,6 +39,7 @@
         order: 0;
          @media (max-width: 962px){
            margin-bottom: 1rem;
+           font-size: 2.8rem;
         }
     }
     &__btn{
@@ -191,6 +192,7 @@
         padding-right: 5.7rem;
         @media (max-width: 962px){
            height: 18.7rem !important;
+           background-color: #9CC6BC !important;
          }
         .svg{
             position: absolute;
@@ -271,7 +273,7 @@
         }
     }
     &__wrapper{
-        gap: 1.4rem;
+        gap: 6.5rem 1.4rem;
         flex-wrap: wrap;
         @media (max-width: 962px){
             flex-wrap: nowrap;
@@ -305,6 +307,9 @@
     }
     &__name{
         margin-bottom: 0.8rem;
+        @media (max-width: 962px){
+            font-size: 3rem;
+        }
     }
     &__dolzh{
         color: #585E63;
@@ -365,6 +370,9 @@
         }
         .people-support__btn{
             padding: 1.5rem 3.5rem;
+            @media (max-width: 962px){
+                width: 100%;
+             }
         }
     }
 }
@@ -379,7 +387,7 @@
     }
     &__wrapper{
         display: flex;
-        gap: 2.7rem;
+        gap: 7rem;
         @media (max-width: 962px){
             flex-direction: column;
         }
