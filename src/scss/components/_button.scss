@@ -1,4 +1,5 @@
 .btn{
+    transition: all 0.2s ease-in;
     &--accent{
         font-size: 1.8rem;
         text-transform: uppercase;
@@ -11,30 +12,29 @@
         background: var(--2, #FFD000);
         font-size: 1.8rem;
         color: #292A29;
-        transition: all 0.3s;
+        transition: all 0.2s ease-in;
         text-transform: uppercase;
         
         &:hover{
+            font-size: 1.8rem;
             background-color: $hover_yellow;
-            transition: all 0.3s !important;
+            transition: all 0.2s  ease-in !important;
             color: #292A29;
-            transform: scale(1.02);
-        }
-        p{
-            transform: scale(1) !important;
-            transition: all 0.1s;
+            // transform: scale(1.2);
         }
     }
     &--b{
         background-color: $black;
         color: $white;
         border-radius: 5.9rem;
-        transition: all 0.3s;
+        transition: all 0.2s linear;
+        backface-visibility: hidden;
+        font-weight: 400;
         &:hover{
             background-color: $hover_yellow;
-            transition: all 0.3s;
+            transition: all 0.2s ease-in;
             color: #292A29;
-            transform: scale(1.02);
+            // transform: scale(1.01);
         }
         p{
             transform: scale(1) !important;
@@ -42,43 +42,43 @@
         }
     }
     &--ba{
-        transition: all 0.3s;
+        transition: all 0.2s linear;
         &:hover{
             background-color: $hover_yellow;
-            transition: all 0.3s;
-            transform: scale(1.02);
+            transition: all 0.2s linear;
+            // transform: scale(1.01);
         }
         p{
             transform: scale(1) !important;
-            transition: all 0.1s;
+            transition: all 0.2s linear;
         }
     }
     &--bay{
         background-color: $black;
         color: $white;
         border-radius: 5.9rem;
-        transition: all 0.3s;
+        transition: all 0.2s linear;
         &:hover{
             background-color: #000;
-            transition: all 0.3s;
+            transition: all 0.2s linear;
             color: $white;
-            transform: scale(1.02);
+            // transform: scale(1.01);
         }
         p{
             transform: scale(1) !important;
-            transition: all 0.1s;
+            transition: all 0.2s linear;
         }
     }
     &--stroke{
         border-radius: 59px;
         border: 0.1rem solid $black;
-        transition: all 0.3s;
+        transition: all 0.2s linear;
         &:hover{
             background-color: $hover_yellow;
             border: 0.1rem solid transparent;
-            transition: all 0.3s;
+            transition: all 0.2s ;
             border-color: $hover_yellow;
-            transform: scale(1.02);
+            // transform: scale(1.1);
         }
         p{
             transform: none !important;

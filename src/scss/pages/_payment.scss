@@ -107,6 +107,9 @@
 
 .payment-requirements{
     margin-bottom: 12rem;
+    @media (max-width: 962px){
+        margin-bottom: 6rem;
+    }
     &__wrapper{
         display: flex;
         gap: 7rem;
@@ -273,25 +276,47 @@
     }
     &__textt{
         margin-bottom: 3rem;
+        @media (max-width: 962px){
+            font-size: 1.4rem;
+            margin-bottom: 2rem;
+        }
     }
     &__btn{
         display: flex;
         justify-content: center;
         gap: 1rem;
         padding: 1.5rem 3rem;
+        svg{
+            width: 2rem;
+            height: 2rem;
+        }
+        @media (max-width: 962px){
+            width: 100%;
+        }
     }
     &__title-bot{
         white-space: nowrap;
         font-size: 3rem;
         text-transform: uppercase;
-        padding-left: 5.2rem;
         position: relative;
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        @media (max-width: 962px){
+            font-size: 2rem;
+            padding-left: 0;
+        }
+        p{
+            order: 1;
+        }
         svg{
-            position: absolute;
-            left: 0;
-            top: 1.7rem;
+            order: 0;
             width: 4.2rem;
             height: 4.2rem;
+            @media (max-width: 962px){
+                top: 0;
+                position: static;
+            }
         }
     }
     &__inner{
@@ -302,7 +327,10 @@
         border-bottom: 0.1rem solid $black;
         @media (max-width: 962px){
             flex-direction: column;
-            display: none;
+            gap: 1.3rem;
+            margin-top: 3rem;
+            padding: 0;
+            border: none;
         }
     }
     &__title{

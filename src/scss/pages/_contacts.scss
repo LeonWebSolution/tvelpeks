@@ -221,6 +221,7 @@
             a{
                 color: $black;
                 text-decoration: underline !important;
+                text-underline-offset: 0.5rem;
             }
          }
     }
@@ -390,6 +391,7 @@
         gap: 7rem;
         @media (max-width: 962px){
             flex-direction: column;
+            gap: 2.5rem;
         }
     }
     &__title{

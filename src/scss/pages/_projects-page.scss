@@ -44,6 +44,11 @@
             gap: 2.5rem;
         }
     }
+    &__title{
+        @media (max-width: 962px){
+           font-size: 2.8rem;
+        }
+    }
     &__wrapper{
         display: flex;
         flex-wrap: wrap;
@@ -96,6 +101,7 @@
         margin-bottom: 3rem;
         @media (max-width: 962px){
             margin-bottom: 2.5rem;
+            font-size: 2.2rem;
         }
     }
     .reviews__slide{
@@ -144,6 +150,11 @@
     }
 }
 .work-etap{
+    .work__title{
+        @media (max-width: 962px){
+            font-size: 2.2rem;
+        }
+    }
     padding-bottom: 6rem;
     @media (max-width: 962px){
         padding-bottom: 3rem;
@@ -169,6 +180,11 @@
     @media (max-width: 962px){
         padding-bottom: 0rem;
         margin-bottom: 5.5rem;
+    }
+    .projects__title{
+        @media (max-width: 962px){
+            font-size: 2.2rem;
+        }
     }
     .swiper{
         overflow: hidden !important;

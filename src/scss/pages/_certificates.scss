@@ -25,7 +25,7 @@
 
 .tabs .tab{
     border:  0.1rem solid transparent !important;
-    background: linear-gradient(#fff, #fff) padding-box, linear-gradient(to right, #fff, $black) border-box;
+    background: linear-gradient(to right, #fff, #fff) padding-box, linear-gradient(to right top, #fff, #292A29) border-box;
     @media (max-width: 962px) {
         white-space: nowrap;
     }
