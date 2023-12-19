@@ -93,6 +93,9 @@
 
   .form-question__content{
     min-width: 73rem;
+    @media(max-width:  962px){
+        min-width: 100%;
+      }
   }
   .form-question__sent{
     opacity: 0;
