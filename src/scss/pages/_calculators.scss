@@ -1,0 +1,59 @@
+.calculators{
+    margin-top: 19rem;
+    padding-top: 6rem;
+    margin-bottom: 6rem;
+    @media (max-width: 962px){
+        margin-top: 8rem;
+        padding-top: 3rem;
+        margin-bottom: 4.5rem;
+    }
+    &__title{
+        margin-bottom: 3.7rem;
+        @media (max-width: 962px){
+            margin-bottom: 2.8rem;
+        }
+    }
+    &__wrapper{
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        gap: 1.5rem;
+        @media (max-width: 962px){
+            grid-template-columns: repeat(1,1fr);
+        }
+    }
+    &__name{
+        @media (max-width: 962px){
+            font-size: 2rem;
+        }
+    }
+    &__item{
+        padding: 2.5rem;
+        border-radius: 2rem;
+        background: linear-gradient(180deg, #E9E9EF 0%, #F4F4F6 100%);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100%;
+        color: $black;
+        gap: 2rem;
+        @media (max-width: 962px){
+            flex-direction: row;
+            gap: 5rem;
+            padding: 1.5rem 2.1rem 1.3rem 2.5rem;
+        }
+        svg{
+           width: 4rem;
+           height: 3.9rem; 
+        }
+    }
+}
+
+.question-calc{
+    .container{
+        margin: 0 auto !important;
+    }
+    @media (max-width: 962px){
+        margin: 0 1.4rem !important;
+        margin-bottom: 2rem !important;
+    }
+}

@@ -161,6 +161,45 @@ export class SwiperInit {
         });
       }
 
+      if (document.querySelector('.areas__slider')) {
+        const areas = new Swiper('.areas__slider', {
+          slidesPerView: 'auto',
+          spaceBetween: 16,
+          initialSlide: 0,
+          centerInsufficientSlides: true,
+          freeMode: true,
+          freeModeSticky: true,
+          navigation: {
+            nextEl: '#swiper-button-next-areas',
+            prevEl: '#swiper-button-prev-areas',
+          },
+        });
+      }
+
+      if (document.querySelector('.choose-us__slider')) {
+        const areas = new Swiper('.choose-us__slider', {
+          slidesPerView: 'auto',
+          spaceBetween: 35,
+          initialSlide: 0,
+          centerInsufficientSlides: true,
+          freeMode: true,
+          freeModeSticky: true,
+          navigation: {
+            nextEl: '#swiper-button-next-choose-us',
+            prevEl: '#swiper-button-prev-choose-us',
+          },
+          breakpoints: {
+            // когда ширина экрана меньше 768 пикселей
+            200: {
+              spaceBetween: 10,
+            },
+            600: {
+              spaceBetween: 35,
+            }
+          }
+        });
+      }
+
       // Swiper for heation-peculiarities__slider
       if (document.querySelector('.heation-peculiarities__slider')) {
         const heation = new Swiper('.heation-peculiarities__slider', {
@@ -331,6 +370,18 @@ export class SwiperInit {
         }
         if (document.querySelector('.job-in__slider')) {
           const articles = new Swiper('.job-in__slider', {
+            slidesPerView: 'auto',
+            spaceBetween: 10,
+            initialSlide: 0,
+            centerInsufficientSlides: true,
+            loop: false,
+            freeMode: true,
+            freeModeSticky: true,
+          });
+        }
+
+        if (document.querySelector('.pipe-features__slider')) {
+          const articles = new Swiper('.pipe-features__slider', {
             slidesPerView: 'auto',
             spaceBetween: 10,
             initialSlide: 0,

@@ -1,0 +1,266 @@
+.calculation-main{
+    margin-bottom: 7rem;
+    margin-top: 19rem;
+    padding-top: 6rem;
+    @media (max-width: 962px) {
+        margin-bottom: 1.9rem;
+    }
+    @media (max-width: 962px) {
+        margin-top: 8rem;
+        padding-top: 3rem;
+    }
+    &__title{
+        margin-bottom: 0.7rem;
+    }
+    &__subtitle{
+        margin-bottom: 2.6rem;
+        @media (max-width: 962px) {
+           margin-bottom: 2rem;
+        }
+    }
+    &__text{
+        margin-bottom: 5rem;
+        color: #585E63;
+        max-width: 110rem;
+        @media (max-width: 962px) {
+            max-width: 330rem;
+            margin-bottom: 2.5rem;
+         }
+    }
+    &__block-title{
+        width: 100%;
+        padding: 1.3rem 2rem;
+        background-color: $black;
+        border-radius: 0.8rem;
+        color: $white;
+        margin-bottom: 4rem;
+    }
+}
+
+.form-calculate{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.2rem;
+    margin-bottom: 4rem;
+    gap: 1.2rem 6rem;
+    @media (max-width: 962px) {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 1.4rem;
+     }
+    &__calc-title{
+         @media (max-width: 962px) {
+            margin-bottom: 1.5rem;
+            font-size: 2rem;
+         }
+    }
+    &__block{
+        display: flex;
+        width: 62rem;
+        justify-content: space-between;
+        align-items: center;
+        @media (max-width: 962px) {
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: flex-start;
+            width: 100%;
+         }
+    }
+    input{
+        border: none;
+        outline: none;
+        padding: 1.5rem 2rem;
+        width: 75%;
+    }
+    label{
+        font-size: 1.4rem;
+        font-family: 'Graphik LCG';
+        font-weight: 500;
+        color: #838C95;
+        @media (max-width: 962px) {
+            color: #AEB2BF;
+         }
+    }
+    &__input-wrapper{
+        min-width: 32.5rem;
+        display: flex;
+        border-radius: 0.8rem;
+        border: 0.1rem solid $black;
+        align-items: center;
+        justify-content: space-between;
+        padding-right: 2rem;
+        @media (max-width: 962px) {
+            border: 0.1rem solid #D7DBE0;
+         }
+    }
+    &__block-name{
+        font-size: 1.6rem;
+        font-family: 'Graphik LCG';
+        color: $black;
+        max-width: 26rem;
+        @media (max-width: 962px) {
+            max-width: 100%;
+            font-size: 1.2rem;
+            font-weight: 500;
+            margin-bottom: 0.6rem;
+         }
+    }
+    &__calc{
+        border-radius: 0.8rem;
+        padding: 1.9rem 2.3rem;
+        display: flex;
+        justify-content: space-between;
+        background: linear-gradient(180deg, #EFEFF2 0%, #F4F4F6 100%);
+        margin-bottom: 5rem;
+        @media (max-width: 962px) {
+            flex-direction: column;
+            padding: 2rem 1.2rem;
+        }
+    }
+    &__calc-sub{
+        font-size: 1.6rem;
+        font-family: 'Graphik LCG';
+        line-height: 120%;
+        letter-spacing: -0.16px;
+        color: $black;
+        display: flex;
+        align-items: baseline;
+        width: 60.5rem;
+        margin-bottom: 1.1rem;
+        @media (max-width: 962px) {
+            width: auto;
+            align-items: flex-end;
+            font-size: 1.2rem;
+        }
+        &:last-child{
+            margin-bottom: 0;
+        }
+        p{
+            max-width: 17rem;
+        }
+        &::before{
+             content: '';
+            border-bottom: 0.2rem dotted #ccc;
+            flex-grow: 1;
+            order: 2;
+            margin: 0 0.5rem;
+             @media (max-width: 962px) {
+                opacity: 0;
+            }
+        }
+        span{
+            font-weight: 500;
+            color: $black;
+            order: 3;
+             @media (max-width: 962px) {
+                font-size: 1.8rem;
+                font-weight: 400;
+                text-transform: uppercase;
+                white-space: nowrap;
+                display: inline;
+            }
+        }
+    }
+    &__itog{
+        display: flex;
+        justify-content: space-between;
+        padding: 2.5rem;
+        background-color: $primary;
+        background: #FFD000;
+        border-radius: 1rem;
+        @media (max-width: 962px) {
+            flex-direction: column;
+            padding: 2rem 1.2rem;
+        }
+    }
+    &__itog-text{
+        margin-top: 1rem;
+        font-size: 2.8rem;
+    }
+    &__itog-title{
+        @media (max-width: 962px) {
+            font-size: 1.7rem;
+        }
+    }
+}
+
+.calc-write{
+    @media (max-width: 962px) {
+        margin-bottom: 5rem;
+     }
+    &__wrapper{
+        padding: 3rem 8.2rem 2.6rem 4rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #C9DBF2;
+        border-radius: 2rem;
+        @media (max-width: 962px) {
+           flex-direction: column;
+           padding: 3rem 1.2rem;
+        }
+    }
+    &__content{
+        max-width: 77.9rem;
+    }
+    &__title{
+        margin-bottom: 2.3rem;
+        @media (max-width: 962px) {
+            width: 100%;
+         }
+    }
+    &__btn{
+        padding: 1.5rem 3.9rem;
+        @media (max-width: 962px) {
+            width: 100%;
+         }
+    }
+    &__img img{
+        width: 26.7rem;
+        height: 26.7rem;
+        @media (max-width: 962px) {
+            margin-top: 3.5rem;
+            width: 22rem;
+            height: 22rem;
+         }
+    }
+}
+.news-calc{
+    padding-bottom: 0 !important;
+    margin-bottom: 1.5rem;
+}
+.heating-production-calc{
+    @media (max-width: 962px) {
+        margin-bottom: 5rem !important;
+    }
+}
+.production__btn-all{
+    display: none;
+    @media (max-width: 962px) {
+        display: block;
+        padding: 1.5rem 3.5rem;
+        width: 100%;
+        margin-top: 3.5rem;
+    }
+}
+.heation-peculiarities__actions{
+    display: flex;
+    align-items: center;
+}
+.production__all-btn{
+    padding: 1.5rem 3.5rem;
+    @media (max-width: 962px) {
+        display: none;
+    }
+}
+
+.news-question{
+    @media (max-width: 962px) {
+        background-color: $primary !important;
+        margin: 1rem !important;
+    }
+}
+.question-calc.news-question{
+    background-color: $primary !important;
+    margin: 0rem !important;
+    margin-top: 4rem !important;
+}

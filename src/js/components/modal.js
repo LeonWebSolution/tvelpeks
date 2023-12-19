@@ -1,36 +1,28 @@
 export class Modal {
-  constructor() {
-      this.modal = document.getElementById('modal-question');
-      this.openModalBtn = document.getElementById('openModalBtn');
-      this.closeModalBtn = document.getElementById('closeModalBtn');
-      this.body = document.body;
-
-      if (this.openModalBtn && this.modal) {
-          this.openModalBtn.addEventListener('click', () => {
-              this.openModal();
-          });
-      }
-
-      if (this.closeModalBtn) {
-          this.closeModalBtn.addEventListener('click', () => {
-              this.closeModal();
-          });
-      }
+    constructor() {
+      document.addEventListener('DOMContentLoaded', function () {
+        // Получаем все кнопки с классом 'open-modal'
+        var openModalButtons = document.querySelectorAll('.open-modal');
+        var closeModalBtn = document.getElementById('closeModalBtn');
+        var modalQuestion = document.getElementById('modal-question');
+        var body = document.body;
+  
+        function openModal() {
+          modalQuestion.classList.add('active');
+          body.classList.add('overflow-hidden');
+        }
+  
+        function closeModal() {
+          modalQuestion.classList.remove('active');
+          body.classList.remove('overflow-hidden');
+        }
+  
+        // Назначаем обработчик события для каждой кнопки
+        openModalButtons.forEach(function (button) {
+          button.addEventListener('click', openModal);
+        });
+  
+        closeModalBtn.addEventListener('click', closeModal);
+      });
+    }
   }
-
-  openModal() {
-      if (this.modal) {
-          this.modal.style.display = 'flex';
-          this.modal.classList.add('active');
-          this.body.style.overflow = 'hidden';
-      }
-  }
-
-  closeModal() {
-      if (this.modal) {
-          this.modal.style.display = 'none';
-          this.modal.classList.remove('active');
-          this.body.style.overflow = '';
-      }
-  }
-}

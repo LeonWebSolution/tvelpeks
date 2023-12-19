@@ -12,6 +12,7 @@
     align-items: center;
     animation: fade-inm 0.7s;
     &.active{
+        display: flex;
         animation: fade-inm 0.7s;
         @keyframes fade-inm {
             from {
@@ -23,7 +24,9 @@
         }
     }
   }
-
+  body.overflow-hidden{
+    // overflow: hidden;
+  }
   .modal-content{
     max-width: 145rem;
     position: relative;
