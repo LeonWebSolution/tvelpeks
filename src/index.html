@@ -2116,24 +2116,54 @@
                 </span>
               <div class="form-question">
                 <div class="form-question__wrapper">
-                    <div class="form-question__content">
-                        <div class="form-question__title display__banner">Есть вопрос?</div>
-                        <div class="form-question__suptitle h4">Задайте нам и мы ответим на него в ближайшее время</div>
-                        <form class="question-form">
-                            <div class="input-group">
-                                <input type="text" required id="name">
-                                <label for="name" class="btn" for="">Имя</label>
+                    <div class="form-question__content error">
+                        <div class="form-question__default">
+                            <div class="form-question__title display__banner">Есть вопрос?</div>
+                            <div class="form-question__suptitle h4">Задайте нам и мы ответим на него в ближайшее время</div>
+                            <form class="question-form">
+                                <div class="input-group">
+                                    <input type="text" required id="name">
+                                    <label for="name" class="btn" for="">Имя</label>
+                                </div>
+                                <div class="input-group">
+                                    <input type="text" required id="phoneInput">
+                                    <label for="phoneInput" class="btn" for="">Телефон</label>
+                                </div>
+                                <div class="input-group area">
+                                    <textarea сlass="btn" placeholder="Ваше сообщение"></textarea>
+                                </div>
+                                <button class="question-form__btn btn btn--bay">Задать вопрос</button>
+                            </form>
+                            <p class="form-question__descr body__medium">Отправляя свои данных вы соглашаетесь с <a href="#">политикой конфиденциальности</a></p>
+                        </div>
+                        <div class="form-question__sent">
+                            <div class="form-question__sent-img">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="84" height="84" viewBox="0 0 84 84" fill="none">
+                                    <path d="M77.4088 33.4122H59.6665V22.2845C59.6665 14.408 53.2643 8 45.3947 8H44.1619V18.4343C44.1619 23.6882 41.3383 28.5892 36.7932 31.2248L29.0253 35.7288H24.9294V35.5691C24.9294 33.4392 23.1966 31.7064 21.0667 31.7064H0.0390625V34.1719H21.0665C21.8369 34.1719 22.4637 34.7987 22.4637 35.5691V68.7526C22.4637 69.523 21.8369 70.1497 21.0665 70.1497H0.0390625V72.6153H21.0665C23.1964 72.6153 24.9292 70.8825 24.9292 68.7526V68.7355H29.0934L43.9579 75.3918H64.4891C67.5242 75.3918 69.9934 72.9228 69.9934 69.8877V66.5954C72.437 66.0342 74.2649 63.8417 74.2649 61.2303V56.8853C76.7085 56.3242 78.5364 54.1316 78.5364 51.5201V46.2473C81.5666 45.7122 83.8757 43.0601 83.8757 39.8789C83.8757 36.3132 80.9747 33.4122 77.4088 33.4122ZM77.4088 43.8801H60.0041V46.3457H76.0709V51.5201C76.0709 53.1957 74.7077 54.5588 73.0321 54.5588H60.0041V57.0244H71.7994V61.2301C71.7994 62.9056 70.4362 64.2687 68.7606 64.2687H60.0041V66.7342H67.5279V69.8875C67.5279 71.563 66.1647 72.9261 64.4891 72.9261H44.4849L29.6204 66.2697H24.9294V38.1944H29.6886L38.0302 33.3576C43.3333 30.2826 46.6278 24.5643 46.6278 18.4341V10.5292C52.5604 11.1485 57.2013 16.184 57.2013 22.2843V35.8776H77.4088C79.6152 35.8776 81.4101 37.6725 81.4101 39.8789C81.4101 42.0852 79.6152 43.8801 77.4088 43.8801Z" fill="#292A29"/>
+                                </svg>
                             </div>
-                            <div class="input-group">
-                                <input type="text" required id="phoneInput">
-                                <label for="phoneInput" class="btn" for="">Телефон</label>
+                            <div class="form-question__title display__banner">Ваша заявка отправлена!</div>
+                            <div class="form-question__suptitle h4">В близайшее время с вами свяжемся для уточнения вопросов</div>
+                            <button class="question-form__btn btn btn--bay">Хорошо!</button>
+                        </div>
+                        <div class="form-question__error">
+                            <div class="form-question__sent-img">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="84" height="84" viewBox="0 0 84 84" fill="none">
+                                    <g clip-path="url(#clip0_1650_29952)">
+                                    <circle cx="42" cy="42" r="41.5" stroke="#292A29"/>
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M41.2929 42.3952L29.4489 54.2392L30.156 54.9463L42 43.1023L53.844 54.9463L54.5511 54.2392L42.7071 42.3952L54.5511 30.5511L53.844 29.844L42 41.6881L30.156 29.844L29.4489 30.5511L41.2929 42.3952Z" fill="black"/>
+                                    </g>
+                                    <defs>
+                                    <clipPath id="clip0_1650_29952">
+                                    <rect width="84" height="84" fill="white"/>
+                                    </clipPath>
+                                    </defs>
+                                </svg>
                             </div>
-                            <div class="input-group area">
-                                <textarea сlass="btn" placeholder="Ваше сообщение"></textarea>
-                            </div>
-                            <button class="question-form__btn btn btn--b">Задать вопрос</button>
-                        </form>
-                        <p class="form-question__descr body__medium">Отправляя свои данных вы соглашаетесь с <a href="#">политикой конфиденциальности</a></p>
+                            <div class="form-question__title display__banner">произошел сбой</div>
+                            <div class="form-question__suptitle h4">Попробуйте отправить заявку еще раз</div>
+                            <button class="question-form__btn btn btn--bay">Хорошо!</button>
+                        </div>
                     </div>
                     <div class="form-question__img">
                         <div class="worker">
