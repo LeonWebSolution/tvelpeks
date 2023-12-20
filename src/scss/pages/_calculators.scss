@@ -36,6 +36,11 @@
         height: 100%;
         color: $black;
         gap: 2rem;
+        transition: all 0.3s;
+        &:hover{
+            background: $primary;
+            transition: all 0.3s;
+        }
         @media (max-width: 962px){
             flex-direction: row;
             gap: 5rem;
@@ -55,5 +60,16 @@
     @media (max-width: 962px){
         margin: 0 1.4rem !important;
         margin-bottom: 2rem !important;
+    }
+    .question__wrapper{
+        padding: 2.5rem 2rem 3rem;
+    }
+    .question__text{
+        max-width: 28.7rem;
+    }
+    .question__btn{
+        @media (max-width: 962px){
+            width: 100%;
+        }
     }
 }
