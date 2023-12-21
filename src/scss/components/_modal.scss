@@ -90,6 +90,34 @@
     }
   }
 
+  .support-form__title{
+    @media(max-width:  962px){
+        span{
+            display: inline !important;
+        }
+      }
+  }
+
+  .form-question .question-form input{
+    @media(max-width:  962px){
+        width: 100% !important;
+      }
+  }
+
+  .form-question .question-form textarea{
+    @media(max-width:  962px){
+        width: 100% !important;
+      }
+  }
+
+  .support-form__img{
+    @media(max-width:  962px){
+        width: 100% !important;
+      }
+    img{
+        width: 100% !important;
+    }
+  }
 
   .form-question__content{
     min-width: 73rem;

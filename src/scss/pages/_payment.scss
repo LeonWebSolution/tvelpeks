@@ -50,6 +50,8 @@
             @media (max-width: 962px){
                 width: 100%;
                 height: 21.9rem;
+                object-fit: cover;
+                object-position: bottom;
              }
             
         }
@@ -140,6 +142,9 @@
         font-size: 2.2rem;
         text-transform: uppercase;
         color: $black;
+        @media (max-width: 962px){
+        font-size: 2.8rem;
+        }
         p{
             display: none;
             font-size: 2rem;
@@ -223,6 +228,9 @@
     }
 }
 .payment-question{
+    @media (max-width: 962px){
+        margin-bottom: 3rem;
+    }
     .form-question__title{
         @media (max-width: 962px){
             font-size: 3.4rem;

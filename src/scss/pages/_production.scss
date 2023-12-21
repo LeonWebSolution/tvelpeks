@@ -77,6 +77,12 @@
     }
 }
 
+.about-production__item{
+    @media (max-width:962px){
+        width: 100%;
+    }
+}
+
 @media (max-width: 962px){
     .faq__title{
         margin-bottom: 2.5rem !important; 

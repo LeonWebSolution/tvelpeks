@@ -323,3 +323,14 @@
         }
     }
 }
+
+.production-main .production__item-img{
+    @media (max-width: 962px){
+        width: 100%; 
+    }
+}
+.production-main .production__item{
+    @media (max-width: 962px){
+        width: 100%; 
+    }
+}

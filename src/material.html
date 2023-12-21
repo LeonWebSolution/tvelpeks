@@ -684,16 +684,17 @@
         </header>
         <main class="main">
             <section class="material-main">
-                <div class="news">
-                    <div class="container">
+                <div class="news news-page">
+                    <div class="container news-page__wrapper">
+                        <div class="blur-container"></div>
                         <div class="news__top section__header">
                             <div class="news__title h2">Материалы</div>
                             <div class="news__slider">
                                 <div class="news__tabs">
-                                    <div class="news__tab btn active">Все</div>
-                                    <div class="news__tab btn">Новинки</div>
-                                    <div class="news__tab btn">Популярное</div>
-                                    <div class="news__tab btn">Производство</div>
+                                    <div class="news__tab btn gradient-border active gradient-border--gray">Все</div>
+                                    <div class="news__tab btn gradient-border gradient-border--gray">Новинки</div>
+                                    <div class="news__tab btn gradient-border gradient-border--gray">Популярное</div>
+                                    <div class="news__tab btn gradient-border gradient-border--gray">Производство</div>
                                 </div>
                             </div>
                         </div>
@@ -701,7 +702,7 @@
                             <div class="news-big">
                                 <div class="news__news">
                                     <div class="news__img">
-                                        <div class="news__label btn">Новинка</div>
+                                        <div class="news__label btn news__label-big">Новинка</div>
                                         <img src="./images/new2.jpg" alt="">
                                     </div>
                                     <div class="news__info">
@@ -730,7 +731,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="swiper articles__slider">
+                            <div class="swiper">
                                 <div class="swiper-wrapper news__articles">
                                     <div class="news__articles-item swiper-slide">
                                         <div class="news__articles-item-content">
@@ -780,6 +781,93 @@
                                             <div class="news__articles-item-name h4">Статус «Привлекательный работодатель 2022 года в Санкт-Петербурге»</div>
                                             <p class="news__articles-item-text">Поставка гибких трубопроводов ТВЭЛ-ПЭКС (30 473 м) и комплектующих к ним</p>
                                         </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="news__wrapper">
+                            <div class="swiper">
+                                <div class="swiper-wrapper news__articles">
+                                    <div class="news__articles-item swiper-slide">
+                                        <div class="news__articles-item-content">
+                                            <div class="news__label btn">Новинка</div>
+                                            <div class="news__info-date lable">23 апреля 2023</div>
+                                            <div class="news__articles-item-name h4">выставка «Аква-Терм- Москва 2023</div>
+                                            <p class="news__articles-item-text">Поставка гибких трубопроводов ТВЭЛ-ПЭКС (30 473 м) и комплектующих к ним</p>
+                                        </div>
+                                        <div class="news__articles-item-img">
+                                            <img src="./images/article1.png" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="news__articles-item swiper-slide">
+                                        <div class="news__articles-item-content">
+                                            <div class="news__label btn">Производство</div>
+                                            <div class="news__info-date lable">23 апреля 2023</div>
+                                            <div class="news__articles-item-name h4">Статус «Привлекательный работодатель 2022 года в Санкт-Петербурге»</div>
+                                            <p class="news__articles-item-text">Поставка гибких трубопроводов ТВЭЛ-ПЭКС (30 473 м) и комплектующих к ним</p>
+                                        </div>
+                                    </div>
+                                    <div class="news__articles-item swiper-slide">
+                                        <div class="news__articles-item-content">
+                                            <div class="news__label btn">Новинка</div>
+                                            <div class="news__info-date lable">23 апреля 2023</div>
+                                            <div class="news__articles-item-name h4">выставка «Аква-Терм- Москва 2023</div>
+                                            <p class="news__articles-item-text">Поставка гибких трубопроводов ТВЭЛ-ПЭКС (30 473 м) и комплектующих к ним</p>
+                                        </div>
+                                        <div class="news__articles-item-img">
+                                            <img src="./images/article2.png" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="news__articles-item swiper-slide">
+                                        <div class="news__articles-item-content">
+                                            <div class="news__label btn">Популярное</div>
+                                            <div class="news__info-date lable">23 апреля 2023</div>
+                                            <div class="news__articles-item-name h4">выставка «Аква-Терм- Москва 2023</div>
+                                            <p class="news__articles-item-text">Поставка гибких трубопроводов ТВЭЛ-ПЭКС (30 473 м) и комплектующих к ним</p>
+                                        </div>
+                                        <div class="news__articles-item-img">
+                                            <img src="./images/article3.png" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="news__articles-item swiper-slide">
+                                        <div class="news__articles-item-content">
+                                            <div class="news__label btn">Производство</div>
+                                            <div class="news__info-date lable">23 апреля 2023</div>
+                                            <div class="news__articles-item-name h4">Статус «Привлекательный работодатель 2022 года в Санкт-Петербурге»</div>
+                                            <p class="news__articles-item-text">Поставка гибких трубопроводов ТВЭЛ-ПЭКС (30 473 м) и комплектующих к ним</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="news-big">
+                                <div class="news__news">
+                                    <div class="news__img">
+                                        <div class="news__label btn">Новинка</div>
+                                        <img src="./images/new2.jpg" alt="">
+                                    </div>
+                                    <div class="news__info">
+                                        <div class="news__info-date lable">23 апреля 2023</div>
+                                        <div class="news__info-name h3">29-я Международная выставка по строительству, ремонту и дизайну «Строим Дом»</div>
+                                        <div class="news__info-text">Поставка гибких трубопроводов ТВЭЛ-ПЭКС (30 473 м) и комплектующих к нимПоставка гибких трубопроводов ТВЭЛ-ПЭКС (30 473 м) и комплектующих к ним</div>
+                                    </div>
+                                </div>
+                                <div class="news__articles-item swiper-slide first-shild">
+                                    <div class="news__articles-item-content">
+                                        <div class="news__label btn">Новинка</div>
+                                        <div class="news__info-date lable">23 апреля 2023</div>
+                                        <div class="news__articles-item-name h4">выставка «Аква-Терм- Москва 2023</div>
+                                        <p class="news__articles-item-text">Поставка гибких трубопроводов ТВЭЛ-ПЭКС (30 473 м) и комплектующих к ним</p>
+                                    </div>
+                                    <div class="news__articles-item-img">
+                                        <img src="./images/article1.png" alt="">
+                                    </div>
+                                </div>
+                                <div class="news__articles-item swiper-slide">
+                                    <div class="news__articles-item-content">
+                                        <div class="news__label btn">Производство</div>
+                                        <div class="news__info-date lable">23 апреля 2023</div>
+                                        <div class="news__articles-item-name h4">Статус «Привлекательный работодатель 2022 года в Санкт-Петербурге»</div>
+                                        <p class="news__articles-item-text">Поставка гибких трубопроводов ТВЭЛ-ПЭКС (30 473 м) и комплектующих к ним</p>
                                     </div>
                                 </div>
                             </div>
@@ -875,6 +963,7 @@
                             </svg>
                         </div>
                     </div>
+                    <button class="material__all-btn btn btn--stroke">смотреть еще 10 из 20</button>
                 </div>
             </section>
             <section class="installation">
@@ -907,7 +996,7 @@
                     </div>
                 </div>
             </section>
-            <section class="document document-scroll">
+            <section class="document document-scroll document-material">
                 <div class="container">
                     <div class="document__top">
                         <div class="document__title">
@@ -1103,7 +1192,7 @@
                                 </svg>
                             </button>
                         </div>
-                        <div class="document__blur"></div>
+                        <div class="document__blur material-blur"></div>
                     </div>
                     <button class="document__btn btn btn--b">
                         <p>Показать еще</p>
