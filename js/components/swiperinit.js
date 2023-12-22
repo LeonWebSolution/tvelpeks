@@ -233,7 +233,18 @@ export class SwiperInit {
             freeModeSticky: true,
           });
         }
-        
+
+        if (document.querySelector('.installations__slider')) {
+          const installationsslider = new Swiper('.installations__slider', {
+            slidesPerView: 'auto',
+            spaceBetween: 12,
+            initialSlide: 0,
+            centerInsufficientSlides: true,
+            freeMode: true,
+            freeModeSticky: true,
+          });
+        }
+
         if (document.querySelector('.peculiarities-dilers__slider')) {
           const peculiaritiesd = new Swiper('.peculiarities-dilers__slider', {
             slidesPerView: 'auto',
@@ -391,6 +402,18 @@ export class SwiperInit {
             freeModeSticky: true,
           });
         }
+
+        // if (document.querySelector('.installations__slider')) {
+        //   const installations = new Swiper('.installations__slider', {
+        //     slidesPerView: 'auto',
+        //     spaceBetween: 10,
+        //     initialSlide: 0,
+        //     centerInsufficientSlides: true,
+        //     loop: false,
+        //     freeMode: true,
+        //     freeModeSticky: true,
+        //   });
+        // }
 
         if (document.querySelector('.projects__tab-slider')) {
           const projectsTab = new Swiper('.projects__tab-slider', {
