@@ -81,3 +81,24 @@ section{
         left: 1.5rem !important;
     }
 }
+
+.question__btn{
+    width: 14.7rem !important;
+    @media (max-width: 962px) {
+        width: 100% !important;
+    }
+}
+
+.question-calc .question__text {
+    max-width: 100% !important;
+    @media (max-width: 962px) {
+        max-width: 28.7rem !important;
+    }
+}
+
+.question-calc .question__wrapper{
+    padding: 0 !important;
+    @media (max-width: 962px) {
+        padding: 2.5rem 2rem 3rem !important;
+    }
+}

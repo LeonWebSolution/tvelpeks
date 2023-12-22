@@ -311,7 +311,7 @@ export class SwiperInit {
         if (document.querySelector('.production__slider')) {
           const production = new Swiper('.production__slider', {
             slidesPerView: 'auto',
-            spaceBetween: 10,
+            spaceBetween: 15,
             initialSlide: 0,
             centerInsufficientSlides: true,
             loop: false,

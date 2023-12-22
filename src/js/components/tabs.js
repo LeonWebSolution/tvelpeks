@@ -46,6 +46,8 @@ export class Tabs {
                 });
             });
         }
+
+        // Получаем все вкладки и слайдеры
         const items = document.querySelectorAll('.navigation-sticky__item');
 
         // Добавляем слушатель событий для каждого элемента
@@ -95,5 +97,22 @@ const tabss = document.querySelectorAll('.filials__tabs-item');
     });
   });
         
+
+  const installationTabs = document.querySelectorAll('.navigation-sticky__item');
+
+  installationTabs.forEach((installationTab, index) => {
+      installationTab.addEventListener('click', () => {
+          installationTabs.forEach(t => t.classList.remove('active'));
+
+          // Добавляем класс active текущему элементу
+          installationTab.classList.add('active');
+
+          const navBlock = document.querySelector('.nav-block:nth-child(' + (index + 1) + ')');
+
+          document.querySelectorAll('.nav-block').forEach(block => block.classList.remove('active'));
+
+          navBlock.classList.add('active');
+      });
+  });
     }
 }

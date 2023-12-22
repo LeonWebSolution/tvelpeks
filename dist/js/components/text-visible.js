@@ -41,6 +41,7 @@ export class TextVisible {
                 this.handleButtonClick('.subcategoirs-advantages__info', '.subcategoirs-advantages__btn', 'Смотреть все', 'Скрыть', '.txt-blur2');
                 this.handleButtonClick('.tabs__content', '.filials__btn--all', 'Смотреть все', 'Скрыть', '.txt-blur');
                 this.handleButtonClick('.payment-requirements__inner', '.payment-requirements__all-btn', 'Смотреть все', 'Скрыть', '.text-blur');
+                this.handleButtonClick('.news-page__wrapper', '.material__all-btn', 'смотреть еще 10 из 20', 'смотреть еще 10 из 20', '.blur-container');
             });
         }
 
