@@ -144,6 +144,10 @@
         }
         .faq__question a{
             margin-bottom: 3rem;
+            display: inline-block;
+            @media (max-width: 600px) {
+                display: block;
+            }
         }
     }
     .job-in{

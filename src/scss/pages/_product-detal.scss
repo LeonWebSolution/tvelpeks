@@ -292,7 +292,7 @@
         min-width: 100%;
         max-width: 100%;
         text-align: left;
-        min-width: 16rem;
+        min-width: 17.5rem;
         font-size: 2.2rem;
         font-family: 'Halvar-Eng-Rg';
         @media (max-width: 962px) {
@@ -415,6 +415,14 @@
         min-height: 30.8rem;
         border-radius: 2rem;
         background: linear-gradient(180deg, #E9E9EF 0%, #F4F4F6 100%);
+    }
+}
+
+.comparison-type--second{
+    .comparison-type__title{
+        @media (max-width: 1440px) {
+            margin-left: 6.5rem !important;
+        }
     }
 }
 .detal-question {
@@ -555,4 +563,13 @@
             margin-left: 1.5rem;
         }
     }
+}
+
+.comparison-type__sticky{
+    .navigation-sticky__item:first-child {
+        min-width: 29rem;
+        @media(max-width: 962px){
+            min-width: 20rem;
+        }
+    } 
 }

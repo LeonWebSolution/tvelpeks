@@ -1,5 +1,8 @@
 .about-сustomer{
     margin-bottom: 7.6rem;
+    @media (max-width: 962px){
+        margin-bottom: 5rem;
+    }
     .container{
         display: flex;
         gap: 10.8rem;

@@ -281,3 +281,31 @@
     margin: 0rem !important;
     margin-top: 4rem !important;
 }
+.form-calculate__block-name{
+    display: flex;
+    gap: 0.6rem;
+    
+}
+.info{
+    position: relative;
+    svg{
+        width: 1.8rem;
+        height: 1.8rem;
+        cursor: pointer;
+    }
+    &__content{
+        position: absolute;
+        padding: 0.7rem 1rem;
+        border-radius: 0.6rem;
+        border: 0.1rem solid $black;
+        top: -4rem;
+        left: -4rem;
+        opacity: 0;
+        visibility: hidden;
+        &.active{
+            opacity: 1;
+            transition: all 0.3s;
+            visibility: visible;
+        }
+    }
+}
