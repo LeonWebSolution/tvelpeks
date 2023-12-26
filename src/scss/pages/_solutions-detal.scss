@@ -940,3 +940,18 @@
         }
     }
 }
+
+.border-fixx{
+    .navigation-sticky__item.active:nth-child(2) .heating-production__nav-descr::before{
+        content: "";
+        position: absolute;
+        width: 100%;
+        width: 1rem;
+        height: 1rem;
+        border-bottom-right-radius: 0.5rem;
+        border-right: 0.1rem solid #292a29;
+        border-bottom: 0.1rem solid #292a29;
+        left: -2.75rem;
+        bottom: -1.75rem;
+    }
+}

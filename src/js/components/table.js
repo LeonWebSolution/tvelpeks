@@ -92,6 +92,21 @@ export class Table {
 
             this.updateArrowPrevState();
         }); 
+
+        const tableBtns = document.querySelectorAll('.table-btn');
+
+        // Добавляем обработчик события для каждого элемента
+        tableBtns.forEach((btn) => {
+            btn.addEventListener('click', () => {
+                // Получаем все элементы с классом bottom-blur
+                const bottomBlurElements = document.querySelectorAll('.bottom-blur');
+
+                // Добавляем класс hidden ко всем элементам с классом bottom-blur
+                bottomBlurElements.forEach((element) => {
+                    element.classList.toggle('hidden');
+                });
+            });
+        });
         
     }
 
@@ -101,4 +116,6 @@ export class Table {
             arrowPrev.classList.toggle('active', document.querySelector('.comparison-type__wrapper')?.scrollLeft > 0);
         }
     }
+    
+    
 }

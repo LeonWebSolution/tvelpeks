@@ -351,7 +351,14 @@
         .faq__sub-content__text{
             font-size: 1.6rem;
             padding: 0;
-           
+            a {
+                @media (max-width: 962px){
+                    font-size: 1.5rem;
+                }
+                @media (max-width: 500px){
+                    font-size: 1.6rem;
+                }
+            }
             &:nth-child(2){
                 font-size: 1.4rem;
             }

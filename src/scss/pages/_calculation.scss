@@ -275,6 +275,9 @@
         background-color: $primary !important;
         margin: 1rem !important;
     }
+    .question__wrapper{
+
+    }
 }
 .question-calc.news-question{
     background-color: $primary !important;
@@ -307,5 +310,11 @@
             transition: all 0.3s;
             visibility: visible;
         }
+    }
+}
+
+.question-calc .question__wrapper{
+    @media (max-width: 962px){
+        padding: 2.5rem 1rem 3rem !important;
     }
 }

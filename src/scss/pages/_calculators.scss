@@ -52,10 +52,24 @@
         }
     }
 }
+.info{
+    transition: all 0 .3s;
+}
+.info.active svg circle{
+    stroke: $hover_yellow;
+    transition: all 0 .3s;
+}
+.info.active svg{
+    fill: $hover_yellow;
+    transition: all 0 .3s;
+}
 
 .question-calc{
     .container{
         margin: 0 auto !important;
+        @media (max-width: 962px){
+            padding: 0;
+        }
     }
     @media (max-width: 962px){
         margin: 0 1.4rem !important;

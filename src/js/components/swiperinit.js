@@ -354,7 +354,7 @@ export class SwiperInit {
         if (document.querySelector('.services__slider')) {
           const services = new Swiper('.services__slider', {
             slidesPerView: 'auto',
-            spaceBetween: 10,
+            spaceBetween: 30,
             initialSlide: 0,
             centerInsufficientSlides: true,
             loop: false,
