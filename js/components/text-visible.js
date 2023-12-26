@@ -41,7 +41,7 @@ export class TextVisible {
                 this.handleButtonClick('.subcategoirs-advantages__info', '.subcategoirs-advantages__btn', 'Смотреть все', 'Скрыть', '.txt-blur2');
                 this.handleButtonClick('.tabs__content', '.filials__btn--all', 'Смотреть все', 'Скрыть', '.txt-blur');
                 this.handleButtonClick('.payment-requirements__inner', '.payment-requirements__all-btn', 'Смотреть все', 'Скрыть', '.text-blur');
-                this.handleButtonClick('.news-page__wrapper', '.material__all-btn', 'смотреть еще 10 из 20', 'смотреть еще 10 из 20', '.blur-container');
+                this.handleButtonClick('.news-page__wrapper', '.material__all-btn', 'смотреть еще 10 из 20', 'Свернуть', '.blur-container');
             });
         }
 
@@ -55,5 +55,24 @@ export class TextVisible {
                 mobileButton.textContent = 'Отправить заявку';
             }
         }
+
+
+        document.addEventListener('DOMContentLoaded', function() {
+            var infoElements = document.querySelectorAll('.info');
+        
+            infoElements.forEach(function(infoElement) {
+                var infoContentElement = infoElement.querySelector('.info__content');
+        
+                infoElement.addEventListener('mouseenter', function() {
+                    infoElement.classList.add('active');
+                    infoContentElement.classList.add('active');
+                });
+        
+                infoElement.addEventListener('mouseleave', function() {
+                    infoElement.classList.remove('active');
+                    infoContentElement.classList.remove('active');
+                });
+            });
+        });
     }
 }
