@@ -65,6 +65,9 @@
     .news-big{
         .news__articles-item{
             margin-top: 0.8rem;
+            &:last-child{
+                margin-top: 0.65rem;
+            }
         }
     }
 }

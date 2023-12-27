@@ -370,6 +370,9 @@
     }
     .comparison-type__table-wrapper{
         max-width: 130rem;
+        @media (max-width:962px){
+            overflow: auto;
+        }
     }
     .comparison-type__wrapper{
         max-width: 130rem;
@@ -382,6 +385,7 @@
         position: relative;
     }
     .blur-table{
+        display: none;
         position: absolute;
         opacity: 0.68;
         background: #000;
@@ -406,7 +410,7 @@
         border: none;
         border-right: 0.1rem solid #BDC0CA;
     }
-    .comparison-type__wrapper .comparison-type__table tr:nth-child(2) td{
+    .comparison-type__wrapper .comparison-type__table tr td{
         border-bottom: 0.1rem solid #BDC0CA;
     }
     .comparison-type__wrapper .comparison-type__table tr:last-child td{
@@ -421,6 +425,9 @@
         text-transform: uppercase;
         text-align: left;
         font-family: 'Halvar-Eng-Rg';
+        @media (max-width:962px){
+            
+        }
     }
     .comparison-type__wrapper .comparison-type__table th:last-child{
         min-width: 9rem !important;
