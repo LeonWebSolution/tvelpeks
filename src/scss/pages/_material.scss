@@ -300,6 +300,11 @@
         @media (max-width: 962px) {
             display: none;
         }
+        &.hidden{
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s;
+        }
     }
     .document__wrapper{
         max-height: 32rem;
@@ -311,6 +316,16 @@
     .document__btn{
         @media (max-width: 962px) {
             display: none;
+        }
+        svg{
+            transform: rotate(0deg);
+            transition: all 0.3s;
+        }
+        &.active{
+            svg{
+                transform: rotate(180deg);
+                transition: all 0.3s;
+            }
         }
     }
 }
