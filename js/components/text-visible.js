@@ -74,5 +74,18 @@ export class TextVisible {
                 });
             });
         });
+
+        document.addEventListener('DOMContentLoaded', function () {
+            var btn = document.querySelector('.document__btn');
+            var materialBlur = document.querySelector('.material-blur');
+    
+            // Проверка на наличие элементов
+            if (btn && materialBlur) {
+                btn.addEventListener('click', function () {
+                    // Переключение класса hidden
+                    materialBlur.classList.toggle('hidden');
+                });
+            }
+        });
     }
 }
