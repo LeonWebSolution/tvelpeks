@@ -1,10 +1,13 @@
 .material-main{
     margin-top: 19rem;
+
     .news__img img{
        height: 39.4rem;
        object-fit: cover; 
     }
+
 }
+
 .document__btn{
     padding: 1.5rem 3.5rem;
     display: flex;
@@ -16,6 +19,7 @@
 
 .document-scroll{
     position: relative;
+
     .document__blur{
         width: 100%;
         background: linear-gradient(0deg, rgba(255, 255, 255, 0.97) 14.37%, rgba(255, 255, 255, 0.00) 112.64%);
@@ -24,46 +28,58 @@
         bottom: 13rem;
         left: 0;
     }
+
     .document__wrapper{
         max-height: 30rem;
         overflow: hidden;
         transition: all 0.3s;
         overflow-y: scroll;
         padding-right: 2rem;
+
         &::-webkit-scrollbar {
             height: 0.3rem;
             width: 0.2rem;
         }
+
         &::-webkit-scrollbar-thumb {
             background-color: #292A29;
             border-radius: 0.6rem;
         }
+
         &::-webkit-scrollbar-track {
             background-color: #BDC0CA;
         }
+
     }
+
 }
 
 .material-main{
     margin-bottom: 7rem;
+
     @media (max-width: 962px){
         margin-bottom: 3rem;
     }
+
     .news{
         padding-bottom: 6rem;
     }
+
     .news__news{
         padding-bottom: 3rem;
         height: 100%;
         max-height: 69.5rem;
         border-bottom: 0.1rem solid $black;
     }
+
     .news__info {
         width: 59.9rem;
         height: 21.7rem;
     }
+
     .news-big{
         .news__articles-item{
+
             margin-top: 0.8rem;
             &:last-child{
                 margin-top: 0.65rem;
@@ -76,63 +92,77 @@
     display: flex;
     align-items: center;
     justify-content: center;
+
     &__nav-arrow-prev{
         width: 6.7rem;
         height: 6.7rem;
         display: flex;
         justify-content: center;
         align-items: center;
+
         @media (max-width: 962px){
             width: 5.8rem;
             height: 5.8rem;
         }
+
         svg{
             width: 6.7rem;
             height: 6.7rem;
             transition: all 0.3s;
+
             @media (max-width: 962px){
                 width: 5.8rem;
                 height: 5.8rem;
             }
         }
+
         &:hover{
+
             svg stop{
                 stop-color: $primary;
                 transition: all 0.3s;
             }
         }
     }
+
     &__nav-arrow-next{
         width: 6.7rem;
         height: 6.7rem;
         display: flex;
         justify-content: center;
         align-items: center;
+
         @media (max-width: 962px){
             width: 5.8rem;
             height: 5.8rem;
         }
+
         svg{
             width: 6.7rem;
             height: 6.7rem;
             transition: all 0.3s;
+
             @media (max-width: 962px){
                 width: 5.8rem;
                 height: 5.8rem;
             }
         }
+
         &:hover{
+
             svg stop{
                 stop-color: $primary;
                 transition: all 0.3s;
             }
         }
     }
+
     &__nav{
         display: flex;
         align-items: center;
         gap: 0.6rem;
     }
+
     &__nav-item{
         width: 4.9rem;
         height: 4.9rem;
@@ -143,29 +173,35 @@
         font-family: 'Halvar-Eng-Rg';
         font-size: 1.8rem;
         text-transform: uppercase;
+
         @media (max-width: 962px){
             width: 4.2rem;
             height: 4.2rem;
         }
+
         svg{
             position: absolute;
             width: 4.9rem;
             height: 4.9rem;
+
             @media (max-width: 962px){
                 width: 4.2rem;
                 height: 4.2rem;
             }
         }
+
         &:hover{
             svg stop{
                 stop-color: $primary;
                 transition: all 0.3s;
             }
         }
+
         &.active{
             svg{
                 fill: $black;
             }
+
             p{
                 color: #fff;
                 position: relative;
@@ -176,13 +212,17 @@
 }
 
 @media (max-width: 962px){
+
     .document-scroll{
+
         .document__blur{
             bottom: 10rem;  
         }
     }
+
     .material-main{
         margin-top: 8rem;
+
         .news{
             border-radius: 0;
         }
@@ -190,18 +230,22 @@
 }
 
 .news-page{
+
     .news__news{
         @media (max-width: 962px) {
             display: block;
             padding-right: 0rem;
         }
     }
+
     .news__info{
         @media (max-width: 962px) {
             width: 100%;
         }
     }
+
     .news__slider{
+
         @media (max-width: 962px) {
             overflow: auto;
             width: 100%;
@@ -210,13 +254,16 @@
             } 
         }
     }
+
     .news__news:hover {
+
         @media (max-width: 962px) {
             padding: 0rem;
             border: none;
             background: transparent;
         }
     }
+    
     .swiper-slide{
         @media (max-width: 962px) {
             width: 100%;
@@ -230,15 +277,19 @@
             background-color: transparent;
         }
     }
+
     .swiper-wrapper{
         display: flex;
         flex-direction: column;
         gap: 1rem;
     }
+
     .news-big{
         margin-bottom: 2rem;
     }
+
     .news__articles-item-img{
+
         @media (max-width: 962px) {
             display: block;
             width: 100%;
@@ -249,63 +300,82 @@
             }
         }
     }
+
     .news__label{
+
         @media (max-width: 962px) {
             padding: 0.6rem 1rem;
-        font-size: 1.4rem;
-        left: 0 !important;
-        top: 0 !important;
+            font-size: 1.4rem;
+            left: 0 !important;
+            top: 0 !important;
         }
     }
+
     .news__articles-item-content{
+
         @media (max-width: 962px) {
             padding-top: 2.3rem;
         }
     }
+
     .news__wrapper{
+
         @media (max-width: 962px) {
             margin-bottom: 1rem;
         }
     }
+
 }
 
 .news-page{
+
     .container{
+
         @media (max-width: 962px) {
             max-height: 140.5rem;
             overflow: hidden;
             position: relative;
         }
     }
+
     .document__blur{
         display: none;
     }
 }
 
 .material-main .page-navigation{
+
     @media (max-width: 962px) {
        display: none;
     }
+
 }
 
 .news-page{
+
     @media (max-width: 962px) {
         margin-bottom: 0;
     }
+
 }
 
 .document-material{
+
     .material-blur{
         background: linear-gradient(0deg, #F4F4F6 0%, rgba(244, 244, 246, 0.00) 100%);
+
         @media (max-width: 962px) {
             display: none;
         }
+
         &.hidden{
             opacity: 0;
             visibility: hidden;
             transition: all 0.3s;
         }
+
     }
+
     .document__wrapper{
         max-height: 32rem;
         transition: all 0.3s;
@@ -313,14 +383,17 @@
             max-height: 37rem;
         }
     }
+
     .document__btn{
         @media (max-width: 962px) {
             display: none;
         }
+
         svg{
             transform: rotate(0deg);
             transition: all 0.3s;
         }
+
         &.active{
             svg{
                 transform: rotate(180deg);
@@ -332,6 +405,7 @@
 
 .material__all-btn{
     display: none;
+
     @media (max-width: 962px) {
         padding: 1.5rem 3rem;
         width: 95%;
@@ -340,6 +414,7 @@
         position: relative;
         z-index: 1;
     }
+
     @media (max-width: 600px) {
        width: 33rem;
     }
@@ -350,17 +425,21 @@
     }
 }
 .material-main{
+
     @media (max-width: 962px) {
         overflow: visible;
-     }
+    }
+
 }
 .installation{
+
     @media (max-width: 962px) {
         margin-bottom: 3rem !important;
-     } 
+    } 
 }
 
 .document-material{
+
     @media (max-width: 962px) {
         margin-bottom: 3rem !important;
      } 
@@ -368,6 +447,7 @@
 
 .blur-container{
     display: none;
+
     @media (max-width: 962px) {
         display: block;
         position: absolute;
@@ -379,12 +459,14 @@
         height: 21.1rem;
         background: linear-gradient(0deg, rgba(255, 255, 255, 0.97) 14.37%, rgba(255, 255, 255, 0.00) 112.64%);
      }
+
      @media (max-width: 500px) {
         width: 100%;
      }
 }
 
 .news-page .news__label-big{
+    
     @media (max-width: 962px) {
        position: absolute;
        top: 0.8rem !important;

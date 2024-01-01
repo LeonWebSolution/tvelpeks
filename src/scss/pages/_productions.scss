@@ -8,14 +8,17 @@
     margin-top: 19rem;
     padding-top: 6rem;
     margin-bottom: 9.6rem;
+    
     &__title{
         margin-bottom: 2rem;
     }
+
     &__descr{
         color: 585E63;
         max-width: 90rem;
         margin-bottom: 5.5rem;
     }
+
     .production__wrapper{
         display: grid;
         grid-template-columns: repeat(4, 1fr);
@@ -28,6 +31,7 @@
         max-width: 100%;
         padding: 0;
     }
+
     &__title{
         margin-bottom: 3.3rem;
         span{
@@ -35,17 +39,20 @@
         }
         margin-left: 13.9rem;
     }
+
     &__table-inner{
         position: relative;
         width: 100%;
         right: 0;
     }
+
     &__table-wrapper{
         position: relative;
         margin-left: 14rem;
         max-width: 140rem;
         height: 100%;
     }
+
     .right-blur{
         position: absolute;
         right: 0.2rem;
@@ -54,6 +61,7 @@
         z-index: 7777;
         background: linear-gradient(270deg, rgba(255, 255, 255, 0.97) 16.53%, rgba(255, 255, 255, 0.00) 92.42%);
     }
+
     .bottom-blur{
         position: absolute;
         width: 99%;
@@ -65,12 +73,14 @@
         opacity: 1;
         visibility: visible;
         transition:  all 0.3s;
+
         &.hidden{
             opacity: 0;
             visibility: hidden;
             transition:  all 0.3s;
         }
     }
+
     .nav-table{
         position: absolute;
         right: 1rem;
@@ -82,13 +92,16 @@
         z-index: 77777;
         flex-direction: column;
     }
+
     .table-arrow-prev{
         margin-top: -1rem;
         display: none;
+
         &.active{
             display: block;
         }
     }
+
     .table-btn{
         position: absolute;
         left: 50%;
@@ -100,6 +113,7 @@
         align-items: center;
         transition: all 0.3s;
         transform: translate(-50%);
+
         &.active{
             svg{
                 transform: rotate(180deg);
@@ -107,6 +121,7 @@
             }
         }
     }
+
     &__wrapper{
         width: auto;
         max-width: 140rem;
@@ -117,20 +132,25 @@
         border-radius: 1rem 0 0 0rem;
         transition: all 0.3s;
         scroll-behavior: smooth;
+
         &::-webkit-scrollbar {
             height: 3px;
             width: 2px;
         }
+
         &::-webkit-scrollbar-thumb {
             background-color: #292A29;
             border-radius: 6px;
         }
+
         &::-webkit-scrollbar-track {
             background-color: #BDC0CA;
         }
+
         .comparison-type__table{
             position: relative !important;
             border-spacing: 0;
+
             th{
                 border-right: 0.1rem solid $black;
                 max-width: 18rem;
@@ -148,6 +168,7 @@
                 font-family: 'Graphik LCG';
                 font-weight: 500;
                 line-height: 120%;
+
                 &:nth-child(1){
                     position: sticky;
                     left: 0;
@@ -158,12 +179,14 @@
                     border-left: none;
                     
                 }
+
                 &:last-child{
                     max-width: 30rem;
                     min-width: 30rem;
                     text-align: left;
                 }
             }
+
             td{
                 border-right: 0.1rem solid #BDC0CA;
                 border-bottom: 0.1rem solid #BDC0CA;
@@ -177,6 +200,7 @@
                 max-width: 18rem;
                 background-color: #fff;
                 border-top: 0;
+
                 span{
                     display: block;
                     min-width: 3.6rem;
@@ -187,6 +211,7 @@
                     margin: 0 4rem 0 4.1rem;
                     
                 }
+
                 &:nth-child(1){
                    position: sticky;
                    left: 0;
@@ -194,6 +219,7 @@
                    background: #EFEFF2;
                    border-left: none;
                 }
+
                 &:last-child{
                     max-width: 30rem;
                     min-width: 30rem;
@@ -213,67 +239,84 @@
 }
 
 @media (max-width: 962px){
+
     .production-main{
         padding-top: 3rem;
         margin-top: 8rem;
         margin-bottom: 4rem;
+
         &__title{
             margin-bottom: 1.5rem;
         }
+
         &__descr{
             font-size: 1.4rem;
             color: $body_text;
             margin-bottom: 3rem;
         }
+
         .production__wrapper{
             width: 100%;
             grid-template-columns: repeat(2, 1fr);
             gap:2.5rem 1.5rem;
         }
+
         .production__item-img{
             width: 15.8rem;
             height: 10.8rem;
         }
+
         .production__item-img img{
             height: 10.1rem;
         }
+
         .production__item{
             width: 15.8rem;
         }
+
         .production__item-name{
             font-size: 1.4rem;
             padding: 0;
             border: none;
             margin: 0;
         }
+
         .production__item-text{
             display: none;
         }
     }
+
     .comparison-type{
         padding-bottom: 13.4rem;
+
         &__title{
             margin-left: 1.5rem;
             margin-bottom: 2.5rem;
         }
+
         &__table-wrapper{
             margin-left: 0rem;
         }
+
         .table-btn{
             z-index: 777777777;
             width: 33rem;
             justify-content: center;
             bottom: -7rem;
         }
+
         .nav-table{
             display: none;
         }
+
         .right-blur{
             display: none;
         }
+
         &__wrapper{
             max-height: 48rem;
             border-radius: 0;
+
             .comparison-type__table th:nth-child(1){
                 padding: 1rem;
                 max-width: 18rem;
@@ -283,6 +326,7 @@
                 z-index: 5;
                 position: sticky;
             }
+
             .comparison-type__table th{
                 padding: 1rem;
                 font-size: 1.6rem;
@@ -290,22 +334,26 @@
                 min-width: 14.1rem;
                 text-align: left;
                 z-index: 6;
+
                 &:last-child{
                     max-width: 14.1rem;
                     min-width: 14.1rem;
                     text-align: left;
                 }
             }
+
             .comparison-type__table td{
                 font-size: 1.4rem;
                 text-align: left;
                 padding: 0 1.5rem 0 1.5rem;
                 font-weight: 400;
+
                 &:nth-child(1){
                     font-size: 1.2rem;
                     font-weight: 500;
                     position: static;
                 }
+
                 &:last-child{
                     max-width: 14.1rem;
                     min-width: 14.1rem;
@@ -314,9 +362,11 @@
                 }
                 
             }
+
             .comparison-type__table td:nth-child(1){
                 padding: 1.2rem 1.3rem 1.2rem 1.5rem;
             }
+
             .comparison-type__table td:nth-child(1){
                 z-index: 5;
             }
@@ -329,6 +379,7 @@
         width: 100%; 
     }
 }
+
 .production-main .production__item{
     @media (max-width: 962px){
         width: 100%; 

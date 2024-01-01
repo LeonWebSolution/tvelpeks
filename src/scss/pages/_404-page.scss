@@ -3,6 +3,7 @@
     width: 100%;
     position: relative;
     height: 50rem;
+
     @media (max-width: 962px){
         margin-top: 9rem;
         height: 30rem;
@@ -14,6 +15,7 @@
         img{
           width: 90.5rem;
           height: 47.1rem;
+
           @media (max-width: 962px){
             width: 42.1rem;
             height: 27.1rem;
@@ -27,28 +29,35 @@
     margin-bottom: 6rem;
     position: relative;
     z-index: 777;
+
     @media (max-width: 962px){
         margin-top: -5rem;
         margin-bottom: 2.5rem;
       }
+
     .container{
+
         @media (max-width: 962px){
             padding: 0 0.3rem;
           }
     }
+
     &__wrapper{
         padding: 5.9rem 5rem 5rem;
         text-align: center;
         border-radius: 4rem;
         background-color: $primary;
+
         @media (max-width: 962px){
             padding: 2.5rem 1.2rem;
           }
     }
+
     &__title{
         font-size: 5rem;
         line-height: 105%;
         text-transform: uppercase;
+
         @media (max-width: 962px){
            font-size: 3.4rem;
            max-width: 31rem;
@@ -57,23 +66,29 @@
            margin-bottom: 2.5rem;
           }
     }
+
     &__btns{
         display: flex;
         gap: 1.5rem;
         justify-content: center;
+
         @media (max-width: 962px){
             flex-direction: column;
         }
     }
+
     &__subtitle{
         margin-bottom: 1rem;
     }
+
     &__title{
         margin-bottom: 3.4rem;
     }
+
     &__main-btn{
         padding: 1.5rem 3.5rem;
     }
+    
     &__main-cons{
         padding: 1.5rem 3.5rem;
     }

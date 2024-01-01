@@ -2,16 +2,19 @@
     margin-top: 19rem;
     padding-top: 6rem;
     margin-bottom: 4.2rem;
+    
     @media (max-width: 962px){
         margin-top: 8rem;
         padding-top: 3rem;
         margin-bottom: 0;
     }
+
     .container{
         display: flex;
         padding-bottom: 9rem;
         gap: 11rem;
         border-bottom: 0.1rem solid $black;
+
         @media (max-width: 962px){
            flex-direction: column;
            gap: 3.4rem;
@@ -19,34 +22,43 @@
            padding-bottom: 5.5rem;
         }
     }
+
     &__title{
         margin-bottom: 3rem;
+
         @media (max-width: 962px){
             margin-bottom: 1.5rem;
         }
     }
+
     &__text p{
         margin-bottom: 1rem;
         color: #585E63;
+
         &:last-child{
             margin-bottom: 0;
         }
+
         @media (max-width: 962px){
            font-size: 1.4rem;
          }
     }
+
     &__img{
         width: 64.2rem;
         height: 39.8rem;
         border-radius: 2rem;
+
         @media (max-width: 962px){
             width: 100%;
             height: 21.9rem;
-         }
+        }
+
         img{
             border-radius: 2rem;
             width: 64.2rem;
             height: 39.8rem;
+
             @media (max-width: 962px){
                 width: 100%;
                 height: 21.9rem;
@@ -60,24 +72,30 @@
 
 .rekomend{
     margin-bottom: 8rem;
+
     @media (max-width: 962px){
         margin-bottom: 5.5rem;
     }
+
     &__wrapper{
         display: flex;
         gap: 4.8rem;
+
         @media (max-width: 962px){
             flex-direction: column;
             gap: 1.5rem;
         }
     }
+
     &__title{
         font-size: 2.2rem;
         text-transform: uppercase;
+
         @media (max-width: 962px){
             font-size: 2.8rem;
         }
     }
+
     &__name{
         font-size: 3rem;
         text-transform: uppercase;
@@ -85,20 +103,25 @@
         span{
             color: #8C919F;
         }
+
         @media (max-width: 962px){
             font-size: 2rem;
             margin-bottom: 3rem;
         }
     }
+
     &__inner{
         display: flex;
+
         @media (max-width: 962px){
             flex-direction: column;
         }
     }
+
     &__item{
         width: 47%;
         color: #585E63;
+
         @media (max-width: 962px){
             width: 100%;
             font-size: 1.4rem;
@@ -109,20 +132,25 @@
 
 .payment-requirements{
     margin-bottom: 12rem;
+
     @media (max-width: 962px){
         margin-bottom: 6rem;
     }
+
     &__wrapper{
         display: flex;
         gap: 7rem;
+
         @media (max-width: 962px){
             flex-direction: column;
             gap: 2rem;
         }
     }
+
     &__text{
         font-size: 1.4rem;
     }
+
     &__inner{
         display: flex;
         gap: 0 6.6rem;
@@ -130,6 +158,7 @@
         max-height: 57.6rem;
         flex-wrap: wrap;
         position: relative;
+
         @media (max-width: 962px){
             flex-wrap: nowrap;
             max-height: 100%;
@@ -138,51 +167,62 @@
             transition: all 0.3s;
         }
     }
+
     &__title{
         font-size: 2.2rem;
         text-transform: uppercase;
         color: $black;
+
         @media (max-width: 962px){
         font-size: 2.8rem;
         }
+
         p{
             display: none;
             font-size: 2rem;
             text-transform: uppercase;
+
             @media (max-width: 962px){
                 display: block;
                 margin-top: 0.6rem;
                 font-size: 2rem;
                 text-transform: uppercase;
             }
+
             span{
                 color: #8C919F;
             }
         }
     }
+
     &__item{
         position: relative;
         width: 50.7rem;
         padding: 1.5rem 0 1.5rem 3.2rem;
         border-bottom: 0.1rem solid #DEDEDE;
         height: auto !important;
+
         @media (max-width: 962px){
             width: 100%;
         }
     }
+
     &__lable{
         position: absolute;
         left: 0;
         top: 1.1rem;
         color: #585E63;
     }
+
     &__all-btn{
         display: none;
+
         @media (max-width: 962px){
             display: block;
             padding: 1.5rem 3rem;
         }
     }
+
     &__download{
         margin-top: 3rem;
         padding: 1.5rem 3.5rem;
@@ -191,27 +231,34 @@
         justify-content: center;
         width: 31rem;
         align-items: center;
+
         @media (max-width: 962px){
             display: none;
         }
+
         &.mobile{
             display: none;
+
             @media (max-width: 962px){
                 display: block;
                 margin-top: 0;
                 width: 100%;
             }
         }
+
         svg{
             width: 1rem;
             height: 1.3rem;
         }
+
         span{
            color: rgba(255, 255, 255, 0.50);
         }
     }
+
     .text-blur{
         display: none;
+
         @media (max-width: 962px){
             display: block;
             background: linear-gradient(180deg, rgba(255, 255, 255, 0.00) 0%, #FFF 100%);
@@ -221,35 +268,43 @@
             left: 0;
             bottom: 0;
             z-index: 7;
+
             &.hidden{
                 opacity: 0;
             }
         }
     }
 }
+
 .payment-question{
     @media (max-width: 962px){
         margin-bottom: 3rem;
     }
+
     .form-question__title{
         @media (max-width: 962px){
             font-size: 3.4rem;
             font-weight: 500;
         }
     }
+
     .form-question__suptitle {
         max-width: 46.7rem;
         margin-bottom: 4rem;
+
         @media (max-width: 962px){
             font-size: 1.8rem;
         }
     }
 }
+
 .payment-option{
     margin-bottom: 9rem;
+
     @media (max-width: 962px){
         margin-bottom: 5rem;
     }
+
     &__lable{
         position: absolute;
         top: 1.5rem;
@@ -261,9 +316,11 @@
         text-transform: uppercase;
         background-color: $white;
     }
+
     &__wrapper{
         gap: 1.5rem;
     }
+
     &__text{
         font-size: 1.6rem;
         font-family: 'Graphik LCG';
@@ -273,6 +330,7 @@
             display: inline;
             text-decoration: underline !important;
         }
+
         @media (max-width: 962px){
             font-size: 1.4rem;
             a{
@@ -282,13 +340,16 @@
             }
         }
     }
+
     &__textt{
         margin-bottom: 3rem;
+
         @media (max-width: 962px){
             font-size: 1.4rem;
             margin-bottom: 2rem;
         }
     }
+
     &__btn{
         display: flex;
         justify-content: center;
@@ -298,10 +359,12 @@
             width: 2rem;
             height: 2rem;
         }
+
         @media (max-width: 962px){
             width: 100%;
         }
     }
+
     &__title-bot{
         white-space: nowrap;
         font-size: 3rem;
@@ -311,30 +374,36 @@
         align-items: center;
         gap: 1rem;
         max-height: 3.7rem;
+
         @media (max-width: 962px){
             font-size: 2rem;
             padding-left: 0;
             max-height: 100%;
         }
+
         p{
             order: 1;
         }
+
         svg{
             order: 0;
             width: 4.2rem;
             height: 4.2rem;
+
             @media (max-width: 962px){
                 top: 0;
                 position: static;
             }
         }
     }
+
     &__inner{
         display: flex; 
         gap: 14.8rem;
         margin-top: 5.5rem;
         padding-bottom: 11.7rem;
         border-bottom: 0.1rem solid $black;
+
         @media (max-width: 962px){
             flex-direction: column;
             gap: 1.3rem;
@@ -343,40 +412,49 @@
             border: none;
         }
     }
+
     &__title{
         margin-bottom: 3.5rem;
         font-size: 3rem;
         text-transform: uppercase;
     }
+
     &__name{
         font-size: 3rem;
         text-transform: uppercase;
         margin-bottom: 1.5rem;
+        
         @media (max-width: 962px){
             font-size: 2rem;
         }
     }
+
     &__img svg{
         width: 10rem;
         height: 10rem;
         margin-bottom: 7.4rem;
     }
+
     .swiper-slide{
         width: 42.3rem;
         height: auto;
+
         @media (max-width: 962px){
             width: 30rem;
         }
     }
+
     &__img svg{
         width: 6rem;
         height: 6rem;
         margin-bottom: 4.5rem;
     }
+
     &__item{
         border-radius: 2rem;
         background: linear-gradient(180deg, #E9E9EF 0%, #F4F4F6 100%);
         padding: 2.5rem 3.3rem 3.9rem 2.4rem;
+
         @media (max-width: 962px){
             padding: 2.5rem 0 3rem 1.5rem;
         }

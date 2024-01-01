@@ -2,17 +2,20 @@
     margin-top: 19rem;
     padding-top: 6rem;
     margin-bottom: 6rem;
+    
     @media (max-width: 962px){
         margin-top: 8rem;
         padding-top: 3rem;
         margin-bottom: 4.5rem;
     }
+
     &__title{
         margin-bottom: 3.7rem;
         @media (max-width: 962px){
             margin-bottom: 2.8rem;
         }
     }
+
     &__wrapper{
         display: grid;
         grid-template-columns: repeat(4,1fr);
@@ -21,11 +24,13 @@
             grid-template-columns: repeat(1,1fr);
         }
     }
+
     &__name{
         @media (max-width: 962px){
             font-size: 2rem;
         }
     }
+
     &__item{
         padding: 2.5rem;
         border-radius: 2rem;
@@ -41,24 +46,29 @@
             background-color: $primary;
             transition: all 0.3s;
         }
+
         @media (max-width: 962px){
             flex-direction: row;
             gap: 5rem;
             padding: 1.5rem 2.1rem 1.3rem 2.5rem;
         }
+
         svg{
            width: 4rem;
            height: 3.9rem; 
         }
     }
 }
+
 .info{
     transition: all 0 .3s;
 }
+
 .info.active svg circle{
     stroke: $hover_yellow;
     transition: all 0 .3s;
 }
+
 .info.active svg{
     fill: $hover_yellow;
     transition: all 0 .3s;
@@ -67,20 +77,25 @@
 .question-calc{
     .container{
         margin: 0 auto !important;
+
         @media (max-width: 962px){
             padding: 0;
         }
     }
+
     @media (max-width: 962px){
+
         margin: 0 1.4rem !important;
         margin-bottom: 2rem !important;
     }
     .question__wrapper{
         padding: 2.5rem 2rem 3rem;
     }
+
     .question__text{
         max-width: 28.7rem;
     }
+    
     .question__btn{
         @media (max-width: 962px){
             width: 100%;

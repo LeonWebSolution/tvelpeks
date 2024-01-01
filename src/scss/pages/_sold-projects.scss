@@ -2,24 +2,30 @@
     padding-top: 6rem;
     margin-top: 19rem;
     padding-bottom: 6rem;
+
     @media (max-width: 962px) {
         margin-top: 8rem;
         padding-top: 3rem;
     }
+
     .projects{
         padding-bottom: 0;
     }
+
     .projects__title{
         margin-bottom: 3rem;
+
         @media (max-width: 962px) {
             margin-bottom: 2.5rem;
         }
     }
+
     .projects__wrapper{
         display: grid;
         grid-template-columns: repeat(2,1fr);
         gap: 3.2rem 1.6rem;
         margin-top: 4rem;
+
         @media (max-width: 962px) {
             margin-top: 2.5rem;
             grid-template-columns: repeat(1,1fr);
@@ -30,12 +36,15 @@
             }
         }
     }
+
     .projects__slide-name{
         font-size: 2.6rem;
+
         @media (max-width: 962px) {
             font-size: 2.2rem;
         }
     }
+    
     .projects__slide-text{
         padding: 0;
         @media (max-width: 962px) {

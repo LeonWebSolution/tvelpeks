@@ -1,14 +1,17 @@
 .job-in{
     margin-bottom: 0rem;
+    
     &__inner{
         display: flex;
         gap: 6.9rem;
         padding-bottom: 9.2rem;
         border-bottom: 0.1rem solid $black;
     }
+
     .swiper-slide{
         width: 34rem;
     }
+
     &__num{
         color: $black;
         opacity: 0.6;
@@ -17,34 +20,44 @@
         text-transform: uppercase;
         margin-bottom: 2.4rem;
     }
+
     &__wrapper{
         gap: 2.9rem;
     }
+
     &__icon{
         margin-bottom: 3rem;
+
         img{
             width: 10rem;
             height: 10rem;
             object-fit: cover;
         }
     }
+
     &__name{
         margin-bottom: 1.5rem;
     }
+
     &__text{
         color: #585E63 ;
     }
 }
+
 .faq__item-name span{
     color: #8C919F;
 }
+
 .job-faq{
     padding: 7rem 0 !important;
+
     @media (max-width: 962px){
         padding: 4rem 0 2.5rem !important;
     }
 }
+
 .job__accordion{
+
     .faq__sub-name{
         font-size: 2rem;
         font-weight: 500;
@@ -53,26 +66,32 @@
         text-transform: none;
         max-width: 57.6rem;
     }
+
 }
 .faq__item{
+
     &:nth-child(4){
         border-bottom: 0.1rem solid $black;
         margin-bottom: 2.9rem;
     }
 }
+
 .vacancy-city{
     margin-bottom: 1.7rem;
 }
+
 .hh-btn-vac{
     display: flex;
     gap: 1rem;
     padding: 1rem 2rem;
     margin-bottom: 3.5rem;
 }
+
 .hh-btn{
     display: flex;
     gap: 1rem;
     padding: 1.5rem 3.5rem;
+
     img{
         width: 2rem;
         height: 2rem;
@@ -81,30 +100,37 @@
 
 .vacancies-contact{
     padding: 8rem 0 10rem;
+
     &__title{
+
         span{
             font-size: 4.8rem;
             display: block;
             margin-top: -2rem;
         }
     }
+
     &__wrapper{
         display: flex;
         justify-content: space-between;
     }
+
     &__cont-img{
         width: 10.2rem;
         height: 10.2rem;
         border-radius: 50%;
     }
+
     &__cont{
         display: flex;
         align-items: center;
         gap: 2.7rem;
     }
+
     &__content{
         width: 69.9rem;
     }
+
     &__contacts{
         margin-top: 4rem;
         display: flex;
@@ -113,6 +139,7 @@
         border-bottom: 0.1rem solid $black;
         align-items: center;
     }
+
     &__tel{
         font-size: 3.4rem;
         font-weight: 400;
@@ -121,12 +148,14 @@
         color: $black;
         padding: 1.5rem 2.7rem 1.5rem 2.4rem;
         background: linear-gradient(180deg, #E9E9EF 0%, #F4F4F6 100%);
+
         span{
             font-size: 2rem;
             font-family: 'Graphik LCG';
             text-transform: lowercase;
         }
     }
+
     &__mail{
         color: $black;
     }

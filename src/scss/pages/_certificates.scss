@@ -1,21 +1,27 @@
 .certificates-page{
+
     .reviews__slide-name{
         max-width: 30rem;
     }
+
     .reviews__top{
+
         @media (max-width: 962px) {
             flex-direction: column;
             align-items: flex-start;
             gap: 2.5rem;
         }
+
     }
     .tabs{
+
         @media (max-width: 962px) {
             width: 100%;
             overflow: auto;
             &::-webkit-scrollbar{
                 display: none;
             }
+
             .tab:nth-child(1) {
                 display: block;
             }
@@ -26,12 +32,15 @@
 .tabs .tab{
     border:  0.1rem solid transparent !important;
     background: linear-gradient(to right, #fff, #fff) padding-box, linear-gradient(to right top, #fff, #292A29) border-box;
+
     @media (max-width: 962px) {
         white-space: nowrap;
     }
+
     &.active{
         background: $black;
     }
+
     &:hover{
         border:  0.1rem solid $primary !important;
         transition: all 0.3s;
@@ -42,12 +51,15 @@
     border:  0.1rem solid transparent !important;
     transition: all 0.3s;
     background: linear-gradient(to right, #fff, #fff) padding-box, linear-gradient(to right top, #fff, #292A29) border-box;
+
     @media (max-width: 962px) {
         white-space: nowrap;
     }
+
     &.active{
         background: $black;
     }
+    
     &:hover{
         border:  0.1rem solid $primary !important;
         transition: all 0.3s;
